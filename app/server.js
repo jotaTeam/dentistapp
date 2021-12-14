@@ -4,14 +4,20 @@ require('colors')
 const express = require('express');
 const db = require('./database/db');
 const server = express();
-const sequelize = require('./database/db');
 
 
+//middlewares
+server.use(express.json())
+server.use(express.urlencoded({extended:false}))
+
+//rutas
+const userRouter = require('./routes/user.routes')
+server.use('/example', userRouter);
+
+const PORT = process.env.PORT || 3000 ;
 
 
-const PORT = process.env.PORT ;
-
-
+//levantamos el servidor
 server.listen(PORT , ()=> {
   console.log(`\n${'Servidor levantado en puerto'.bold} ${PORT.toString().green.bold}\n`);
   db.sync({force:true})
