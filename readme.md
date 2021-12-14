@@ -28,4 +28,9 @@ PORT=3000
  5. Tienes una carpeta de routes y otra de controlladores con un mini ejemplo funcional
  6. por ultimo para probar la app utiliza el comando 
  ```bash
- npm run dev```
+ ~npm run dev
+ ```
+ 7. este repo es solo para iniciar un proyecto de forma rapida, si encuentras que se puede mejor deja tu PR
+
+ 
+
