@@ -20,6 +20,12 @@ server.use('/causes', causesRoutes);
 const simptomsRoutes = require('./routes/simptoms.routes');
 server.use('/simptoms', simptomsRoutes);
 
+const patientsRoutes = require('./routes/patients.routes');
+server.use('/patients', patientsRoutes);
+
+const progDatesRoutes = require('./routes/progDates.routes');
+server.use('/dates', progDatesRoutes);
+
 const PORT = process.env.PORT || 3000 ;
 
 

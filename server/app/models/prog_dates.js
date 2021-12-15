@@ -14,7 +14,15 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   prog_dates.init({
-    date: DataTypes.DATE
+    date: {
+      type:DataTypes.DATE,
+      defaultValue:DataTypes.NOW,
+      allowNull:false,
+      validate:{
+        isDate:true,
+        
+      }
+    }
   }, {
     timestamps:false,
     sequelize,
