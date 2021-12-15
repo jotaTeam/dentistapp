@@ -1,8 +1,8 @@
-require('dotenv').config({path:'../.env'});
+require('dotenv').config();
 require('colors')
 
 const express = require('express');
-const db = require('./database/db');
+const {connection} = require('./database/db');
 const server = express();
 
 
@@ -12,16 +12,25 @@ server.use(express.urlencoded({extended:false}))
 
 //rutas
 const userRouter = require('./routes/user.routes')
-server.use('/example', userRouter);
+server.use('/user', userRouter);
+
+const causesRoutes = require('./routes/causes.routes');
+server.use('/causes', causesRoutes);
+
+const simptomsRoutes = require('./routes/simptoms.routes');
+server.use('/simptoms', simptomsRoutes);
 
 const PORT = process.env.PORT || 3000 ;
+
 
 
 //levantamos el servidor
 server.listen(PORT , ()=> {
   console.log(`\n${'Servidor levantado en puerto'.bold} ${PORT.toString().green.bold}\n`);
-  db.sync({force:true})
+  connection.sync({
+    force:false,
+  })
   .then(()=>{
-    console.log(`\nconectado con ${process.env.TABLE_DATABASE.yellow}`);
+    console.log(`\nconectado con ${process.env.TABLE_DATABASE}`);
   })
 })

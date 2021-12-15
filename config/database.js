@@ -1,4 +1,6 @@
-require('dotenv').config({path:'../.env'});
+require('dotenv').config();
+
+
 
 const options = {
   username: process.env.USERNAME_DATABASE,
@@ -10,6 +12,7 @@ const options = {
     timestamp: true,
     underscore: true,
   }
+  
 }
 
 module.exports = options;
