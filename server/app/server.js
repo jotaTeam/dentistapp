@@ -26,6 +26,12 @@ server.use('/patients', patientsRoutes);
 const progDatesRoutes = require('./routes/progDates.routes');
 server.use('/dates', progDatesRoutes);
 
+const emergencyRoutes = require('./routes/emergency.routes');
+server.use('/emergency', emergencyRoutes);
+
+const medicalInfoRouter = require('./routes/medicalInfo.routes');
+server.use('/medical', medicalInfoRouter);
+
 const PORT = process.env.PORT || 3000 ;
 
 
@@ -34,7 +40,7 @@ const PORT = process.env.PORT || 3000 ;
 server.listen(PORT , ()=> {
   console.log(`\n${'Servidor levantado en puerto'.bold} ${PORT.toString().green.bold}\n`);
   connection.sync({
-    force:false,
+    force:true,
   })
   .then(()=>{
     console.log(`\nconectado con ${process.env.TABLE_DATABASE}`);
