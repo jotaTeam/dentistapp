@@ -25,4 +25,10 @@ db.Emergency =require('../models/dental_emergency')(db.connection, DataTypes);
 //!ejemplo
 //* db.User.associate(db);
 
+db.MedicalInfo.associate(db);
+db.Emergency.associate(db);
+db.Causes.associate(db);
+db.Simptoms.associate(db);
+
+
 module.exports=db;
