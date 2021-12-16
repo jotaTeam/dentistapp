@@ -1,9 +1,10 @@
 import React from 'react'
+import { AppRouter } from './routers/AppRouter';
 
 export const DentistApp = () => {
     return (
         <>
-            <h1>Bienvenido a DentistApp</h1>
+            <AppRouter/>
         </>
     )
 }

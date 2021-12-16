@@ -1,6 +1,6 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
-import { Login } from "../components/Login";
-import { DentistApp } from "../DentistApp";
+import { PublicDashboard } from "./PublicDashboard";
+import { PublicRoute } from "./PublicRoute";
 
 export const AppRouter = () => {
     return (
@@ -9,8 +9,14 @@ export const AppRouter = () => {
         
         <Routes>
 
-            <Route path="/" element={<DentistApp />} />
-            <Route path="/login" element={<Login />} />
+            <Route path="/*" element={
+            
+                <PublicRoute>
+                    <PublicDashboard/>
+                </PublicRoute>
+                
+            } />
+            
 
         </Routes>
         
