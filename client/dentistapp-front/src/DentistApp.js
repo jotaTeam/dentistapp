@@ -3,7 +3,7 @@ import React from 'react'
 export const DentistApp = () => {
     return (
         <>
-            Bienvenido a DentistApp
+            <h1>Bienvenido a DentistApp</h1>
         </>
     )
 }
