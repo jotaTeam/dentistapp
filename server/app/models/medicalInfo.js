@@ -3,20 +3,25 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class form extends Model {
+  class medicalInfo extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      medicalInfo.hasOne(models.Emergency)
+      
     }
   };
-  form.init({
-    date:{
-      type:DataTypes.DATE,
-      defaultValue:DataTypes.NOW
+  medicalInfo.init({
+    allergy:{
+      type:DataTypes.BOOLEAN,
+      defaultValue:false,
+    },
+    surgery:{
+      type:DataTypes.BOOLEAN,
+      defaultValue:false,
     },
     pain_zone:{
       type: DataTypes.STRING,
@@ -25,7 +30,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     timestamps:false,
     sequelize,
-    modelName: 'form',
+    modelName: 'medicalInfo',
   });
-  return form;
+  return medicalInfo;
 };

@@ -9,8 +9,8 @@ const options = {
   host: process.env.HOST_DATABASE,
   dialect: process.env.DIALECT_DATABASE,
   define:{
-    timestamp: true,
-    underscore: true,
+    timestamps: false,
+    underscored: true,
   }
   
 }
