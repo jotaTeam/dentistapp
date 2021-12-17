@@ -2,6 +2,7 @@ import React, { useReducer } from 'react';
 import { AuthContext } from './auth/authContext';
 import { authReducer } from './auth/authReducer';
 import { AppRouter } from './routers/AppRouter';
+import { LangProvider } from './lang/langContext';
 
 
 const init = () => {
@@ -22,9 +23,9 @@ export const DentistApp = () => {
                 user,
                 dispatch
             }}>
-
-                <AppRouter />
-
+                <LangProvider>
+                    <AppRouter />
+                </LangProvider>
             </AuthContext.Provider>
 
         </>
