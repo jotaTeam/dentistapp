@@ -1,9 +1,20 @@
 import React from 'react'
+import { FormattedMessage } from 'react-intl';
+import LanguageSelector from './LanguageSelector'
+
+
+{/*Añadido provisionalmente el LanguageSelector a Home para hacer pruebas*/ }
 
 export const Home = () => {
     return (
         <div>
-            <h1>Bienvenido a Dentist-App</h1>
+            <LanguageSelector />
+            <h1>
+                <FormattedMessage
+                    id="home.welcome"
+                    defaultMessage="Bienvenido"
+                />
+            </h1>
         </div>
     )
 }
