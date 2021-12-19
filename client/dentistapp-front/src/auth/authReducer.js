@@ -1,11 +1,5 @@
-import { types } from '../datahelpers/types'
+import { types } from '../datahelpers/types';
 
-
-
-/* const state = {
-    name: 'Nestor',
-    logged: true
-} */
 
 
 
@@ -14,21 +8,21 @@ export const authReducer = (state = {}, action) => {
     switch (action.type) {
         case types.login:
 
-        return {
-            ...action.payload,
-            logged: true
-        }
-            
+            return {
+                ...action.payload,
+                logged: true
+            };
+
         case types.logout:
 
-            return{
+            return {
                 logged: false
-            }
-    
+            };
+
         default:
             return state;
     }
 
 
 
-}
+};
