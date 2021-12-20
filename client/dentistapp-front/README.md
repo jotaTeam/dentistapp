@@ -6,3 +6,5 @@
  - Rutas principales definidas
  - Proteccion de rutas activo
  - Creación y propagación del contexto de auth (datos del login)
+ - Implementado contexto y funcionalidad de soporte de idiomas
+ - Implementado el uso de LocalData para variables de configuración
