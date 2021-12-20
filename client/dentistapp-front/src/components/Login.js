@@ -6,7 +6,7 @@ import { types } from '../datahelpers/types';
 
 export const Login = () => {
 
-    const { user, dispatch } = useContext(AuthContext);
+    const {  dispatch } = useContext(AuthContext);
 
     const navigate = useNavigate();
 
@@ -73,6 +73,10 @@ export const Login = () => {
                 navigate(lastPath, {
                     replace: true
                 });
+
+                break;
+
+                default:
 
                 break;
         }
