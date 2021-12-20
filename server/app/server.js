@@ -2,13 +2,16 @@ require('dotenv').config();
 require('colors')
 
 const express = require('express');
-const {connection} = require('./database/db');
+const cors = require('cors');
+
 const server = express();
+const {connection} = require('./database/db');
 
 
 //middlewares
 server.use(express.json())
 server.use(express.urlencoded({extended:false}))
+server.use(cors())
 
 //rutas
 const userRouter = require('./routes/user.routes')
