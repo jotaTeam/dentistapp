@@ -1,11 +1,11 @@
 import React from 'react';
-import { getPatientList } from '../../selectors/getPatientList';
+// import { getPatientList } from '../../selectors/getPatientList';
 
 export const AdminHome = () => {
 
-    const data = getPatientList();
+    // const data = getPatientList();
 
-    console.log(data);
+    // console.log(data);
 
 
     

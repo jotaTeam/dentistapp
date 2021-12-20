@@ -1,6 +1,6 @@
 import { Routes, Route, NavLink } from "react-router-dom";
 import { Urgencias } from "../components/Urgencias";
-import { Login } from "../components/Login";
+import { Login } from "../components/login/Login";
 import { Home } from "../components/Home";
 
 
