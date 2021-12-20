@@ -10,8 +10,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
-      simptoms.hasOne(models.MedicalInfo);
+    
     }
   };
   simptoms.init({
@@ -47,7 +46,10 @@ module.exports = (sequelize, DataTypes) => {
       type:DataTypes.BOOLEAN,
       defaultValue:false,
     },
-    other: DataTypes.STRING
+    other: {
+      type:DataTypes.STRING,
+      defaultValue:'Nada que destacar'
+    },
   }, {
     timestamps:false,
     sequelize,

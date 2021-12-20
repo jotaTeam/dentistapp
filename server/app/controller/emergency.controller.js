@@ -1,9 +1,12 @@
-const { Emergency } = require('../database/db');
+const { Emergency,MedicalInfo } = require('../database/db');
 
 const EmergencyController={}
   
   EmergencyController.get= async (req, res)=>{
-    Emergency.findAll()
+    Emergency.findAll({
+      include: MedicalInfo,
+      attributes:['allergy']
+    })
     .then(emergency=> res.json(emergency))
     .catch(err=>res.json(err))
 
