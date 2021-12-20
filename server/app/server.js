@@ -32,7 +32,7 @@ server.use('/emergency', emergencyRoutes);
 const medicalInfoRouter = require('./routes/medicalInfo.routes');
 server.use('/medical', medicalInfoRouter);
 
-const PORT = process.env.PORT || 3000 ;
+const PORT = process.env.PORT || 7074 ;
 
 
 
