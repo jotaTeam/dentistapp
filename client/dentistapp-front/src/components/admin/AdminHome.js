@@ -1,9 +1,8 @@
 import React from 'react';
-// import { useCreatePatient } from '../../selectors/useCreatePatient';
-// import { useDeletePatient } from '../../selectors/useDeletePatient';
-import { useGetPatientList } from '../../selectors/useGetPatientList';
-import { useGetPatientById } from '../../selectors/useGetPatientById';
-// import { useUpdatePatient } from '../../selectors/useUpdatePatient';
+import { useGetPatientList } from '../../selectors/patient/useGetPatientList';
+import { useGetPatientById } from '../../selectors/patient/useGetPatientById';
+import { useGetUserList } from '../../selectors/user/useGetUserList';
+import { useGetUserById } from '../../selectors/user/useGetUserById';
 
 export const AdminHome = () => {
 
@@ -11,29 +10,12 @@ export const AdminHome = () => {
 
     const { data: data1 } = useGetPatientList();
 
-
-
-    // useCreatePatient({
-    //     dni: `22`,
-    //     name: `Patient 2`,
-    //     lastname: 'Prueba'
-    // });
-
-    // useUpdatePatient({
-    //     dni: `22`,
-    //     name: `Patient 222`,
-    //     lastname: 'Prueba'
-    // });
-
-
-
-    // useDeletePatient({dni: '22'});
-
-
     const { data: data2 } = useGetPatientById('3');
 
 
-
+    const {data: user} = useGetUserList();
+    
+    const {data: user2} = useGetUserById(2);
 
 
 
@@ -63,7 +45,26 @@ export const AdminHome = () => {
                     ? <p >{JSON.stringify(data2)}</p>
                     : <p>loading...</p>
             }
-            <button >Crear</button>
+
+            <br />
+            <hr />
+            <h3>Listado de usuarios</h3>
+            {
+
+                user
+                    ? user.map(usertemp => <p key={usertemp.id}>{JSON.stringify(usertemp)}</p>)
+                    : <p>loading...</p>
+            }
+            <br />
+            <hr />
+            <h3>Usuario con el Id 2</h3>
+            {
+
+                user2
+                    ? <p >{JSON.stringify(user2)}</p>
+                    : <p>loading...</p>
+            }
+            
 
         </div>
     );

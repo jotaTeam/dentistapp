@@ -1,17 +1,17 @@
-import { apiUrl } from "../datahelpers/apiURL";
-import { useFetch } from "../hooks/useFetch";
+import { apiUrl } from "../../datahelpers/apiURL";
+import { useFetch } from "../../hooks/useFetch";
 
 
-export const useUpdatePatient = (patient) => {
+export const useDeletePatient = (dni) => {
 
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
     const requestOptions = {
 
-        method: 'PUT',
+        method: 'DELETE',
         headers: myHeaders,
-        body: JSON.stringify(patient)
+        body: JSON.stringify(dni)
     };
 
 
@@ -19,4 +19,5 @@ export const useUpdatePatient = (patient) => {
     const data = useFetch(apiUrl.patient, requestOptions);
 
     
+
 };

@@ -1,5 +1,5 @@
-import { apiUrl } from "../datahelpers/apiURL";
-import { useFetch } from "../hooks/useFetch";
+import { apiUrl } from "../../datahelpers/apiURL";
+import { useFetch } from "../../hooks/useFetch";
 
 
 export const useGetPatientById = (dni) => {

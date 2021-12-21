@@ -5,6 +5,11 @@ export const apiUrl = {
     
 
     patient: `http://localhost:${PORT}/patients/`,
+    user: `http://localhost:${PORT}/user/`,
+
+
+
+
     
     
 

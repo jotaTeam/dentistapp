@@ -1,15 +1,15 @@
-import { apiUrl } from "../datahelpers/apiURL";
-import { useFetch } from "../hooks/useFetch";
+import { apiUrl } from "../../datahelpers/apiURL";
+import { useFetch } from "../../hooks/useFetch";
 
 
-export const useCreatePatient = (patient) => {
+export const useUpdatePatient = (patient) => {
 
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
     const requestOptions = {
 
-        method: 'POST',
+        method: 'PUT',
         headers: myHeaders,
         body: JSON.stringify(patient)
     };
