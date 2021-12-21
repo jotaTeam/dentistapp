@@ -2,7 +2,7 @@ import React from 'react'
 import { FormattedMessage } from 'react-intl';
 import LanguageSelector from './LanguageSelector'
 
-import '../styles/common.css';
+import '../assets/styles/common.css';
 
 
 {/*Añadido provisionalmente el LanguageSelector a Home para hacer pruebas*/ }
