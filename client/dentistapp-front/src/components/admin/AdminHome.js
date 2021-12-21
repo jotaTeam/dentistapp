@@ -9,7 +9,6 @@ export const AdminHome = () => {
 
     
 
-    console.log(data);
 
 
     
