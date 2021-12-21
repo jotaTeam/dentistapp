@@ -5,7 +5,7 @@ const PatientController = require('../controller/patients.controller');
 
 
 router.get('/', PatientController.get);
-router.get('/dni', PatientController.getById);
+router.get('/:dni', PatientController.getById);
 
 router.post('/', PatientController.create);
 

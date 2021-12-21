@@ -5,7 +5,7 @@ export const apiUrl = {
     
 
     patientList: `http://localhost:${PORT}/patients/`,
-    patientById: `http://localhost:${PORT}/patients/dni/`,
+    patientById: `http://localhost:${PORT}/patients/`,
     patientCreate: `http://localhost:${PORT}/patients/`,
     patientUpdate: `http://localhost:${PORT}/patients/`,
     patientDelete: `http://localhost:${PORT}/patients/`,

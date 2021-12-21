@@ -32,7 +32,9 @@ export const useFetch = (url, requestOptions) => {
                     });
                 }
             })
-            .catch(() => {
+            .catch((e) => {
+
+                console.log(e);
 
                 setState({
                     loading: false,

@@ -2,21 +2,22 @@ import { apiUrl } from "../datahelpers/apiURL";
 import { useFetch } from "../hooks/useFetch";
 
 
-export const useCreatePatient = (patient) => {
+export const useDeletePatient = (dni) => {
 
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
     const requestOptions = {
 
-        method: 'POST',
+        method: 'DELETE',
         headers: myHeaders,
-        body: JSON.stringify(patient)
+        body: JSON.stringify(dni)
     };
 
 
 
-    const data = useFetch(apiUrl.patientCreate, requestOptions);
+    const data = useFetch(apiUrl.patientDelete, requestOptions);
 
-    
+    console.log(data);
+
 };
