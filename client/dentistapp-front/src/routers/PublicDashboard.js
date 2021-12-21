@@ -2,6 +2,7 @@ import { Routes, Route, NavLink } from "react-router-dom";
 import { Urgencias } from "../components/Urgencias";
 import { Login } from "../components/login/Login";
 import { Home } from "../components/Home";
+import { Nav } from "../components/utils/nav";
 
 
 export const PublicDashboard = () => {
@@ -10,7 +11,7 @@ export const PublicDashboard = () => {
 
             {/* TODO: Aquí iría el navbar */}
 
-            <nav>
+            {/* <nav>
 
                 <NavLink to="/">Home</NavLink>
                 <br/>
@@ -26,9 +27,9 @@ export const PublicDashboard = () => {
                 <br/>
                 <NavLink to="/admin/control">Admin control</NavLink>
 
-            </nav>
+            </nav> */}
 
-            
+            <Nav />
 
 
             {/* Esta parte se puede convertir en un <div> y así controlar el estilo del contenido */}
