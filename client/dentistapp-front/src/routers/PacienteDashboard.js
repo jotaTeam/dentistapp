@@ -1,13 +1,14 @@
 import { Routes, Route, NavLink } from "react-router-dom";
 import { PacienteHome } from "../components/paciente/PacienteHome";
 import { Cita } from "../components/paciente/Cita";
+import { Nav } from "../components/utils/nav";
 
 export const PacienteDashboard = () => {
     return (
         <>
             {/* TODO: Aquí iría el navbar */}
 
-            <nav>
+            {/* <nav>
 
                 <NavLink to="/">Home</NavLink>
                 <br/>
@@ -23,7 +24,9 @@ export const PacienteDashboard = () => {
                 <br/>
                 <NavLink to="/admin/control">Admin control</NavLink>
 
-            </nav>
+            </nav> */}
+
+            <Nav />
 
 
             {/* Esta parte se puede convertir en un <div> y así controlar el estilo del contenido */}
