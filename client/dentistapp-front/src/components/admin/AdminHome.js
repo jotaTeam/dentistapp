@@ -3,12 +3,13 @@ import React from 'react';
 // import { useDeletePatient } from '../../selectors/useDeletePatient';
 import { useGetPatientList } from '../../selectors/useGetPatientList';
 import { useGetPatientById } from '../../selectors/useGetPatientById';
+// import { useUpdatePatient } from '../../selectors/useUpdatePatient';
 
 export const AdminHome = () => {
 
     // const data1 = null;
 
-    const { data: data1   } = useGetPatientList();
+    const { data: data1 } = useGetPatientList();
 
 
 
@@ -18,16 +19,20 @@ export const AdminHome = () => {
     //     lastname: 'Prueba'
     // });
 
-
+    // useUpdatePatient({
+    //     dni: `22`,
+    //     name: `Patient 222`,
+    //     lastname: 'Prueba'
+    // });
 
 
 
     // useDeletePatient({dni: '22'});
 
-    
-    const {data: data2} = useGetPatientById('3');
 
-    
+    const { data: data2 } = useGetPatientById('3');
+
+
 
 
 
@@ -49,8 +54,8 @@ export const AdminHome = () => {
             }
 
 
-            <br/>
-            <hr/>
+            <br />
+            <hr />
             <h3>Paciente con el DNI nº3</h3>
             {
 

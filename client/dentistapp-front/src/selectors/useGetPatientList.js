@@ -5,7 +5,7 @@ export const useGetPatientList = () => {
 
   
 
-  const data = useFetch(apiUrl.patientList);
+  const data = useFetch(apiUrl.patient);
 
   return data; 
     

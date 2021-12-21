@@ -4,8 +4,8 @@ import { useFetch } from "../hooks/useFetch";
 
 export const useGetPatientById = (dni) => {
 
-    
-    const data = useFetch(apiUrl.patientById+dni);
+
+    const data = useFetch(apiUrl.patient+dni);
 
     return data;
 };
