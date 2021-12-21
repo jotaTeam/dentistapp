@@ -1,11 +1,15 @@
 import React from 'react';
-// import { getPatientList } from '../../selectors/getPatientList';
+import { useGetPatientList } from '../../selectors/useGetPatientList';
 
 export const AdminHome = () => {
 
-    // const data = getPatientList();
+    const data = useGetPatientList();
 
-    // console.log(data);
+    console.log(data);
+
+    
+
+    console.log(data);
 
 
     
@@ -13,6 +17,7 @@ export const AdminHome = () => {
     return (
         <div>
             <h1>Home del admin</h1>
+
         </div>
     )
 }
