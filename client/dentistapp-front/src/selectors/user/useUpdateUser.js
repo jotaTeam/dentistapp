@@ -18,5 +18,7 @@ export const useUpdateUser = (user, id) => {
 
     const data = useFetch(apiUrl.user+id, requestOptions);
 
+    return data;
+
     
 };

@@ -18,6 +18,8 @@ export const useDeletePatient = (dni) => {
 
     const data = useFetch(apiUrl.patient, requestOptions);
 
+    return data;
+
     
 
 };

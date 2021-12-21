@@ -18,5 +18,7 @@ export const useCreateUser = (user) => {
 
     const data = useFetch(apiUrl.user, requestOptions);
 
+    return data;
+
     
 };

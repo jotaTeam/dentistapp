@@ -18,5 +18,7 @@ export const useUpdatePatient = (patient) => {
 
     const data = useFetch(apiUrl.patient, requestOptions);
 
+    return data;
+
     
 };

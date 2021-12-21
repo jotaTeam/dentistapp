@@ -18,5 +18,7 @@ export const useCreatePatient = (patient) => {
 
     const data = useFetch(apiUrl.patient, requestOptions);
 
+    return data;
+
     
 };
