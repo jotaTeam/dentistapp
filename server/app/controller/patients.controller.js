@@ -9,7 +9,7 @@ PatientsController.get = async(req, res) =>{
 }
 
 PatientsController.getById = async(req, res) =>{
-  Patients.findByPk(req.body.dni)
+  Patients.findByPk(req.params.dni)
   .then(patient=> res.json(patient))
   .catch(err=>res.json(err))
 }

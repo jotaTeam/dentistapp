@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
 
-export const useFetch = (url) => {
+export const useFetch = (url, requestOptions) => {
 
     const isMounted = useRef(true);
 
@@ -20,7 +20,7 @@ export const useFetch = (url) => {
 
         setState({ data: null, loading: true, error: null });
 
-        fetch(url)
+        fetch(url, requestOptions)
             .then(resp => resp.json())
             .then(data => {
                 if (isMounted.current) {
@@ -32,7 +32,9 @@ export const useFetch = (url) => {
                     });
                 }
             })
-            .catch(() => {
+            .catch((e) => {
+
+                console.log(e);
 
                 setState({
                     loading: false,
