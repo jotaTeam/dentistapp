@@ -5,8 +5,6 @@ import LanguageSelector from './LanguageSelector'
 import '../assets/styles/common.css';
 
 
-{/*Añadido provisionalmente el LanguageSelector a Home para hacer pruebas*/ }
-
 export const Home = () => {
     return (
         <div>
