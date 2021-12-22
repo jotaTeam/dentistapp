@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom'
+import {FormattedMessage} from 'react-intl';
 
 export const Nav = () => {
   
@@ -8,37 +9,58 @@ export const Nav = () => {
     routes:[
       {
         path:'/',
-        title:'Home',
+        title: <FormattedMessage
+        id="nav.home"
+        defaultMessage="Inicio"
+      />,
         key:'Home'
       },
       {
         path:'/login',
-        title:'Login',
+        title: <FormattedMessage
+        id="nav.login"
+        defaultMessage="Login"
+      />,
         key:'Login'
       },
       {
         path:'/urgencias',
-        title:'Urgencias',
+        title: <FormattedMessage
+        id="nav.emergencies"
+        defaultMessage="Urgencias"
+      />,
         key:'Urgencias'
       },
       {
         path:'/paciente',
-        title:'Pacientes home',
+        title: <FormattedMessage
+        id="nav.patients"
+        defaultMessage="Pacientes"
+      />,
         key:'Pacientes'
       },
       {
         path:'/paciente/citas',
-        title:'Citas',
+        title: <FormattedMessage
+        id="nav.appointments"
+        defaultMessage="Citas"
+      />,
         key:'Citas'
       },
       {
         path:'/admin',
-        title:'Admin home',
+        title: <FormattedMessage
+        id="nav.adminhome"
+        defaultMessage="Admin Home"
+      />,
         key:'Admin'
       },
       {
         path:'/admin/control',
-        title:'Admin control',
+        title: <FormattedMessage
+        id="nav.admincontrol"
+        defaultMessage="Admin Control"
+      />,
         key:'Admin2'
       },
     ]

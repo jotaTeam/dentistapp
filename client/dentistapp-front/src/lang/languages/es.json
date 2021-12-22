@@ -1,3 +1,11 @@
 {
-    "home.welcome": "Bienvenido a Dentist-App"
+    "home.welcome": "Bienvenido a Dentist-App",
+
+    "nav.home": "Inicio",
+    "nav.login": "Acceso",
+    "nav.emergencies": "Urgencias",
+    "nav.patients": "Pacientes",
+    "nav.appointments": "Citas",
+    "nav.adminhome": "Admin home",
+    "nav.admincontrol": "Admin control"
 }
