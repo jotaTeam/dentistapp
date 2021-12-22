@@ -18,7 +18,7 @@ export const Form = () => {
 
     return (
         <form onSubmit={onSubmitHandle}>
-            <h1>Formulario de emergencias</h1>
+            <h1>Formulario de urgencias</h1>
 
             <div>
                 <h3>Datos personales</h3>
@@ -91,7 +91,7 @@ export const Form = () => {
             <hr />
 
             <div>
-                <h3>¿Es alérgico algún alimentos/medicamento/producto?</h3>
+                <h3>¿Es alérgico algún alimento/medicamento/producto?</h3>
 
                 <input type="radio"
                     onChange={handleInputChange}
@@ -225,7 +225,7 @@ export const Form = () => {
                     onChange={handleInputChange}
                     name="oral_disease"
                     value="true" />
-                <label for="oral_disease"> Enfermedades orales (cancer oral, herpes labial…)</label>
+                <label for="oral_disease"> Enfermedades orales (cáncer oral, herpes labial…)</label>
 
                 {/*Creo que falta la causa de traumatismo oral en la BBDD*/}
                 <input type="checkbox"
