@@ -14,6 +14,7 @@ MedicalInfoController.get= async(req, res)=>{
     .catch(err=>res.json(err))
   }
   MedicalInfoController.create= async(req, res)=>{
+    console.log(req.body);
     MedicalInfo.create(req.body)
     .then(medInfo=>res.json(medInfo))
     .catch(err=>res.json(err))
