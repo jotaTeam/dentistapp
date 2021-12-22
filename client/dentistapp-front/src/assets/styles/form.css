@@ -1,0 +1,30 @@
+div{
+    margin: 1em;
+}
+
+label{
+
+    margin: 0.5em;
+}
+
+input{
+
+    margin: 0.5em;
+}
+
+.datos label{
+    display: inline-block;
+    width: 150px;
+    
+}
+
+.boton{
+    width: 9em;
+    height: 4em;
+    border-radius: 4em;
+    color: white;
+    font-weight: bolder;
+    font-size: 0.8em;
+    background-color:rgb(0, 189, 157);
+    
+}
