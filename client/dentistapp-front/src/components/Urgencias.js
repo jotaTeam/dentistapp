@@ -1,9 +1,10 @@
 import React from 'react'
+import { Form } from './utils/Form'
 
 export const Urgencias = () => {
     return (
         <>
-            <h1>Formulario de urgencias</h1>
+            <Form/>
         </>
     )
 }

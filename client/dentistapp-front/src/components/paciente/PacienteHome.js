@@ -1,11 +1,10 @@
 import React from 'react'
-import { Form } from '../utils/Form'
 
 
 export const PacienteHome = () => {
     return (
         <div>
-            <Form/>
+            <h1>Home del paciente</h1>
         </div>
     )
 }
