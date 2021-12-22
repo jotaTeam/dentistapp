@@ -43,7 +43,7 @@ const PORT = process.env.PORT || 7074 ;
 server.listen(PORT , ()=> {
   console.log(`\n${'Servidor levantado en puerto'.bold} ${PORT.toString().green.bold}\n`);
   connection.sync({
-    force:false,
+    force:true,
   })
   .then(()=>{
     console.log(`\nconectado con ${process.env.TABLE_DATABASE}`);

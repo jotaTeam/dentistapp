@@ -16,14 +16,22 @@ module.exports = (sequelize, DataTypes) => {
       
     }
   };
-  medicalInfo.init({
+  medicalInfo.init({//todo add description to allergy and pathology
     allergy:{
       type:DataTypes.BOOLEAN,
       defaultValue:false,
     },
-    surgery:{
+    descriptionAllergy:{
+      type:DataTypes.STRING,
+      defaultValue: 'sin alergias previas'
+    },
+    pathology:{ //todo pathology
       type:DataTypes.BOOLEAN,
       defaultValue:false,
+    },
+    descriptionPathology:{
+      type:DataTypes.STRING,
+      defaultValue: 'sin alergias previas'
     },
     pain_zone:{
       type: DataTypes.STRING,
