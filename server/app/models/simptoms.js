@@ -46,7 +46,7 @@ module.exports = (sequelize, DataTypes) => {
       type:DataTypes.BOOLEAN,
       defaultValue:false,
     },
-    other: {
+    otherSimptoms: { 
       type:DataTypes.STRING,
       defaultValue:'Nada que destacar'
     },

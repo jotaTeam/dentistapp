@@ -34,7 +34,7 @@ module.exports = (sequelize, DataTypes) => {
       type:DataTypes.BOOLEAN,
       defaultValue:false,
     },
-    other: DataTypes.STRING
+    otherCauses: DataTypes.STRING 
   }, {
     timestamps:false,
     sequelize,
