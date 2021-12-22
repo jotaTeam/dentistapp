@@ -1,21 +1,23 @@
 import React from 'react';
-import { useGetPatientList } from '../../selectors/patient/useGetPatientList';
-import { useGetPatientById } from '../../selectors/patient/useGetPatientById';
-import { useGetUserList } from '../../selectors/user/useGetUserList';
-import { useGetUserById } from '../../selectors/user/useGetUserById';
+import { useGetListCRUD } from '../../crud/useGetListCRUD';
+import { apiUrl } from '../../datahelpers/apiURL';
+import { useGetByIdCRUD } from '../../crud/useGetByIdCRUD';
 
 export const AdminHome = () => {
 
     // const data1 = null;
 
-    const { data: data1 } = useGetPatientList();
+    const { data: data1 } = useGetListCRUD(apiUrl.patient);
 
-    const { data: data2 } = useGetPatientById('3');
+    const { data: data2 } = useGetByIdCRUD('3', apiUrl.patient);
 
 
-    const {data: user} = useGetUserList();
+    const {data: user} = useGetListCRUD(apiUrl.user);
     
-    const {data: user2} = useGetUserById(2);
+    const {data: user2} = useGetByIdCRUD('2', apiUrl.user);
+
+
+    
 
 
 

@@ -21,7 +21,7 @@ PatientsController.create = async(req, res) =>{
 }
 
 PatientsController.update = async(req, res) =>{
-  const {dni} = req.body
+  const dni = req.params.dni
   Patients.update(req.body,{
     where:{
       dni
@@ -32,7 +32,7 @@ PatientsController.update = async(req, res) =>{
 }
 
 PatientsController.delete = async(req, res) =>{
-  const {dni} = req.body
+  const dni = req.params.dni
   Patients.destroy({
     where:{
       dni
