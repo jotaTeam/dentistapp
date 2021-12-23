@@ -1,3 +1,51 @@
 {
-    "home.welcome": "Bienvenido a Dentist-App"
+    "home.welcome": "Bienvenido a DentisApp",
+
+    "nav.home": "Inicio",
+    "nav.login": "Acceso",
+    "nav.emergencies": "Urgencias",
+    "nav.patients": "Pacientes",
+    "nav.appointments": "Citas",
+    "nav.adminhome": "Admin home",
+    "nav.admincontrol": "Admin control",
+
+
+    "form.title": "Formulario de urgencias",
+
+    "form.data": "Datos personales",
+    "form.name": "Nombre:",
+    "form.surname": "Apellidos:",
+    "form.dni": "DNI:",
+    "form.telephone": "Teléfono:",
+
+    "form.yes": "Sí",
+    "form.no": "No",
+    "form.specify": "En caso afirmativo, especificar:",
+    "form.others": "Otros:",
+    "form.send": "Enviar",
+
+    "form.pathology": "¿Ha tenido alguna patología oral previa o la presenta en la actualidad?",
+    "form.allergy": "¿Es alérgico algún alimento/ medicamento/ producto?",
+
+    "form.symptoms": "Síntomas y signos",
+    "form.symptoms.bleeding":"Sangrado",
+    "form.symptoms.pain":"Dolor",
+    "form.symptoms.dentalmov":"Movilidad dental",
+    "form.symptoms.ulcers":"Úlceras",
+    "form.symptoms.dentalstains":"Manchas dentales",
+    "form.symptoms.gums":"Inflamación de encías",
+    "form.symptoms.badbreath":"Mal aliento",
+    "form.symptoms.sensitivity":"Sensibilidad",
+
+    "form.location": "Localización del dolor",
+
+    "form.cause": "¿A qué asocia este problema?",
+    "form.cause.cavity": "Caries",
+    "form.cause.fracture": "Fractura",
+    "form.cause.gums": "Problemas de encías",
+    "form.cause.hygiene": "Productos de higiene oral",
+    "form.cause.diseases": "Enfermedades orales (cáncer oral, herpes labial… )",
+    "form.cause.trauma": "Traumatismo oral"
+
+
 }
