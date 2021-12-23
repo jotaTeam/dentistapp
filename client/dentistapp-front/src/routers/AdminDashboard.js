@@ -3,7 +3,7 @@ import { AdminHome } from "../components/admin/AdminHome";
 import { CitasList } from '../components/admin/CitasList';
 import { ControlHoras } from '../components/admin/ControlHoras';
 import { UrgenciasList } from '../components/admin/UrgenciasList';
-import { Nav } from "../components/utils/Nav";
+import { Nav } from "../components/utils/nav";
 
 export const AdminDashboard = () => {
     return (
