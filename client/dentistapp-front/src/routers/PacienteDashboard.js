@@ -1,7 +1,7 @@
 import { Routes, Route, NavLink } from "react-router-dom";
 import { PacienteHome } from "../components/paciente/PacienteHome";
 import { Cita } from "../components/paciente/Cita";
-import { Nav } from "../components/utils/Nav";
+import { Nav } from "../components/utils/nav";
 
 export const PacienteDashboard = () => {
     return (
