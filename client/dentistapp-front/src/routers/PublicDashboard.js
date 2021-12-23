@@ -3,6 +3,7 @@ import { Urgencias } from "../components/Urgencias";
 import { Login } from "../components/login/Login";
 import { Home } from "../components/Home";
 import { Nav } from "../components/utils/Nav";
+import LanguageSelector from "../components/LanguageSelector";
 
 
 export const PublicDashboard = () => {
@@ -10,6 +11,7 @@ export const PublicDashboard = () => {
         <>
 
             <Nav />
+            <LanguageSelector />
 
 
             {/* Esta parte se puede convertir en un <div> y así controlar el estilo del contenido */}
