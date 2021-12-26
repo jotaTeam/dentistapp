@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-     dental_emergency.hasOne(models.MedicalInfo)
+     dental_emergency.hasOne(models.medicalInfo)
      
     }
   };
@@ -23,19 +23,23 @@ module.exports = (sequelize, DataTypes) => {
         len:[2-20],
       }
     },
+    surnames: {
+      type:DataTypes.STRING,
+      allowNull:false,
+      validate:{
+        isAlpha:true,
+        len:[2-50],
+      }
+    },
     phone: {
       type:DataTypes.INTEGER,
       allowNull:false,
       validate:{
         isNumeric:true,
         len:9,
-
       }
     },
-    creation_date: {
-      type:DataTypes.DATE,
-      defaultValue:DataTypes.NOW
-    },
+    
   }, {
     sequelize,
     timestamps:false,

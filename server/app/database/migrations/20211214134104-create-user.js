@@ -8,15 +8,21 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      firstName: {
-        type: Sequelize.STRING
+      name: {
+        type:DataTypes.STRING,
+        allowNull:false,
+        validate:{
+          len:[2,20]
+        }
       },
-      lastName: {
-        type: Sequelize.STRING
-      },
+      password: DataTypes.STRING,
       email: {
-        type: Sequelize.STRING
+        type:DataTypes.STRING,
+        validate:{
+          isEmail:true,
+        }
       },
+      google_token:DataTypes.STRING,
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

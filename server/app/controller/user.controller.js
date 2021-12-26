@@ -1,5 +1,5 @@
-const { User } = require("../database/db");
-
+// const { User } = require("../database/db");
+const { User } = require("../models/index");
 
 const userController ={};
 

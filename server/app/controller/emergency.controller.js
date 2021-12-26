@@ -1,5 +1,5 @@
-const { Emergency,MedicalInfo, Causes, Simptoms } = require('../database/db');
-
+// const { Emergency,MedicalInfo, Causes, Simptoms } = require('../database/db');
+const { Emergency,MedicalInfo, Causes, Simptoms } = require('../models/index');
 const EmergencyController={}
   
   EmergencyController.get= async (req, res)=>{

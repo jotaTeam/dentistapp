@@ -1,6 +1,7 @@
 //TODO terminar controlador clinicas
 
-const { DentalClinic } = require('../database/db');
+// const { DentalClinic } = require('../database/db');
+const { DentalClinic } = require('../models/index');
 
 const DentalClinicController = {};
 

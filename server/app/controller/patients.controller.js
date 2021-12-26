@@ -1,4 +1,5 @@
-const { Patients } =require('../database/db');
+// const { Patients } =require('../database/db');
+const { Patients } =require('../models/index');
 
 const PatientsController={};
 
