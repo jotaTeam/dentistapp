@@ -1,6 +1,7 @@
 
 
-const { ProgDates } = require('../database/db');
+// const { ProgDates } = require('../database/db');
+const { ProgDates } = require('../models/index');
 
 const ProgDatesController= {};
 

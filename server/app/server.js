@@ -5,7 +5,10 @@ const express = require('express');
 const cors = require('cors');
 
 const server = express();
-const {connection} = require('./database/db');
+
+//!const {connection} = require('./database/db'); //probando  conexion desde archivo index
+
+const { sequelize } = require('../app/models/index');
 
 
 //middlewares
@@ -42,8 +45,9 @@ const PORT = process.env.PORT || 7074 ;
 //levantamos el servidor
 server.listen(PORT , ()=> {
   console.log(`\n${'Servidor levantado en puerto'.bold} ${PORT.toString().green.bold}\n`);
-  connection.sync({
-    force:false,
+  // !connection.sync({
+    sequelize.sync({
+    force:true,
   })
   .then(()=>{
     console.log(`\nconectado con ${process.env.TABLE_DATABASE}`);

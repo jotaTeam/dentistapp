@@ -1,6 +1,8 @@
 //TODO terminar controlar formulario si no
 
-const { MedicalInfo } = require('../database/db');
+// const { MedicalInfo } = require('../database/db');
+const { MedicalInfo } = require('../models/index');
+
 
 const MedicalInfoController={}
 MedicalInfoController.get= async(req, res)=>{

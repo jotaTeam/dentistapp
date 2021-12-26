@@ -8,6 +8,10 @@ const options = {
   database: process.env.TABLE_DATABASE,
   host: process.env.HOST_DATABASE,
   dialect: process.env.DIALECT_DATABASE,
+
+  seederStorage:'sequelize',
+  seederStorageTableName:'SequelizeSeeds',
+
   define:{
     timestamps: false,
     underscored: true,

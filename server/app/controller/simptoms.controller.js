@@ -1,4 +1,5 @@
-const { Simptoms } = require('../database/db');
+// const { Simptoms } = require('../database/db');
+const { Simptoms } = require('../models/index');
 
 const controllerSimptoms ={};
 

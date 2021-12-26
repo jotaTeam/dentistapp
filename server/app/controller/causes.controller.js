@@ -1,4 +1,6 @@
-const { Causes } = require('../database/db');
+// const { Causes } = require('../database/db');
+const { Causes } = require('../models/index');
+
 const causes = require('../models/causes');
 
 const CausesController ={};

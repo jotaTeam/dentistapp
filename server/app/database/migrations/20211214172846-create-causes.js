@@ -9,19 +9,24 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       cavity: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.BOOLEAN,
+        defaultValue:false,
       },
       fracture: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.BOOLEAN,
+        defaultValue:false,
       },
       gums_problems: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.BOOLEAN,
+        defaultValue:false,
       },
       oral_hygiene: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.BOOLEAN,
+        defaultValue:false,
       },
       oral_disease: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.BOOLEAN,
+        defaultValue:false,
       },
       other: {
         type: Sequelize.STRING

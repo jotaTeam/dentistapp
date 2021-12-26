@@ -9,10 +9,29 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       name: {
-        type: Sequelize.STRING
+        type:DataTypes.STRING,
+        allowNull:false,
+        validate:{
+          isAlpha:true,
+          len:[2-20],
+        }
+      },
+      surnames: {
+        type:DataTypes.STRING,
+        allowNull:false,
+        validate:{
+          isAlpha:true,
+          len:[2-50],
+        }
       },
       phone: {
-        type: Sequelize.INTEGER
+        type:DataTypes.INTEGER,
+        allowNull:false,
+        validate:{
+          isNumeric:true,
+          len:9,
+  
+        }
       },
       creation_date: {
         type: Sequelize.DATE
