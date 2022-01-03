@@ -1,12 +1,12 @@
 // const { Emergency,MedicalInfo, Causes, Simptoms } = require('../database/db');
-const { Emergency,MedicalInfo, Causes, Simptoms } = require('../models/index');
+const { dental_emergency,medicalInfo, causes, simptoms } = require('../models/index');
 const EmergencyController={}
   
   EmergencyController.get= async (req, res)=>{
-    Emergency.findAll({
+    dental_emergency.findAll({
       include: {
-        model: MedicalInfo,
-        include: [Causes,Simptoms]
+        model: medicalInfo,
+        include: [causes,simptoms]
       }  
     })
     .then(emergency=> res.json(emergency))
@@ -15,7 +15,7 @@ const EmergencyController={}
   }
 
   EmergencyController.getBiId= async (req,res)=>{
-    Emergency.findByPk(req.params.id)
+    dental_emergency.findByPk(req.params.id)
     .then(emergency=> res.json(emergency))
     .catch(err=>res.json(err))
 
@@ -30,7 +30,7 @@ const EmergencyController={}
 
   EmergencyController.update= async (req,res)=>{
     const {id} = req.params; 
-    Emergency.update(req.body,{
+    dental_emergency.update(req.body,{
       where:{
         id
       }
@@ -42,7 +42,7 @@ const EmergencyController={}
 
   EmergencyController.delete= async (req,res)=>{
     const {id} = req.params;
-    Emergency.destroy({where:{
+    dental_emergency.destroy({where:{
       id
     }})
     .then(emergency=> res.json(emergency))
@@ -50,24 +50,46 @@ const EmergencyController={}
 
   }
 
+  //TODO metodo es una prueba para probar el que el token sea valido
+  EmergencyController.getWhitAuth = async(req, res)=>{
+    // let emer = await dental_emergency.findAll()
+    // console.log(emer);
+    // res.json(emer);
+    gety(req,res)
+    
+    
+  }
+  const gety = (req,res)=>{
+    dental_emergency.findAll({
+      include: {
+        model: medicalInfo,
+        include: [causes,simptoms]
+      }  
+    })
+    .then(emergency=> res.json(emergency))
+    .catch(err=>res.json(err))
+}
+
   const newEmergency = async( values ) =>{
-    Emergency.create(emergencyValues(values))
+    console.log(values);
+    dental_emergency.create(emergencyValues(values))
     .then(emergency=> {
       const emergencyId =emergency.dataValues.id
-      MedicalInfo.create(medicalInfoValues(values,emergencyId))
+      medicalInfo.create(medicalInfoValues(values,emergencyId))
       .then(medicalinfo=> {
         const medicalInfoId = medicalinfo.dataValues.id;
-        Causes.create(causesValues(values,medicalInfoId));
-        Simptoms.create(simptomsValues(values,medicalInfoId))
+        causes.create(causesValues(values,medicalInfoId));
+        simptoms.create(simptomsValues(values,medicalInfoId))
       })
     })
     .catch(err=>console.log(err))
   }
 
-  const emergencyValues = ({name,phone})=>{
+  const emergencyValues = ({name,phone,surnames})=>{
     return{
       name,
-      phone
+      phone,
+      surnames
     }
   }
   

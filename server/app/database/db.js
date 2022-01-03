@@ -19,7 +19,7 @@ db.DentalClinic = require('../models/dental_clinic')(db.connection, DataTypes);
 db.MedicalInfo = require('../models/medicalInfo')(db.connection, DataTypes);
 db.Patients = require('../models/patient')(db.connection, DataTypes);
 db.Simptoms= require('../models/simptoms')(db.connection, DataTypes);
-db.Emergency =require('../models/dental_emergency')(db.connection, DataTypes);
+db.Emergency = require('../models/dental_emergency')(db.connection, DataTypes);
 
 //relaciones
 //!ejemplo

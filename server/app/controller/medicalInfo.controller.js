@@ -1,17 +1,17 @@
 //TODO terminar controlar formulario si no
 
 // const { MedicalInfo } = require('../database/db');
-const { MedicalInfo } = require('../models/index');
+const { medicalInfo } = require('../models/index');
 
 
 const MedicalInfoController={}
 MedicalInfoController.get= async(req, res)=>{
-    MedicalInfo.findAll()
+    medicalInfo.findAll()
     .then(medInfo=>res.json(medInfo))
     .catch(err=>res.json(err))
   }
   MedicalInfoController.getById= async(req, res)=>{
-    MedicalInfo.findByPk(req.params.id)
+    medicalInfo.findByPk(req.params.id)
     .then(medInfo=>res.json(medInfo))
     .catch(err=>res.json(err))
   }
@@ -23,7 +23,7 @@ MedicalInfoController.get= async(req, res)=>{
   }
   MedicalInfoController.update= async(req, res)=>{
     const {id} = req.params;
-    MedicalInfo.update(req.body,{
+    medicalInfo.update(req.body,{
       where:{
         id,
       }
@@ -33,7 +33,7 @@ MedicalInfoController.get= async(req, res)=>{
   }
   MedicalInfoController.delete= async(req, res)=>{
     const {id} = req.params;
-    MedicalInfo.destroy({where:{
+    medicalInfo.destroy({where:{
       id,
     }})
     .then(medInfo=>res.json(medInfo))
