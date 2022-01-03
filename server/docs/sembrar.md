@@ -37,7 +37,7 @@ module.exports = {
      await queryInterface.bulkInsert('users',users , {});
   
   },
- //esta se ejucata cuando hacemos el proceso inverso a la siembra
+ //esta se ejecuta cuando hacemos el proceso inverso a la siembra
   down: async (queryInterface, Sequelize) => {
 
      await queryInterface.bulkDelete('People', null, {});
