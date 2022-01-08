@@ -1,7 +1,6 @@
 import { useFetch } from "../hooks/useFetch";
 
-
-export const useDeleteCRUD = (id, url) => {
+export const useDeleteData = (id, url) => {
 
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
