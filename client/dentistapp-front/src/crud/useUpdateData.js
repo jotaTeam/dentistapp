@@ -1,7 +1,6 @@
 import { useFetch } from "../hooks/useFetch";
 
-
-export const useUpdateUser = (sentData, id, url) => {
+export const useUpdateData = (sentData, id, url) => {
 
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");

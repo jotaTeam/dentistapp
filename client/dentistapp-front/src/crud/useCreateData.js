@@ -1,7 +1,6 @@
 import { useFetch } from "../hooks/useFetch";
 
-
-export const useCreateCRUD = (sentData, url) => {
+export const useCreateData = (sentData, url) => {
 
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
