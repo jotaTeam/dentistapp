@@ -1,16 +1,27 @@
 import React, {useContext} from 'react';
 import es from './../assets/img/spain.png';
 import en from './../assets/img/united-kingdom.png';
+import logo from './../assets/img/logo/dt_logo_2.svg';
 import {langContext} from './../lang/langContext';
+import { Link } from 'react-router-dom';
 
 const LanguageSelector = () => {
 
     const lang = useContext(langContext);
     return (
+
+        <section class="menu-cont">
+
+        <div class="logo-cont">
+        <Link to="/" ><img class="menu-logo" src={logo} alt="dentist" width='40px'></img></Link>
+       
+        </div>  
+
         <div className="langButtons">
-            <button onClick={() => lang.provideLanguage('es')}><img src={es} alt="" width='30px' /></button>
-            <button onClick={() => lang.provideLanguage('en')}><img src={en} alt="" width='30px' /></button>
+            <button onClick={() => lang.provideLanguage('es')}><img src={es} alt="" width='40px' /></button>
+            <button onClick={() => lang.provideLanguage('en')}><img src={en} alt="" width='40px' /></button>
         </div>
+        </section>
     );
 
 }
