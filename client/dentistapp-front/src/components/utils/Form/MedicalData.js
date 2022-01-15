@@ -1,9 +1,11 @@
-/*
-import React from "react";
 import { FormattedMessage } from "react-intl";
-
+import { useForm } from '../../../hooks/useForm';
 
 export const MedicalData = () => {
+    
+    const [formData, handleInputChange] = useForm({
+
+    });
 
     return (
         <div>
@@ -56,7 +58,6 @@ export const MedicalData = () => {
                 />
                 <br />
             </div>
-            <hr />
 
             <div>
                 <h3>
@@ -108,4 +109,3 @@ export const MedicalData = () => {
         </div>
     )
 }
-*/

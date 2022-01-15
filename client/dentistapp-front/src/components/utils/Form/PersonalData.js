@@ -1,9 +1,12 @@
-/*
-import React from "react";
+import { useForm } from '../../../hooks/useForm';
 import { FormattedMessage } from "react-intl";
 
-
 export const PersonalData = () => {
+    
+    const [formData, handleInputChange] = useForm({
+
+    });
+
 
     return (
         <div>
@@ -71,4 +74,4 @@ export const PersonalData = () => {
         </div>
     )
 }
-*/
+

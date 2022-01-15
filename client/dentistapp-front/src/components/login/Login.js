@@ -68,7 +68,7 @@ export const Login = () => {
                 !user.logged
                     ? <form onSubmit={handleLogin}>
 
-                                        <input class="user-login-input"
+                                        <input className="user-login-input"
                                             type="text"
                                             name="name"
                                             values={newUser.name}
@@ -78,8 +78,8 @@ export const Login = () => {
                                         />
                                   
         
-                                    <div class="radio-cont">
-                                        <input class="radio-login-option"
+                                    <div className="radio-cont">
+                                        <input className="radio-login-option"
                                             type="radio"
                                             name="pass"
                                             id="radio-admin"
@@ -87,13 +87,13 @@ export const Login = () => {
                                             onChange={handleInputChange}
 
                                         />
-                                        <label class="radio-login-label"
+                                        <label className="radio-login-label"
                                         for="radio-admin"
                                         >
                                         Administración
                                         </label>
                                     
-                                        <input class="radio-login-option"
+                                        <input className="radio-login-option"
                                             type="radio"
                                             name="pass"
                                             id="radio-paciente"
@@ -101,7 +101,7 @@ export const Login = () => {
                                             onChange={handleInputChange}
                                          
 
-                                        /><label class="radio-login-label"
+                                        /><label className="radio-login-label"
                                         for="radio-paciente"
                                         >
                                         Paciente

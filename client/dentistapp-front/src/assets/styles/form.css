@@ -1,9 +1,4 @@
-div{
-    margin: 1em;
-}
-
 label{
-
     margin: 0.5em;
 }
 
@@ -18,7 +13,7 @@ input{
     
 }
 
-.boton{
+.urgency-btn{
     width: 9em;
     height: 4em;
     border-radius: 4em;
@@ -26,5 +21,34 @@ input{
     font-weight: bolder;
     font-size: 0.8em;
     background-color:rgb(0, 189, 157);
-    
+    display: none;
 }
+
+.form-header{
+    width:100%;
+    height: 110px;
+    background-color: rgb(147, 224, 211);
+}
+
+.medical, .symptom, .cause, .pain{
+    display: none;
+}
+
+.formCont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formCont form{
+    margin: auto;
+    background-color: aquamarine;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4em 0;
+}
+
