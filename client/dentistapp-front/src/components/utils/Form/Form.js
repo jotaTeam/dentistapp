@@ -19,69 +19,44 @@ export const Form = () => {
 
     //const [isReady, setIsReady] = useState(false);
 
-   /* const componentList = [
+    const formComponents = [
         <PersonalData
+            formData={formData}
             handleInputChange={handleInputChange}
-            formData={formData}/>,
+        />,
+        <MedicalData
+            formData={formData}
+            handleInputChange={handleInputChange}
+        />,
         <Symptoms
+            formData={formData}
             handleInputChange={handleInputChange}
-            formData={formData}/>,
+        />,
         <PainLocation
+            formData={formData}
             handleInputChange={handleInputChange}
-            formData={formData}/>,
-        <MedicalData
-            handleInputChange={handleInputChange}
-            formData={formData}/>,
+        />,
         <Causes
+            formData={formData}
             handleInputChange={handleInputChange}
-            formData={formData}/>, 
-        <MedicalData
-            handleInputChange={handleInputChange}
-            formData={formData}/>,
-        <UrgenciasValidator
-            formData={formData}/>
-            
-    ];*/
+        />
+    ];
 
-    const [{value,firstPosition}, setPosition] = useState({value=0, firstPosition=true});
-    //const [firstPosition, setFirstPosition] = useState(true);
-
-    //alert(firstPosition);
-
-   // const [chargedComponent, setchargedComponent] = useState(componentList[position]);
-
-   /*  const onHandleNext = ()=>{
-        setPosition(position =>position +1 );
-        alert("position" + position)
-    
-    setchargedComponent(componentList[position]);
-    
-     }*/
+    const [position, setPosition] = useState(0);
     
 
-     const onHandleNext = ()=>{
-        //alert(firstPosition);
-
-        
-
-        //alert(firstPosition);
-
-        setPosition(value + 1 );
-        if(value!==0){
-            setPosition(firstPosition=false);
-        }
-      
-     }
-
-  
+    const onHandleNext = (e) => {
+        setPosition(position + 1);
+    }
+    
 
     const onSubmitHandle = (e) => {
         e.preventDefault();
+        //console.log(formData);
     };
 
 
     return (
-
 
         <div className="formCont">
 
@@ -101,62 +76,8 @@ export const Form = () => {
                     />
                 </h1>
 
-
+                {formComponents[position]}
             
-                {/* {chargedComponent                    
-                } */}
-
-              
-              
-
-                {/* <button className="urgency-btn"  type="submit">
-                    <FormattedMessage
-                        id="form.send"
-                        defaultMessage="Enviar"
-                    />
-                </button> */}
-
-                {
-                firstPosition 
-                    ? <PersonalData 
-                    handleInputChange={handleInputChange}
-                    formData={formData}/>
-                    : ''
-                }
-                     {
-                position ===2
-                    ? <Symptoms 
-                    handleInputChange={handleInputChange}
-                    formData={formData}/>
-                    : ''
-                }
-                {
-                position ===3
-                    ? <PainLocation 
-                    handleInputChange={handleInputChange}
-                    formData={formData}/>
-                    : ''
-                }
-                {
-                position ===4
-                    ? <MedicalData 
-                    handleInputChange={handleInputChange}
-                    formData={formData}/>
-                    : ''
-                }
-                {
-                position ===5
-                    ? <Causes 
-                    handleInputChange={handleInputChange}
-                    formData={formData}/>
-                    : ''
-                }
-                {
-                position ===6
-                    ? <UrgenciasValidator 
-                    formData={formData}/>
-                    : ''
-                }
 
         <button onClick={onHandleNext}>Next</button>
 
