@@ -6,6 +6,7 @@ export const UrgenciasValidator = ({formData}) => {
 
     
     const resp = useCreateData(formData,apiUrl.emergency);
+    //console.log(formData);
 
 
     return (

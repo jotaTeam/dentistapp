@@ -1,11 +1,6 @@
 import { FormattedMessage } from "react-intl";
-import { useForm } from '../../../hooks/useForm';
 
-export const Symptoms = () => {
-   
-    const [formData, handleInputChange] = useForm({
-
-    });
+export const Symptoms = ({handleInputChange, formData}) => {
 
     return (
         <div>

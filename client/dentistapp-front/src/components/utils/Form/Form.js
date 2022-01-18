@@ -8,34 +8,75 @@ import { Causes } from "./Causes";
 import '../../../assets/styles/form.css';
 import { UrgenciasValidator } from "../validators/UrgenciasValidator";
 import { PainLocation } from "./PainLocation";
-import { Component } from "react";
+
 
 
 export const Form = () => {
-    //handleInputChange
-    const [formData] = useForm({
+
+    const [formData, handleInputChange ] = useForm({
 
     });
 
-    const [isReady, setIsReady] = useState(false);
+    //const [isReady, setIsReady] = useState(false);
 
-    /****************/
-    const[setCounter] = useState();
-    const show1 = () =>setCounter();
-    const show2 = () =>setCounter();
-    const show3 = () =>setCounter();
-    const show4 = () =>setCounter();
-    const show5 = () =>setCounter();
-    /****************/
+   /* const componentList = [
+        <PersonalData
+            handleInputChange={handleInputChange}
+            formData={formData}/>,
+        <Symptoms
+            handleInputChange={handleInputChange}
+            formData={formData}/>,
+        <PainLocation
+            handleInputChange={handleInputChange}
+            formData={formData}/>,
+        <MedicalData
+            handleInputChange={handleInputChange}
+            formData={formData}/>,
+        <Causes
+            handleInputChange={handleInputChange}
+            formData={formData}/>, 
+        <MedicalData
+            handleInputChange={handleInputChange}
+            formData={formData}/>,
+        <UrgenciasValidator
+            formData={formData}/>
+            
+    ];*/
+
+    const [{value,firstPosition}, setPosition] = useState({value=0, firstPosition=true});
+    //const [firstPosition, setFirstPosition] = useState(true);
+
+    //alert(firstPosition);
+
+   // const [chargedComponent, setchargedComponent] = useState(componentList[position]);
+
+   /*  const onHandleNext = ()=>{
+        setPosition(position =>position +1 );
+        alert("position" + position)
+    
+    setchargedComponent(componentList[position]);
+    
+     }*/
+    
+
+     const onHandleNext = ()=>{
+        //alert(firstPosition);
+
+        
+
+        //alert(firstPosition);
+
+        setPosition(value + 1 );
+        if(value!==0){
+            setPosition(firstPosition=false);
+        }
+      
+     }
+
+  
 
     const onSubmitHandle = (e) => {
         e.preventDefault();
-
-        console.log(formData);
-
-        setIsReady(true);
-
-
     };
 
 
@@ -44,11 +85,11 @@ export const Form = () => {
 
         <div className="formCont">
 
-            {
+           {/* {
                 isReady
                     ? <UrgenciasValidator formData={formData}/>
                     : ''
-            }
+            } */}
 
             <section className="form-header"></section>
 
@@ -61,52 +102,68 @@ export const Form = () => {
                 </h1>
 
 
-                {/**********************************************************************/ }
-                {/* DATOS PERSONALES */}
-                <section className="form-section personal">
-                 <PersonalData></PersonalData>
-                </section>
-                {/* PATOLOGÍAS Y ALERGIAS */}
-                <section className="form-section medical">
-               <MedicalData></MedicalData>
-                </section>
-                {/* SÍNTOMAS Y SIGNOS */}
-                <section className="form-section symptom">
-               <Symptoms></Symptoms>
-                </section>
+            
+                {/* {chargedComponent                    
+                } */}
 
-                {/* LOCALIZACIÓN DEL DOLOR */}
-                <section className="form-section pain">
-                <PainLocation></PainLocation>
-                </section>
-                
-                {/* CAUSAS */}
-                <section className="form-section cause">
-                 <Causes></Causes>
-                </section>
-                {/**********************************************************************/ }
               
-                <button className="urgency-btn"  type="submit">
+              
+
+                {/* <button className="urgency-btn"  type="submit">
                     <FormattedMessage
                         id="form.send"
                         defaultMessage="Enviar"
                     />
-                </button>
+                </button> */}
+
+                {
+                firstPosition 
+                    ? <PersonalData 
+                    handleInputChange={handleInputChange}
+                    formData={formData}/>
+                    : ''
+                }
+                     {
+                position ===2
+                    ? <Symptoms 
+                    handleInputChange={handleInputChange}
+                    formData={formData}/>
+                    : ''
+                }
+                {
+                position ===3
+                    ? <PainLocation 
+                    handleInputChange={handleInputChange}
+                    formData={formData}/>
+                    : ''
+                }
+                {
+                position ===4
+                    ? <MedicalData 
+                    handleInputChange={handleInputChange}
+                    formData={formData}/>
+                    : ''
+                }
+                {
+                position ===5
+                    ? <Causes 
+                    handleInputChange={handleInputChange}
+                    formData={formData}/>
+                    : ''
+                }
+                {
+                position ===6
+                    ? <UrgenciasValidator 
+                    formData={formData}/>
+                    : ''
+                }
+
+        <button onClick={onHandleNext}>Next</button>
+
+                
             </form>
-           
-           
-            <section className="btn-form-footer">
-                <button onClick={show1}>1</button>
-                <button onClick={show2}>2</button>
-                <button onClick={show3}>3</button>
-                <button onClick={show4}>4</button>
-                <button onClick={show5}>5</button>
-            </section>
+         
         </div>
-
-
-
-           
 
     );
 

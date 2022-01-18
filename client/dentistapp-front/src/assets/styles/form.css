@@ -30,9 +30,6 @@ input{
     background-color: rgb(147, 224, 211);
 }
 
-.medical, .symptom, .cause, .pain{
-    display: none;
-}
 
 .formCont{
     display: flex;

@@ -1,12 +1,8 @@
 import { FormattedMessage } from "react-intl";
-import { useForm } from '../../../hooks/useForm';
 
 
-export const PainLocation = () => {
+export const PainLocation = ({handleInputChange, formData}) => {
 
-    const [formData, handleInputChange] = useForm({
-
-    });
 
     return (
         <div>
