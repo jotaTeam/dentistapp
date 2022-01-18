@@ -1,9 +1,7 @@
-/*
-import React from "react";
 import { FormattedMessage } from "react-intl";
 
-
-export const PersonalData = () => {
+export const PersonalData = ({handleInputChange, formData}) => {
+    
 
     return (
         <div>
@@ -71,4 +69,4 @@ export const PersonalData = () => {
         </div>
     )
 }
-*/
+

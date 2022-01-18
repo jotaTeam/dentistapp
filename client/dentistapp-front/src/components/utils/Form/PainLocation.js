@@ -1,9 +1,8 @@
-/*
-import React from "react";
 import { FormattedMessage } from "react-intl";
 
 
-export const PainLocation = () => {
+export const PainLocation = ({handleInputChange, formData}) => {
+
 
     return (
         <div>
@@ -23,4 +22,4 @@ export const PainLocation = () => {
         </div>
     )
 }
-*/
+

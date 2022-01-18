@@ -1,0 +1,46 @@
+
+.home-header{
+    width: 100%;
+    background-image: linear-gradient(360deg, #4e8d82 0%,rgba(147, 224, 211, 0.753) 100%), url(../img/background/dt_05_background.jpg) ;
+    background-position: 60% 50%;
+    background-size:100%;
+    background-repeat: no-repeat;
+   background-attachment: fixed;
+    height: 430px;
+    margin-top: -3em;
+    position: relative;
+    z-index: -1;
+}
+div{
+    margin: 0;
+}
+
+.login-cont{
+    margin: auto;
+    margin-top: -100px;
+}
+
+.btn-home{
+    background-color: #39ac99;
+    color: #fff;
+    font-weight: 600;
+    width: 500px;
+  height: 55px;
+  margin: auto;
+  line-height: 55px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 3em;
+}
+
+.btn-home:hover{
+    background-color: #1f8271;
+}
+
+.home-link-cont{
+    width: 100%;
+    display: flex;
+
+}

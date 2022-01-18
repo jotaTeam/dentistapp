@@ -59,63 +59,59 @@ export const Login = () => {
 
     return (
         <>
+            
             <h1>Login </h1>
 
             <h4>User: {user.logged ? `${user.name} (${user.pass})` : 'no está logeado'}</h4>
-            <hr />
 
             {
                 !user.logged
                     ? <form onSubmit={handleLogin}>
 
-                        <table>
-
-                            <tbody>
-
-                                <tr>
-                                    <td>User:</td>
-                                    <td>
-                                        <input
+                                        <input className="user-login-input"
                                             type="text"
                                             name="name"
                                             values={newUser.name}
                                             onChange={handleInputChange}
+                                            placeholder="Introduce tu usuario"
 
                                         />
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Rol:</td>
-                                    <td>
-                                        <input
+                                  
+        
+                                    <div className="radio-cont">
+                                        <input className="radio-login-option"
                                             type="radio"
                                             name="pass"
+                                            id="radio-admin"
                                             value={pass.admin}
                                             onChange={handleInputChange}
 
-                                        />Admin
-                                        <input
+                                        />
+                                        <label className="radio-login-label"
+                                        for="radio-admin"
+                                        >
+                                        Administración
+                                        </label>
+                                    
+                                        <input className="radio-login-option"
                                             type="radio"
                                             name="pass"
+                                            id="radio-paciente"
                                             value={pass.patient}
                                             onChange={handleInputChange}
+                                         
 
-                                        />Paciente
-                                    </td>
+                                        /><label className="radio-login-label"
+                                        for="radio-paciente"
+                                        >
+                                        Paciente
+                                        </label>
+                                    </div>
 
-                                </tr>
-                                <tr>
-                                    <td>
                                         <button
                                             type="submit"
                                         >Login</button>
-                                    </td>
-                                </tr>
-
-                            </tbody>
-
-
-                        </table>
+                                 
 
                     </form>
                     :<form onSubmit={handleLogout}>
@@ -123,10 +119,11 @@ export const Login = () => {
                             type="submit"
                         >Logout</button>
                     </form>
+                   
             }
 
 
-
+           
 
 
         </>

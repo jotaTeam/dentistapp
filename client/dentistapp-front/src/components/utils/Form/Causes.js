@@ -1,9 +1,6 @@
-/*
-import React from "react";
 import { FormattedMessage } from "react-intl";
 
-
-export const Causes = () => {
+export const Causes = ({handleInputChange, formData}) => {
 
     return (
             <div>
@@ -96,7 +93,7 @@ export const Causes = () => {
             </div>
     )
 }
-*/
+
 
 
 

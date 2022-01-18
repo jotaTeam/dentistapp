@@ -1,10 +1,10 @@
 import React from 'react'
-import { Form } from './utils/Form/Form'
+import Prueba from './utils/Form/Prueba'
 
 export const Urgencias = () => {
     return (
         <>
-            <Form/>
+            <Prueba/>
         </>
     )
 }

@@ -1,9 +1,6 @@
-/*
-import React from "react";
 import { FormattedMessage } from "react-intl";
 
-
-export const MedicalData = () => {
+export const MedicalData = ({handleInputChange, formData}) => {
 
     return (
         <div>
@@ -56,7 +53,6 @@ export const MedicalData = () => {
                 />
                 <br />
             </div>
-            <hr />
 
             <div>
                 <h3>
@@ -108,4 +104,3 @@ export const MedicalData = () => {
         </div>
     )
 }
-*/
