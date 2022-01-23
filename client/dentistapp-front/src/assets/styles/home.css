@@ -1,46 +1,204 @@
 
-.home-header{
-    width: 100%;
-    background-image: linear-gradient(360deg, #4e8d82 0%,rgba(147, 224, 211, 0.753) 100%), url(../img/background/dt_05_background.jpg) ;
-    background-position: 60% 50%;
-    background-size:100%;
-    background-repeat: no-repeat;
-   background-attachment: fixed;
-    height: 430px;
-    margin-top: -3em;
-    position: relative;
-    z-index: -1;
+body{
+    background-color: #2f7f5a;
 }
+
 div{
     margin: 0;
 }
 
-.login-cont{
+.home-header{
+    
+   /* background-image: linear-gradient(360deg, #4e8d82 0%,rgba(147, 224, 211, 0.753) 100%), url(../img/background/dt_05_background.jpg) ;
+    background-position: 60% 50%;
+    background-size:100%;
+    background-repeat: no-repeat;
+   background-attachment: fixed;
+    height: 50vh;*/
+    width: 100%;
+    height: 100vh;
+   
+    position: fixed;
+    background-repeat: no-repeat;
+    bottom: 0;
+    z-index: 1;
+    margin: auto;
+}
+
+
+/*.login-cont{
     margin: auto;
     margin-top: -100px;
+}*/
+
+.under-background{
+    background-color: rgba(255, 255, 255, 0.24);
+    width: 95%;
+    margin: auto;
+    height: 90vh;
+    z-index: 0;
+    top: 2em;
+    position: absolute;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border-radius: 25px;
+    --webkit-box-shadow: 0px 0px 25px -7px rgba(12,74,12,1);
+    -moz-box-shadow: 0px 0px 25px -7px rgba(12,74,12,1);
+    box-shadow: 0px 0px 25px -7px rgba(12,74,12,1);
+    background-image:url(../img/background/home_background_green.png);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 50%;
+
 }
 
-.btn-home{
-    background-color: #39ac99;
-    color: #fff;
-    font-weight: 600;
-    width: 500px;
-  height: 55px;
-  margin: auto;
-  line-height: 55px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 3em;
-}
-
-.btn-home:hover{
-    background-color: #1f8271;
+.home-options-cont{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 18em;
+    width: 100%;   
 }
 
 .home-link-cont{
-    width: 100%;
+   /* background-color:#98fcb1;*/
+    background-color:#fff;
+    font-weight: 600;
+    width: 320px;
+    height: 60px;
+    text-align: center;
+    border-radius: 35px;
+    cursor: pointer;
+    margin:1em 3em;
     display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    --webkit-box-shadow: 0px 0px 25px -7px rgba(12,74,12,1);
+    -moz-box-shadow: 0px 0px 25px -7px rgba(12,74,12,1);
+    box-shadow: 0px 0px 25px -7px rgba(12,74,12,1);
+}
+
+/* .home-link-cont:nth-child(2){
+    background-color:#80ffd4;
+} */
+.home-link-cont a{
+    text-decoration: none;
+    font-size:22px;
+}
+
+.home-link-cont:hover{
+   
+    background-color:#b8fdc9;
+}
+.home-link-cont:nth-child(2):hover{
+    background-color:#aafce1;
+}
+
+.home-title-left, .home-title-right{
+    color: #fff;
+    font-size: 122px;
+}
+
+.home-title-cont{
+    width:60%;
+    margin: auto;
+    margin-top: 15em;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    animation: appear 3s;
+}
+@keyframes appear {
+    0%{
+        opacity: 0;
+        transform: translateY(15%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+}
+
+/***************************RESPONSIVE*******************/
+@media screen and (max-width:1700px){
+
+    .under-background{
+        background-size: 70%;
+    }
 
 }
+@media screen and (max-width:1400px){
+
+    .under-background{
+        background-size: 80%;
+    }
+
+}
+@media screen and (max-width:1166px){
+
+    .under-background{
+        background-size: 100%;
+    }
+
+}
+@media screen and (max-width:900px){
+
+    .under-background{
+        background-size: 150%;
+    }
+
+    .home-title-left, .home-title-right {
+        color: #fff;
+        font-size: 82px;
+    }
+
+    .home-options-cont {
+        flex-direction: column;
+        
+    }
+
+}
+@media screen and (max-width:600px){
+
+    .home-title-cont {
+        margin-top: 8em;
+        width: 100%;
+        justify-content: space-around;
+        
+    }
+
+    .home-options-cont {
+        
+        bottom: 12em;  
+    }
+    
+}
+
+@media screen and (max-width:550px){
+
+    .under-background{
+        background:none;
+        background-color: rgba(255, 255, 255, 0.315);
+        filter: blur(2px);
+    }
+
+    .menu-cont{
+        width: 98%;
+    }
+
+    .home-title-cont {
+        margin-top: 12em;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+
+

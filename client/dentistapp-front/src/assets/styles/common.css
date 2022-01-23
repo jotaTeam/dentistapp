@@ -57,7 +57,7 @@ nav a{
 }
 
 nav a:hover{
-  background-color:rgb(110, 238, 238); ;
+  background-color:rgb(110, 238, 238); 
 }
 
 .langButtons{
@@ -65,7 +65,34 @@ nav a:hover{
   justify-content: center;
   position: relative;
   z-index: 2;
-  padding: 0 1em;
+  background-color: rgba(255, 255, 255, 0.527);
+  background-color: #2f7f5a;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.langButtons input{
+  display: none;
+}
+.lang-change-btn{
+font-size: 20px;
+
+}
+
+.lb-lang{
+  padding:  1em;
+  margin: 0;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #fff;
+}
+
+.lb-lang:hover{
+  background-color: rgba(255, 255, 255, 0.327);
+}
+
+ input:checked + .lb-lang {
+  background-color: rgba(255, 255, 255, 0.427);
 }
 
 .menu-cont{
@@ -74,8 +101,11 @@ nav a:hover{
   align-items: center;
   position: absolute;
   top: 10px;
-  width: 100%;
-  padding: 1em 2em;
+  width: 90%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  padding: 3em 2em;
+  z-index: 6;
 }
 .logo-cont{
   position: relative;     

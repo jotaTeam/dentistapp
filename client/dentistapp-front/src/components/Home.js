@@ -1,10 +1,10 @@
 import React from 'react'
-import { FormattedMessage } from 'react-intl';
+//import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router-dom';
 
 import '../assets/styles/common.css';
 import '../assets/styles/home.css';
-import { Login } from './login/Login';
+//import { Login } from './login/Login';
 
 
 
@@ -19,14 +19,33 @@ export const Home = () => {
             </h1>}
         </div>*/
         <>
-        <header class="home-header"></header>
-        <div class="login-cont">
-       <Login></Login>
-       </div>
+        <div className='under-background'></div>
 
-       <div class="home-link-cont">
-       <Link to="/urgencias" class="btn-home">Solicitud de Urgencias</Link>
-       </div>
+       
+
+        <header class="home-header">
+        <div className='home-title-cont'>    
+        <h1 className='home-title-left'>Dentist</h1>
+        <h1 className='home-title-right'>App</h1>
+        </div>
+        <section className='home-options-cont'>
+
+        <div className="home-link-cont">
+        <Link to="/urgencias" class="btn-home">Urgencias</Link>
+        </div>
+
+        <div className="home-link-cont">
+        <Link to="/urgencias" class="btn-home">Cita Previa</Link> 
+        </div>
+
+        </section>
+
+        </header>
+        {/* <div class="login-cont">
+       { <Login></Login> }
+       </div> */}
+
+      
         </>
     )
 }
