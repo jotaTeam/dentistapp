@@ -1,8 +1,3 @@
-
-body{
-    background-color: #2f7f5a;
-}
-
 div{
     margin: 0;
 }
@@ -32,7 +27,7 @@ div{
 }*/
 
 .under-background{
-    background-color: rgba(255, 255, 255, 0.24);
+    background-color: rgba(255, 255, 255, 0.34);
     width: 95%;
     margin: auto;
     height: 90vh;
@@ -79,15 +74,13 @@ div{
     --webkit-box-shadow: 0px 0px 25px -7px rgba(12,74,12,1);
     -moz-box-shadow: 0px 0px 25px -7px rgba(12,74,12,1);
     box-shadow: 0px 0px 25px -7px rgba(12,74,12,1);
+    text-decoration: none;
+    font-size:22px;
 }
 
 /* .home-link-cont:nth-child(2){
     background-color:#80ffd4;
 } */
-.home-link-cont a{
-    text-decoration: none;
-    font-size:22px;
-}
 
 .home-link-cont:hover{
    

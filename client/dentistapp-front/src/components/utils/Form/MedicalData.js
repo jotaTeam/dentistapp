@@ -1,10 +1,11 @@
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 
 export const MedicalData = ({handleInputChange, formData}) => {
+    const intl = useIntl();
 
     return (
-        <div>
-            <div>
+        <div className="medical-form">
+            <div className="radio-options-form-cont">
                 <h3>
                     <FormattedMessage
                         id="form.pathology"
@@ -12,34 +13,40 @@ export const MedicalData = ({handleInputChange, formData}) => {
                     />
                 </h3>
 
+                <section>
                 <input
                     type="radio"
                     onChange={handleInputChange}
                     value="true"
                     name="pathology"
+                    id="true-pathology"
                 />
-                <label>
+                <label for="true-pathology">
                     <FormattedMessage
                         id="form.yes"
                         defaultMessage="Sí"
+                        
                     />
                 </label>
-                <br />
+                
 
                 <input type="radio"
                     onChange={handleInputChange}
                     value="false"
                     name="pathology"
+                    id="false-pathology"
                     defaultChecked />
 
-                <label>
+                <label for="false-pathology">
                     <FormattedMessage
                         id="form.no"
                         defaultMessage="No"
                     />
                 </label>
-                <br />
+                </section>
 
+
+                <div className="more-info-cont">
                 <label>
                     <FormattedMessage
                         id="form.specify"
@@ -50,11 +57,13 @@ export const MedicalData = ({handleInputChange, formData}) => {
                     onChange={handleInputChange}
                     value={formData.descriptionPathology}
                     name="descriptionPathology"
+                    placeholder={intl.formatMessage({id: 'form.patologyPrev'})}
+
                 />
-                <br />
+                </div>
             </div>
 
-            <div>
+            <div className="radio-options-form-cont">
                 <h3>
                     <FormattedMessage
                         id="form.allergy"
@@ -62,32 +71,36 @@ export const MedicalData = ({handleInputChange, formData}) => {
                     />
                 </h3>
 
+                <section>
                 <input type="radio"
                     onChange={handleInputChange}
                     value="true"
                     name="allergy"
+                    id="true-allergy"
                 />
-                <label >
+                <label for="true-allergy">
                     <FormattedMessage
                         id="form.yes"
                         defaultMessage="Sí"
                     />
                 </label>
-                <br />
+              
 
                 <input type="radio"
                     onChange={handleInputChange}
                     value="false"
                     name="allergy"
+                    id="false-allergy"
                     defaultChecked />
-                <label >
+                <label for="false-allergy">
                     <FormattedMessage
                         id="form.no"
                         defaultMessage="No"
                     />
                 </label>
-                <br />
+                </section>
 
+                <div className="more-info-cont">
                 <label>
                     <FormattedMessage
                         id="form.specify"
@@ -98,8 +111,10 @@ export const MedicalData = ({handleInputChange, formData}) => {
                     onChange={handleInputChange}
                     value={formData.descriptionAllergy}
                     name="descriptionAllergy"
+                    placeholder={intl.formatMessage({id: 'form.allergyMore'})}
+
                 />
-                <br />
+                </div>
             </div>
         </div>
     )

@@ -1,10 +1,11 @@
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 
 export const PersonalData = ({handleInputChange, formData}) => {
     
+    const intl = useIntl();
 
     return (
-        <div>
+        <div className="personal-form">
             <h3>
                 <FormattedMessage
                     id="form.data"
@@ -12,7 +13,7 @@ export const PersonalData = ({handleInputChange, formData}) => {
                 />
             </h3>
 
-            <div className="datos">
+            <section>
                 <label>
                     <FormattedMessage
                         id="form.name"
@@ -20,26 +21,34 @@ export const PersonalData = ({handleInputChange, formData}) => {
                     />
                 </label>
                 <input
+                    placeholder={intl.formatMessage({id: 'form.placeName'})}
                     type="text"
                     onChange={handleInputChange}
                     value={formData.name}
                     name="name"
+                    required
                 />
-                <br />
+            </section> 
 
+            <section>
                 <label>
                     <FormattedMessage
                         id="form.surname"
                         defaultMessage="Apellidos:"
                     />
                 </label>
-                <input type="text"
+                <input
+                    placeholder={intl.formatMessage({id: 'form.placeLastname'})}
+                    type="text"
                     onChange={handleInputChange}
                     value={formData.surname}
                     name="surname"
+                    required
                 />
-                <br />
+            </section>   
 
+
+            <section>
                 <label>
                     <FormattedMessage
                         id="form.dni"
@@ -47,26 +56,34 @@ export const PersonalData = ({handleInputChange, formData}) => {
                     />
 
                 </label>
-                <input type="text"
+                <input
+                    placeholder={intl.formatMessage({id: 'form.placeDNI'})}
+                    type="text"
                     onChange={handleInputChange}
                     value={formData.dni}
                     name="dni"
+                    required
                 />
-                <br />
+            </section>   
+
+            <section>
                 <label>
                     <FormattedMessage
                         id="form.telephone"
                         defaultMessage="Teléfono:"
                     />
                 </label>
-                <input type="text"
+                <input
+                    placeholder={intl.formatMessage({id: 'form.placePhone'})}
+                    type="text"
                     onChange={handleInputChange}
                     value={formData.telephone}
                     name="telephone"
+                    required
                 />
-                <br />
-            </div>
+            </section>  
         </div>
+      
     )
 }
 
