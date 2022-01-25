@@ -17,6 +17,8 @@ export const Form = () => {
 
     });
 
+    let pain =false;
+
     //const [isReady, setIsReady] = useState(false);
 
     const formComponents = [
@@ -33,9 +35,9 @@ export const Form = () => {
             handleInputChange={handleInputChange}
         />,
         <PainLocation
-            formData={formData}
-            handleInputChange={handleInputChange}
-        />,
+                    formData={formData}
+                    handleInputChange={handleInputChange}
+                    />,
         <Causes
             formData={formData}
             handleInputChange={handleInputChange}
@@ -58,6 +60,9 @@ export const Form = () => {
 
     return (
 
+        <>
+        <div className='under-background-form'></div>
+
         <div className="formCont">
 
            {/* {
@@ -66,10 +71,9 @@ export const Form = () => {
                     : ''
             } */}
 
-            <section className="form-header"></section>
 
             <form onSubmit={onSubmitHandle}>
-                <h1>
+                <h1 className="form-urg-title">
                     <FormattedMessage
                         id="form.title"
                         defaultMessage="Formulario de urgencias"
@@ -77,15 +81,28 @@ export const Form = () => {
                 </h1>
 
                 {formComponents[position]}
-            
+{/* 
+                if(pain){
 
-        <button onClick={onHandleNext}>Next</button>
+                <div className="pain-location-cont">
+                <PainLocation
+                    formData={formData}
+                    handleInputChange={handleInputChange}
+                    />,
+                </div>
+                } */}
+        <button className="btn-next" onClick={onHandleNext}>
+        <FormattedMessage
+                        id="form.btnNext"
+                        defaultMessage="Formulario de urgencias"
+                    />
+        </button>
 
                 
             </form>
          
         </div>
-
+        </>
     );
 
 };

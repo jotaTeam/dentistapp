@@ -30,13 +30,13 @@ export const Home = () => {
         </div>
         <section className='home-options-cont'>
 
-        <div className="home-link-cont">
-        <Link to="/urgencias" class="btn-home">Urgencias</Link>
-        </div>
+       
+        <Link to="/urgencias" className="btn-home home-link-cont">Urgencias</Link>
+        
 
-        <div className="home-link-cont">
-        <Link to="/urgencias" class="btn-home">Cita Previa</Link> 
-        </div>
+      
+        <Link to="/urgencias" className="btn-home home-link-cont">Cita Previa</Link> 
+        
 
         </section>
 

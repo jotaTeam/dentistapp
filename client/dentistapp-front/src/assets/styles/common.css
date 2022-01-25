@@ -7,7 +7,9 @@
 
 body{
   font-family: 'palatino', sans-serif; 
-  background-color: rgb(236, 238, 238);
+ 
+  background: #2f7f5a;
+  
 }
 
 /*html{

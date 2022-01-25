@@ -13,6 +13,11 @@
     "form.title": "Formulario de urgencias",
 
     "form.data": "Datos personales",
+    "form.placeName": "Introduce tu nombre",
+    "form.placeLastname": "Introduce tu apellido",
+    "form.placeDNI": "Introduce tu DNI",
+    "form.placePhone": "Introduce tu número de teléfono",
+    "form.btnNext": "Siguiente",
     "form.name": "Nombre:",
     "form.surname": "Apellidos:",
     "form.dni": "DNI:",
@@ -26,8 +31,10 @@
 
     "form.pathology": "¿Ha tenido alguna patología oral previa o la presenta en la actualidad?",
     "form.allergy": "¿Es alérgico algún alimento/ medicamento/ producto?",
+    "form.allergyMore":"Introduce alergias",
+    "form.patologyPrev":"Introduce patología previas",
 
-    "form.symptoms": "Síntomas y signos",
+    "form.symptoms": "Selecciona síntomas y signos",
     "form.symptoms.bleeding":"Sangrado",
     "form.symptoms.pain":"Dolor",
     "form.symptoms.dentalmov":"Movilidad dental",
@@ -36,16 +43,19 @@
     "form.symptoms.gums":"Inflamación de encías",
     "form.symptoms.badbreath":"Mal aliento",
     "form.symptoms.sensitivity":"Sensibilidad",
+    "form.otherSymptoms":"Introduce otros síntomas",
 
-    "form.location": "Localización del dolor",
+    "form.location": "Selecciona los dientes en los que sientes dolor",
 
     "form.cause": "¿A qué asocia este problema?",
     "form.cause.cavity": "Caries",
     "form.cause.fracture": "Fractura",
     "form.cause.gums": "Problemas de encías",
     "form.cause.hygiene": "Productos de higiene oral",
-    "form.cause.diseases": "Enfermedades orales (cáncer oral, herpes labial… )",
-    "form.cause.trauma": "Traumatismo oral"
+    "form.cause.diseases": "Enfermedades orales",
+    "form.cause.diseasesEx": "cáncer oral, herpes labial… ",
+    "form.cause.trauma": "Traumatismo oral",
+    "form.otherCauses": "Introduce otras causas"
 
 
 }

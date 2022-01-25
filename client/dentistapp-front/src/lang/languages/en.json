@@ -13,6 +13,11 @@
     "form.title": "Emergency form",
 
     "form.data": "Personal information",
+    "form.placeName": "Insert your firts name",
+    "form.placeLastname": "Insert your last name",
+    "form.placeDNI": "Insert your DNI",
+    "form.placePhone": "Insert your phone number",
+    "form.btnNext": "Next",
     "form.name": "Name:",
     "form.surname": "Surname:",
     "form.dni": "ID number:",
@@ -26,8 +31,11 @@
 
     "form.pathology": "Have you had any previous oral pathology or do you present it nowadays?",
     "form.allergy": "Are you allergic to any food/ medication/ product?",
+    "form.allergyMore":"Insert allergies",
+    "form.patologyPrev":"Insert previous pathologies",
 
-    "form.symptoms": "Symptoms and signs",
+
+    "form.symptoms": "Select symptoms and signs",
     "form.symptoms.bleeding":"Bleeding",
     "form.symptoms.pain":"Pain",
     "form.symptoms.dentalmov":"Dental movility",
@@ -36,15 +44,18 @@
     "form.symptoms.gums":"Gums inflammation",
     "form.symptoms.badbreath":"Bad breath",
     "form.symptoms.sensitivity":"Sensitivity",
+    "form.otherSymptoms":"Insert other symptoms",
 
-    "form.location": "Location of pain",
+    "form.location": "Select the teeth where you feel pain",
 
     "form.cause": "What do you associate this problem with?",
     "form.cause.cavity": "Cavity",
     "form.cause.fracture": "Fracture",
     "form.cause.gums": "Gums problems",
     "form.cause.hygiene": "Products of oral hygiene",
-    "form.cause.diseases": "Oral diseases (oral cancer, lip cold sore… )",
-    "form.cause.trauma": "Oral trauma"
+    "form.cause.diseases": "Oral diseases",
+    "form.cause.diseasesEx": "oral cancer, lip cold sore… ",
+    "form.cause.trauma": "Oral trauma",
+    "form.otherCauses": "Insert other causes"
 
 }
