@@ -6,7 +6,7 @@ import { MedicalData } from "./MedicalData";
 import { Symptoms } from "./Symptoms";
 import { Causes } from "./Causes";
 import '../../../assets/styles/form.css';
-import { UrgenciasValidator } from "../validators/UrgenciasValidator";
+//import { UrgenciasValidator } from "../validators/UrgenciasValidator";
 import { PainLocation } from "./PainLocation";
 
 
@@ -17,7 +17,7 @@ export const Form = () => {
 
     });
 
-    let pain =false;
+    //let pain =false;
 
     //const [isReady, setIsReady] = useState(false);
 
