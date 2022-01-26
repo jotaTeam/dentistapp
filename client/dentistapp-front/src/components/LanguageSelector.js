@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
-import es from './../assets/img/spain.png';
-import en from './../assets/img/united-kingdom.png';
+//import es from './../assets/img/spain.png';
+//import en from './../assets/img/united-kingdom.png';
 import logo from './../assets/img/logo/dt_logo_2.svg';
 import {langContext} from './../lang/langContext';
 import { Link } from 'react-router-dom';
