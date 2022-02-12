@@ -26,10 +26,10 @@ const LanguageSelector = () => {
                 {/* <button onClick={() => lang.provideLanguage('es')}><img src={es} alt="" width='40px' /></button> */}
                 {/* <button onClick={() => lang.provideLanguage('en')}><img src={en} alt="" width='40px' /></button> */}
 
-                <input type="radio" id="lang-es" className='lang-change-btn' name="lang-selection" onClick={() => lang.provideLanguage('es')} checked={localStorage.getItem('lang') === 'es'} />
+                <input type="radio" id="lang-es" className='lang-change-btn' name="lang-selection" onChange={() => lang.provideLanguage('es')} checked={localStorage.getItem('lang') === 'es'} />
                 <label className='lb-lang' for="lang-es">ES</label>
 
-                <input type="radio" id="lang-en" className='lang-change-btn' name="lang-selection" onClick={() => lang.provideLanguage('en')} checked={localStorage.getItem('lang') === 'en'} />
+                <input type="radio" id="lang-en" className='lang-change-btn' name="lang-selection" onChange={() => lang.provideLanguage('en')} checked={localStorage.getItem('lang') === 'en'} />
                 <label className='lb-lang' for="lang-en">EN</label>
 
 
