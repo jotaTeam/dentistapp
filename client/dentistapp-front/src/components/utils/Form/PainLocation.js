@@ -162,7 +162,7 @@ export const PainLocation = ({ handleInputChange, formData }) => {
                         <div className={`t ${active[19] ? "selected" : ""}`} onClick={(id) => handleToggle(19)} data-id="19">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 83.51 88.77"><defs><style></style></defs><title>t-3</title><g id="Capa_2" data-name="Capa 2"><g id="Capa_2-2" data-name="Capa 2"><path className="cls-2" d="M82,50.92c-.69,24.57-7,34.82-29,36.2C38.78,88,15.58,85.4,7.38,71.83-1.22,57.58,1,49.64,5.26,40.76c3-6.29,5.82-7.21,6.33-11.83C12.93,17,14.21,7,30.35,2.45,54.27-4.3,82.69,26.35,82,50.92Z" /></g></g></svg>
                         </div>
-                        <div className="t" data-id="30">
+                        <div className={`t ${active[30] ? "selected" : ""}`} onClick={(id) => handleToggle(30)} data-id="30">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 91.81 88.72"><defs><style></style></defs><title>t-14</title><g id="Capa_2" data-name="Capa 2"><g id="Capa_2-2" data-name="Capa 2"><path className="cls-2" d="M10.68,73.67C-3.65,54-.63,33,15.77,18.61,26.33,9.32,46.05-2.7,60.67,3,76,8.88,79.1,16.44,81.16,26,82.61,32.7,81,35.11,83.37,39c6.2,10.17,11.23,18.74,1.37,32.07C70.12,90.87,25,93.3,10.68,73.67Z" /></g></g></svg>
                         </div>
                     </div>

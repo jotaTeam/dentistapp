@@ -19,25 +19,20 @@ export const Home = () => {
             </h1>}
         </div>*/
         <>
-        <div className='under-background'></div>
+        <div className='under-background'>
+        </div>
 
        
 
         <header class="home-header">
         <div className='home-title-cont'>    
-        <h1 className='home-title-left'>Dentist</h1>
-        <h1 className='home-title-right'>App</h1>
+        <h1 className='home-title-left'>Dentist App</h1>
+        <p className='home-description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ul</p>
         </div>
         <section className='home-options-cont'>
 
-       
-        <Link to="/urgencias" className="btn-home home-link-cont">Urgencias</Link>
-        
-
-      
         <Link to="/urgencias" className="btn-home home-link-cont">Cita Previa</Link> 
-        
-
+        <Link to="/urgencias" className="btn-home home-link-cont">Urgencias</Link>
         </section>
 
         </header>

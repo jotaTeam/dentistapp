@@ -7,9 +7,10 @@
 
 body{
   font-family: 'palatino', sans-serif; 
- 
-  background: #2f7f5a;
-  
+  background: #f9f9f9;
+  background: linear-gradient(-80deg, #f9f9f9 50%, #cff2f2 5%) no-repeat;
+  background-size: 100%;
+  height: 100vh;
 }
 
 /*html{
@@ -67,8 +68,7 @@ nav a:hover{
   justify-content: center;
   position: relative;
   z-index: 2;
-  background-color: rgba(255, 255, 255, 0.527);
-  background-color: #2f7f5a;
+  background-color: rgba(58, 57, 68, 0.103);
   border-radius: 25px;
   cursor: pointer;
 }
@@ -86,15 +86,18 @@ font-size: 20px;
   border-radius: 25px;
   cursor: pointer;
   font-weight: bold;
-  color: #fff;
+  color: #1aacaa;
 }
 
 .lb-lang:hover{
-  background-color: rgba(255, 255, 255, 0.327);
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
  input:checked + .lb-lang {
-  background-color: rgba(255, 255, 255, 0.427);
+  background-color: rgba(255, 255, 255, 0.727);
+  --webkit-box-shadow: 0px 0px 15px -7px rgba(58,57,68,0.6);
+  -moz-box-shadow: 0px 0px 15px -7px rgba(58,57,68,0.6);
+  box-shadow: 0px 0px 18px -7px rgba(58,57,68,0.6);
 }
 
 .menu-cont{
