@@ -527,10 +527,21 @@ svg{
 }
 /*****************************************RESPONSIVE*********************/
 
+@media screen and (max-width:1280px){
+    .background-form{
+        display: none;
+    }
+}
 @media screen and (max-width:624px){
     .form-urg-title{
         font-size: 25px;
     }
+
+    .pain-title {
+        text-align: center;
+        width: 50%;
+        margin: auto;
+      }
 }
 @media screen and (max-width:520px){
 
@@ -557,7 +568,7 @@ svg{
     }
 
     .formCont form{
-        margin-top: 15em;
+        margin-top: 11em;
       
     }
 
@@ -588,7 +599,7 @@ svg{
 }
 
 
-@media screen and (max-width:580px){
+/* @media screen and (max-width:580px){
     .mouth-separate{
     width: 290px;
     margin-top: 220px;
@@ -611,15 +622,15 @@ svg{
 .mouth-cont{
     width: 300px;
 
-}
+} */
 
 /**************************************/
-.tooth-cont:nth-child(1){
+/* .tooth-cont:nth-child(1){
     width: 70px;
     margin: auto;
-}
+} */
 /**************************************/
-.tooth-cont:nth-child(2){
+/* .tooth-cont:nth-child(2){
     width: 145px;
     margin: auto;
     position: relative;
@@ -636,9 +647,9 @@ svg{
    
     top: -30px;
     right: -12px;
-}
+} */
 /**************************************/
-.tooth-cont:nth-child(3){
+/* .tooth-cont:nth-child(3){
     width: 200px;
     margin: auto;
     position: relative;
@@ -654,10 +665,10 @@ svg{
    
     top: -12px;
     right: -12px;
-}
+} */
 
 /**************************************/
-.tooth-cont:nth-child(4){
+/* .tooth-cont:nth-child(4){
     width: 250px;
     margin: auto;
     position: relative;
@@ -673,10 +684,10 @@ svg{
    
     top: 15px;
     right: -5px;
-}
+} */
 
 /**************************************/
-.tooth-cont:nth-child(5){
+/* .tooth-cont:nth-child(5){
     width: 260px;
     margin: auto;
     position: relative;
@@ -691,9 +702,9 @@ svg{
    
     top: 40px;
     right: -10px;
-}
+} */
 /**************************************/
-.tooth-cont:nth-child(6){
+/* .tooth-cont:nth-child(6){
     width: 280px;
     margin: auto;
     position: relative;
@@ -708,9 +719,9 @@ svg{
    
     top: 65px;
     right: -5px;
-}
+} */
 /**************************************/
-.tooth-cont:nth-child(7){
+/* .tooth-cont:nth-child(7){
     width: 280px;
     margin: auto;
     position: relative;
@@ -725,9 +736,9 @@ svg{
    
     top: 105px;
     right: -10px;
-}
+} */
 /**************************************/
-.tooth-cont:nth-child(8){
+/* .tooth-cont:nth-child(8){
     width:290px;
     margin: auto;
     position: relative;
@@ -747,5 +758,5 @@ svg{
     transform: rotate(180deg);
     margin-top: 220px;
     border: none;
-}
-}
+} */
+/* } */

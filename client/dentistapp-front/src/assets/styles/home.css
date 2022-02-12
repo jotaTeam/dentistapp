@@ -170,7 +170,7 @@ div{
 @media screen and (max-width:980px){
     .under-background {
         background-size: 380px;
-        background-position: center bottom 3em;
+        background-position: center top 26em;
       }
 
       .home-title-cont  {
