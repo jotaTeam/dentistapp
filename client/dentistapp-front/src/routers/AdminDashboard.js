@@ -4,6 +4,7 @@ import { CitasList } from '../components/admin/CitasList';
 import { ControlHoras } from '../components/admin/ControlHoras';
 import { UrgenciasList } from '../components/admin/UrgenciasList';
 import { Nav } from "../components/utils/nav";
+import { NotFound } from "../components/NotFound";
 
 export const AdminDashboard = () => {
     return (
