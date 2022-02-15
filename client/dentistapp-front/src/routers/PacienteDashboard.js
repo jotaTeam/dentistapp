@@ -19,6 +19,7 @@ export const PacienteDashboard = () => {
                 
                 <Route path="/" element={<PacienteHome />} />
                 <Route path="/citas" element={<Cita />} />
+                <Route path= "/*" element = {<NotFound/>}/>
                 
 
             </Routes>

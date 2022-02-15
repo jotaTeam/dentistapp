@@ -23,6 +23,7 @@ export const AdminDashboard = () => {
                 <Route path="/urgenciaslist" element={<UrgenciasList />} />
                 <Route path="/citaslist" element={<CitasList />} />
                 <Route path="/control" element={<ControlHoras />} />
+                <Route path= "/*" element = {<NotFound/>}/>
 
             </Routes>
 
