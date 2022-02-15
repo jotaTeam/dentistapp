@@ -19,6 +19,8 @@ module.exports = (sequelize, DataTypes) => {
       // medicalInfo.hasOne(models.Simptoms);
       medicalInfo.hasOne(models.simptoms);
       
+      medicalInfo.hasOne(models.Teeth)
+      
     }
   };
   medicalInfo.init({//todo add description to allergy and pathology
