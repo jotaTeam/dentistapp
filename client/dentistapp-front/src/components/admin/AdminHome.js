@@ -33,9 +33,9 @@ export const AdminHome = () => {
     
      createData({name: 'otro pa', lastname: '1234', dni: 'a3'}, apiUrl.patient);
    
-    //const dataUrgencia = await createData({name: 'PruebaUno', surnames: 'Apellido', phone: 987653214, allergy: true, description_allergy: 'Prueba uno y tal', bleeding: true, pain: true, cavity: true, fracture: true, pieces: 'unos cuantos' }, apiUrl.emergency);
+    const dataUrgencia = await createData({name: 'PruebaUno', surnames: 'Apellido', phone: 987653214, allergy: true, description_allergy: 'Prueba uno y tal', bleeding: true, pain: true, cavity: true, fracture: true, pieces: 'unos cuantos' }, apiUrl.emergency);
 
-    //    console.log(dataUrgencia);
+       console.log(dataUrgencia);
 
   }
 

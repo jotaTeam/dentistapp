@@ -14,7 +14,11 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Teeth.init({
-    pieces: DataTypes.STRING
+    pieces: {
+      type: DataTypes.STRING,
+      defaultValue: ''
+    },
+    
   }, {
     sequelize,
     modelName: 'Teeth',
