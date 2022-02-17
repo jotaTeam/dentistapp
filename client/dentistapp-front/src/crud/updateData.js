@@ -1,22 +1,22 @@
-import { useFetch } from "../hooks/useFetch";
+import {fetchTool} from "../helpers/fetchTool";
 
-export const useCreateData = (sentData, url) => {
+export const updateData = (sentData, id, url) => {
 
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
     const requestOptions = {
 
-        method: 'POST',
+        method: 'PUT',
         headers: myHeaders,
         body: JSON.stringify(sentData)
     };
 
 
 
-    const data = useFetch(url, requestOptions);
+    const data = fetchTool(url+id, requestOptions);
 
     return data;
 
-
+    
 };
