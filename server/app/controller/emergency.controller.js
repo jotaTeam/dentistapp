@@ -1,5 +1,5 @@
 // const { Emergency,MedicalInfo, Causes, Simptoms } = require('../database/db');
-const { dental_emergency,medicalInfo, causes, simptoms } = require('../models/index');
+const { dental_emergency,medicalInfo, causes, simptoms, teeth } = require('../models/index');
 const EmergencyController={}
   
   EmergencyController.get= async (req, res)=>{
@@ -79,7 +79,9 @@ const EmergencyController={}
       .then(medicalinfo=> {
         const medicalInfoId = medicalinfo.dataValues.id;
         causes.create(causesValues(values,medicalInfoId));
-        simptoms.create(simptomsValues(values,medicalInfoId))
+        simptoms.create(simptomsValues(values,medicalInfoId));
+        teeth.create(teethValues(values,medicalInfoId))
+        
       })
     })
     .catch(err=>console.log(err))
@@ -109,6 +111,11 @@ const EmergencyController={}
     causes.medicalInfoId = medicalInfoId;
    
     return causes;
+  }
+
+  const teethValues = (values, medicalInfoid)=>{
+    const teeth = {pieces} = values
+    teeth.medicalInfoId = medicalInfoid
   }
 
 

@@ -4,6 +4,7 @@ import { CitasList } from '../components/admin/CitasList';
 import { ControlHoras } from '../components/admin/ControlHoras';
 import { UrgenciasList } from '../components/admin/UrgenciasList';
 import { Nav } from "../components/utils/nav";
+import { NotFound } from "../components/NotFound";
 
 export const AdminDashboard = () => {
     return (
@@ -23,6 +24,7 @@ export const AdminDashboard = () => {
                 <Route path="/urgenciaslist" element={<UrgenciasList />} />
                 <Route path="/citaslist" element={<CitasList />} />
                 <Route path="/control" element={<ControlHoras />} />
+                <Route path= "/*" element = {<NotFound/>}/>
 
             </Routes>
 
