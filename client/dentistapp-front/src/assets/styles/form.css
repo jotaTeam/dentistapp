@@ -1,0 +1,762 @@
+.datos label{
+    display: inline-block;
+    width: 150px;
+    
+}
+
+.urgency-btn{
+    width: 9em;
+    height: 4em;
+    border-radius: 4em;
+    color: white;
+    font-weight: bolder;
+    font-size: 0.8em;
+    background-color:rgb(0, 189, 157);
+    display: none;
+}
+
+
+.formCont{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.formCont form{
+    margin: auto;
+     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 600px;
+    position: relative;
+    width: 50%;
+    margin-top: 10em;
+    
+}
+
+.btn-next:hover{
+    background-color:#118f8d;
+}
+.btn-next{
+    position: absolute;
+    bottom: 0;
+    border: none;
+    width: 450px;
+    cursor: pointer;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 25px;
+    background-color: #1aacaa;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+}
+
+
+
+.under-background-form{
+    width: 95%;
+    margin: auto;
+    height: 90vh;
+    z-index: 0;
+    top: 2em;
+    position: absolute;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.34);
+    /* background:linear-gradient(to bottom, rgba(255, 255, 255, 0.34) 90%, #1aacaa 5%) no-repeat; */
+    --webkit-box-shadow: 0px 0px 25px -7px rgba(58,57,68,0.6);
+    -moz-box-shadow: 0px 0px 25px -7px rgba(58,57,68,0.6);
+    box-shadow: 0px 0px 25px -7px rgba(58,57,68,0.6);
+}
+
+.form-urg-title{
+    margin-bottom: 1em;
+}
+
+.personal-form, .medical-form, .symptom-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: flex-start;
+    width:450px;
+}
+.personal-form section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: flex-start;
+    width: 100%;
+}
+.personal-form section input,.personal-form section label{
+    margin: 0.5em 0;
+    width: 100%;
+    font-weight: 600;
+}
+
+.personal-form h3, .symptom-form h3{
+    margin-bottom: 1em;
+    font-weight: 400;
+}
+
+.formCont form input[type="text"], .formCont form input[type="email"]{
+    background-color: #e6e6e7a8;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    height: 45px;
+    padding-left: 20px;
+    width: 450px;
+}
+
+.formCont form input[type="text"]:focus, .formCont form input[type="email"]:focus{
+    background-color: #f0f0f0a8;
+}
+
+.formCont form input[type="text"]::placeholder, .formCont form input[type="email"]::placeholder{
+    /* color: #fff; */
+    font-weight: 800;
+    color: #000;
+}
+/*****************************************************/
+.radio-options-form-cont input[type="radio"]{
+    display: none;
+}
+.radio-options-form-cont section label{
+    width: 46%;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    font-weight: 800;
+    border-radius: 25px;
+    cursor: pointer;
+   margin:0.5em 0;
+   font-size: 14px;
+   margin-bottom: 1.5em;
+   border: 2px solid #dfdfdf;
+   color: #9f9f9f;
+}
+
+.radio-options-form-cont section label:hover{
+    background-color: #cff2f2;
+    border: 2px solid transparent;
+}
+
+.radio-options-form-cont section{
+    display: flex;
+    width: 100%;
+    justify-content:space-between;
+}
+
+.radio-options-form-cont input[type="radio"]:checked + label{
+    background-color: #1aacaa;
+    color: #fff;
+    border: 2px solid transparent;
+}
+.more-info-cont{
+    display: flex;
+    flex-direction: column;
+}
+
+.radio-options-form-cont h3{
+    
+    font-weight: 500;
+    margin-top: 1em;
+} 
+
+.radio-options-form-cont:first-child h3{
+    margin: 0;
+}
+
+.more-info-cont label, .more-info-cont input{
+    margin: 0.5em 0;
+    margin-top: 0.3em;
+}
+
+/*******************************************/
+.symptom-options{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.symptom-options label{
+    width: 180px;
+    padding:0 0.2em;
+    line-height: 20px;
+    height: 45px;
+    border: 2px solid #dfdfdf;
+    color: #9f9f9f;
+    text-align: center;
+    font-weight: 800;
+    border-radius: 25px;
+    cursor: pointer;
+   margin:0.5em 0;
+   font-size: 14px;
+   margin-bottom: 1.5em;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   overflow: hidden;
+}
+
+.oral-disease-label{
+    flex-direction: column;
+}
+
+.oral-disease-label span{
+    font-size: 10px;
+}
+
+.symptom-options input[type="checkbox"]{
+    display: none;
+}
+
+.symptom-options input[type="checkbox"]:checked + label{
+    background-color: #1aacaa;
+    border: 2px solid transparent;
+    color: #fff;
+}
+
+.symptom-options label:hover{
+    background-color: #cff2f2;
+    border: 2px solid transparent;
+}
+
+
+.other-label{
+    margin: 0.5em 0;
+}
+/**********************************************************/
+.pain-location-cont{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/********************************************************/
+.cls-2{fill:#cef1f1;stroke:#1aacaa;stroke-miterlimit:10;stroke-width:3px;opacity:0.55;}
+.cls-1{fill:#cef1f1;opacity:1;}
+.cls-3{fill:#cef1f1;opacity:0.55;}
+svg:hover .cls-2{
+    fill: #50e9e6!important;
+}
+
+.selected svg .cls-2{
+    fill: #1aacaa!important;
+}
+
+svg{
+    width: 30px;
+    cursor:pointer
+}
+
+.tb{
+    width: 35px;
+}
+
+.ts{
+    width: 35px;
+}
+
+.mouth-cont{
+    width: 550px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  
+}
+.tooth-cont{
+  
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+/**************************************/
+.tooth-cont:nth-child(1){
+    width: 60px;
+    margin: auto;
+}
+/**************************************/
+.tooth-cont:nth-child(2){
+    width: 130px;
+    margin: auto;
+    position: relative;
+    
+}
+
+.tooth-cont:nth-child(2) .t:nth-child(1){
+    position: absolute;
+    top: -28px;
+    left: 2px;
+}
+.tooth-cont:nth-child(2) .t:nth-child(2){
+    position: absolute;
+   
+    top: -28px;
+    right: -7px;
+}
+/**************************************/
+.tooth-cont:nth-child(3){
+    width: 190px;
+    margin: auto;
+    position: relative;
+   
+}
+.tooth-cont:nth-child(3) .t:nth-child(1){
+    position: absolute;
+   left: 2px;
+    top: -12px;
+}
+.tooth-cont:nth-child(3) .t:nth-child(2){
+    position: absolute;
+   
+    top: -12px;
+    right: -6px;
+}
+
+/**************************************/
+.tooth-cont:nth-child(4){
+    width: 240px;
+    margin: auto;
+    position: relative;
+}
+.tooth-cont:nth-child(4) .t:nth-child(1){
+    position: absolute;
+   
+    top: 9px;
+    left: 3px;
+}
+.tooth-cont:nth-child(4) .t:nth-child(2){
+    position: absolute;
+    top: 13px;
+    right: 0;
+}
+
+/**************************************/
+.tooth-cont:nth-child(5){
+    width: 270px;
+    margin: auto;
+    position: relative;
+}
+.tooth-cont:nth-child(5) .t:nth-child(1){
+    position: absolute;
+    top: 35px;
+}
+.tooth-cont:nth-child(5) .t:nth-child(2){
+    position: absolute;
+   
+    top: 38px;
+    right: 0;
+}
+/**************************************/
+.tooth-cont:nth-child(6){
+    width: 300px;
+    margin: auto;
+    position: relative;
+}
+.tooth-cont:nth-child(6) .t:nth-child(1){
+    position: absolute;
+   
+    top: 58px;
+}
+.tooth-cont:nth-child(6) .t:nth-child(2){
+    position: absolute;
+   
+    top: 58px;
+    right: 0;
+}
+/**************************************/
+.tooth-cont:nth-child(7){
+    width: 310px;
+    margin: auto;
+    position: relative;
+}
+.tooth-cont:nth-child(7) .t:nth-child(1){
+    position: absolute;
+   
+    top: 92px;
+}
+.tooth-cont:nth-child(7) .t:nth-child(2){
+    position: absolute;
+   
+    top: 90px;
+    right: 0;
+}
+/**************************************/
+.tooth-cont:nth-child(8){
+    width: 320px;
+    margin: auto;
+    position: relative;
+}
+.tooth-cont:nth-child(8) .t:nth-child(1){
+    position: absolute;
+   
+    top: 122px;
+}
+.tooth-cont:nth-child(8) .t:nth-child(2){
+    position: absolute;
+   
+    top: 118px;
+    right: 0;
+}
+.mouth-down{
+    transform: rotate(180deg);
+    margin-top: 160px;
+    border: none;
+}
+
+.mouth-separate{
+    width: 520px;
+    margin: auto;
+    margin-top: 160px;
+    height: 3px;
+    border-radius: 20px;
+    background-color: #cef1f1;
+}
+
+
+/***********************/
+.signs-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 900px;
+    margin: auto;
+    padding: 4em 0;
+}
+.signs-cont h1{
+    margin-bottom: 0.3em;
+}
+.signs-cont p{
+    margin-bottom: 2em;
+}
+
+.signs{
+  
+    display: grid;
+    grid-template-columns: auto auto auto;
+  
+    margin-bottom: 3em;
+}
+.sign-check{
+    display: none;
+}
+
+.sign-option{
+    cursor: pointer;
+    display: flex;
+    width: 250px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    justify-content: center;
+    border: 2px solid #cfcff1;
+     border-radius: 12px;
+    margin: 0.5em;
+    font-size: 18px;
+}
+.sign-check:checked + .sign-option{
+    background-color: #909ce6;
+    border: 2px solid #909ce6;
+    color: #fff;
+}
+.sign-option:hover{
+    background-color: #cfcff1;
+}
+
+.pain-location{
+    
+    flex-direction: column;
+    margin-top: 3em;
+    
+}
+
+.pain-location-title{
+    text-align: center;
+    margin-bottom: 2em;
+   
+}
+.pain-title{
+    text-align: center;
+}
+
+
+.background-form{
+    width: 50%;
+    height: 90vh;
+   background-image: url(../img/logo/SVG/Recurso\ 4.svg);
+   background-repeat: no-repeat;
+   background-position: 1.5em 19em;
+   background-size: 90%;
+    margin-left: 3em;
+    border-radius: 25px;
+    margin-top: 2em;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.background-form h1{
+    color: #1aacaa;
+    font-size: 58px;
+    animation: appear 3s;
+    margin-top: 4em;
+    margin-left: 1.5em;
+}
+
+.back{
+    width: 150px!important;
+}
+/*****************************************RESPONSIVE*********************/
+
+@media screen and (max-width:1280px){
+    .background-form{
+        display: none;
+    }
+}
+@media screen and (max-width:624px){
+    .form-urg-title{
+        font-size: 25px;
+    }
+
+    .pain-title {
+        text-align: center;
+        width: 50%;
+        margin: auto;
+      }
+}
+@media screen and (max-width:520px){
+
+    .btn-next,.personal-form, .symptom-options label,.medical-form, .symptom-form, .formCont form input[type="text"], .formCont form input[type="email"]{
+        width: 320px;
+    }
+
+    .symptom-options label{
+        margin: 1em 0;
+    }
+    .form-urg-title{
+
+        width: 150%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .btn-next{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 80px;
+        border-radius: 0;
+    }
+
+    .formCont form{
+        margin-top: 11em;
+      
+    }
+
+    .under-background-form{
+        background:none;
+        background-color: rgba(255, 255, 255, 0.315);
+        filter: blur(2px);
+        height: 120%;
+        padding-bottom: 9em;
+    }
+
+    .symptom-options {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+
+    .symptom-form{
+        padding-bottom: 9em;
+    }
+
+    .personal-form h3, .symptom-form h3 {
+        text-align: center;
+        align-self: center;
+    }
+  
+}
+
+
+/* @media screen and (max-width:580px){
+    .mouth-separate{
+    width: 290px;
+    margin-top: 220px;
+    }
+
+    
+svg{
+    width: 40px;
+    cursor:pointer
+}
+
+.tb{
+    width: 45px;
+}
+
+.ts{
+    width: 35px;
+}
+
+.mouth-cont{
+    width: 300px;
+
+} */
+
+/**************************************/
+/* .tooth-cont:nth-child(1){
+    width: 70px;
+    margin: auto;
+} */
+/**************************************/
+/* .tooth-cont:nth-child(2){
+    width: 145px;
+    margin: auto;
+    position: relative;
+    
+}
+
+.tooth-cont:nth-child(2) .t:nth-child(1){
+    position: absolute;
+    top: -30px;
+    left: 5px;
+}
+.tooth-cont:nth-child(2) .t:nth-child(2){
+    position: absolute;
+   
+    top: -30px;
+    right: -12px;
+} */
+/**************************************/
+/* .tooth-cont:nth-child(3){
+    width: 200px;
+    margin: auto;
+    position: relative;
+   
+}
+.tooth-cont:nth-child(3) .t:nth-child(1){
+    position: absolute;
+   left: 2px;
+    top: -12px;
+}
+.tooth-cont:nth-child(3) .t:nth-child(2){
+    position: absolute;
+   
+    top: -12px;
+    right: -12px;
+} */
+
+/**************************************/
+/* .tooth-cont:nth-child(4){
+    width: 250px;
+    margin: auto;
+    position: relative;
+}
+.tooth-cont:nth-child(4) .t:nth-child(1){
+    position: absolute;
+   left: 5px;
+    top: 12px;
+    
+}
+.tooth-cont:nth-child(4) .t:nth-child(2){
+    position: absolute;
+   
+    top: 15px;
+    right: -5px;
+} */
+
+/**************************************/
+/* .tooth-cont:nth-child(5){
+    width: 260px;
+    margin: auto;
+    position: relative;
+}
+.tooth-cont:nth-child(5) .t:nth-child(1){
+    position: absolute;
+   
+    top: 42px;
+}
+.tooth-cont:nth-child(5) .t:nth-child(2){
+    position: absolute;
+   
+    top: 40px;
+    right: -10px;
+} */
+/**************************************/
+/* .tooth-cont:nth-child(6){
+    width: 280px;
+    margin: auto;
+    position: relative;
+}
+.tooth-cont:nth-child(6) .t:nth-child(1){
+    position: absolute;
+   
+    top: 70px;
+}
+.tooth-cont:nth-child(6) .t:nth-child(2){
+    position: absolute;
+   
+    top: 65px;
+    right: -5px;
+} */
+/**************************************/
+/* .tooth-cont:nth-child(7){
+    width: 280px;
+    margin: auto;
+    position: relative;
+}
+.tooth-cont:nth-child(7) .t:nth-child(1){
+    position: absolute;
+   left: -5px;
+    top: 115px;
+}
+.tooth-cont:nth-child(7) .t:nth-child(2){
+    position: absolute;
+   
+    top: 105px;
+    right: -10px;
+} */
+/**************************************/
+/* .tooth-cont:nth-child(8){
+    width:290px;
+    margin: auto;
+    position: relative;
+}
+.tooth-cont:nth-child(8) .t:nth-child(1){
+    position: absolute;
+   
+    top: 157px;
+}
+.tooth-cont:nth-child(8) .t:nth-child(2){
+    position: absolute;
+   
+    top: 149px;
+    right: 0;
+}
+.mouth-down{
+    transform: rotate(180deg);
+    margin-top: 220px;
+    border: none;
+} */
+/* } */

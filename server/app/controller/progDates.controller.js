@@ -1,27 +1,28 @@
 
 
-const { ProgDates } = require('../database/db');
+// const { ProgDates } = require('../database/db');
+const { prog_dates } = require('../models/index');
 
 const ProgDatesController= {};
 
 ProgDatesController.get = async(req, res) =>{
-  ProgDates.findAll()
+  prog_dates.findAll()
   .then(pd=>res.json(pd))
   .catch(err=> res.json(err))
 }
 ProgDatesController.getBiId = async(req, res) =>{
-  ProgDates.findByPk(req.params.id)
+  prog_dates.findByPk(req.params.id)
   .then(pd=>res.json(pd))
   .catch(err=> res.json(err))
 }
 ProgDatesController.create = async(req, res) =>{
-  ProgDates.create(req.body)
+  prog_dates.create(req.body)
   .then(pd=>res.json(pd))
   .catch(err=> res.json(err))
 }
 ProgDatesController.update = async(req, res) =>{
   const id = req.params.id
-  ProgDates.update(req.body,{
+  prog_dates.update(req.body,{
     where:{
       id
     }
@@ -31,7 +32,7 @@ ProgDatesController.update = async(req, res) =>{
 }
 ProgDatesController.delete = async(req, res) =>{
   const id = req.params.id
-  ProgDates.destroy({
+  prog_dates.destroy({
     where:{
       id
     },

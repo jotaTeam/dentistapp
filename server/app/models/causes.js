@@ -10,7 +10,8 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      causes.belongsTo(models.medicalInfo)
+     
     }
   };
   causes.init({
@@ -34,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
       type:DataTypes.BOOLEAN,
       defaultValue:false,
     },
-    other: DataTypes.STRING
+    otherCauses: DataTypes.STRING 
   }, {
     timestamps:false,
     sequelize,

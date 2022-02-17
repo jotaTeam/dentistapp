@@ -8,12 +8,16 @@ const options = {
   database: process.env.TABLE_DATABASE,
   host: process.env.HOST_DATABASE,
   dialect: process.env.DIALECT_DATABASE,
+
+  seederStorage:'sequelize',
+  seederStorageTableName:'SequelizeSeeds',
+
   define:{
-    timestamp: true,
-    underscore: true,
+    timestamps: false,
+    underscored: true,
   }
   
 }
 
 module.exports = options;
-
+//hola que tal lauraaaa ooo

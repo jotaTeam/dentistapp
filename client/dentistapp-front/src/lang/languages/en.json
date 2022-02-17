@@ -1,0 +1,61 @@
+{
+    "home.welcome": "Welcome to DentisApp",
+
+    "nav.home": "Home",
+    "nav.login": "Login",
+    "nav.emergencies": "Emergencies",
+    "nav.patients": "Patients",
+    "nav.appointments": "Appointments",
+    "nav.adminhome": "Admin home",
+    "nav.admincontrol": "Admin control",
+
+
+    "form.title": "Emergency form",
+
+    "form.data": "Personal information",
+    "form.placeName": "Insert your first name",
+    "form.placeLastname": "Insert your last name",
+    "form.placeDNI": "Insert your DNI",
+    "form.placePhone": "Insert your phone number",
+    "form.btnNext": "Next",
+    "form.name": "Name:",
+    "form.surname": "Surname:",
+    "form.dni": "ID number:",
+    "form.telephone": "Telephone:",
+
+    "form.yes": "Yes",
+    "form.no": "No",
+    "form.specify": "If yes, specify:",
+    "form.others": "Others:",
+    "form.send": "Submit",
+
+    "form.pathology": "Have you had any previous oral pathology or do you present it nowadays?",
+    "form.allergy": "Are you allergic to any food/ medication/ product?",
+    "form.allergyMore":"Insert allergies",
+    "form.patologyPrev":"Insert previous pathologies",
+
+
+    "form.symptoms": "Select symptoms and signs",
+    "form.symptoms.bleeding":"Bleeding",
+    "form.symptoms.pain":"Pain",
+    "form.symptoms.dentalmov":"Dental movility",
+    "form.symptoms.ulcers":"Ulcers",
+    "form.symptoms.dentalstains":"Dental stains",
+    "form.symptoms.gums":"Gums inflammation",
+    "form.symptoms.badbreath":"Bad breath",
+    "form.symptoms.sensitivity":"Sensitivity",
+    "form.otherSymptoms":"Insert other symptoms",
+
+    "form.location": "Select the teeth where you feel pain",
+
+    "form.cause": "What do you associate this problem with?",
+    "form.cause.cavity": "Cavity",
+    "form.cause.fracture": "Fracture",
+    "form.cause.gums": "Gums problems",
+    "form.cause.hygiene": "Products of oral hygiene",
+    "form.cause.diseases": "Oral diseases",
+    "form.cause.diseasesEx": "oral cancer, lip cold sore… ",
+    "form.cause.trauma": "Oral trauma",
+    "form.otherCauses": "Insert other causes"
+
+}

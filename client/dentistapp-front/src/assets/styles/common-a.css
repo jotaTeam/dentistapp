@@ -1,0 +1,31 @@
+html{
+  background-color: rgb(201, 241, 248);
+}
+
+body{
+  padding: 1em;
+  width: 80%;
+  text-align: center;
+}
+
+nav{
+  
+  border-radius: 20%;
+  display: inline-flex;
+  padding: 1em;
+}
+
+nav a{
+  background-color: rgb(135, 248, 248);
+  margin: 0 10px 0 10px;
+  padding: 10px;
+  font-family: 'Dosis', sans-serif;
+  font-weight: 700;
+  font-size: x-large;
+  transition: background-color .2s;
+  text-decoration: none; 
+}
+
+nav a:hover{
+  background-color:rgb(110, 238, 238); ;
+}

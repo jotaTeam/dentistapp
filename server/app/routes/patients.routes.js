@@ -5,13 +5,13 @@ const PatientController = require('../controller/patients.controller');
 
 
 router.get('/', PatientController.get);
-router.get('/dni', PatientController.getById);
+router.get('/:dni', PatientController.getById);
 
 router.post('/', PatientController.create);
 
-router.put('/', PatientController.update);
+router.put('/:dni', PatientController.update);
 
-router.delete('/', PatientController.delete);
+router.delete('/:dni', PatientController.delete);
 
 
 
