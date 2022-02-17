@@ -1,6 +1,6 @@
-import { useFetch } from "../hooks/useFetch";
+import {fetchTool} from "../helpers/fetchTool";
 
-export const useCreateData = (sentData, url) => {
+export const createData = async(sentData, url) => {
 
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
@@ -14,9 +14,10 @@ export const useCreateData = (sentData, url) => {
 
 
 
-    const data = useFetch(url, requestOptions);
+  const data = await fetchTool(url, requestOptions);
+    
 
-    return data;
+  return data;
 
 
 };
