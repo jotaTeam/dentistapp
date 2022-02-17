@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
 
-export const PainLocation = ({ handleInputChange, formData }) => {
+export const PainLocation = ({ setTeeth }) => {
 
     let prevState = [false, false, false, false, false, false, false, false, false, false,
         false, false, false, false, false, false, false, false, false, false,
@@ -9,14 +9,20 @@ export const PainLocation = ({ handleInputChange, formData }) => {
         false, false, false];
     //El array tiene 33 elementos, el 0 no se corresponde a ningún diente
 
-    const [active, setActive] = useState(prevState);
 
+    const [active, setActive] = useState(prevState);
 
     const handleToggle = (id) => {
         prevState = active;
         prevState[id] = !active[id];
         setActive([...prevState]);
     };
+
+    useEffect(() => {
+        return () => {
+            setTeeth(active);
+        }
+    });
 
     return (
         <div>
@@ -187,6 +193,7 @@ export const PainLocation = ({ handleInputChange, formData }) => {
                     </div>
                 </div>
             </div>
+
         </div>
     )
 }
