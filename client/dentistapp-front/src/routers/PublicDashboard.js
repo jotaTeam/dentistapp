@@ -5,6 +5,7 @@ import { Home } from "../components/Home";
 import { Nav } from "../components/utils/nav";
 import LanguageSelector from "../components/LanguageSelector";
 import { NotFound } from "../components/NotFound";
+import PreSendInfo from "../components/urgencias/PreSendInfo";
 
 
 export const PublicDashboard = () => {
@@ -22,6 +23,7 @@ export const PublicDashboard = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/urgencias" element={<Urgencias />} />
+                <Route path='/show' element={<PreSendInfo/>} />
                 <Route path= "/*" element = {<NotFound/>}/>
 
             </Routes>
