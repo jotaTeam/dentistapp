@@ -11,11 +11,19 @@ export const PainLocation = ({ handleInputChange, formData }) => {
 
     const [active, setActive] = useState(prevState);
 
+    let mouth="";
 
     const handleToggle = (id) => {
         prevState = active;
         prevState[id] = !active[id];
         setActive([...prevState]);
+
+       
+      document.getElementById("prueba").value=active;
+      alert(document.getElementById("prueba").value)
+
+ 
+        
     };
 
     return (
@@ -187,7 +195,10 @@ export const PainLocation = ({ handleInputChange, formData }) => {
                     </div>
                 </div>
             </div>
+            <input type="hidden" id="prueba" ></input>
         </div>
+
+        
     )
 }
 
