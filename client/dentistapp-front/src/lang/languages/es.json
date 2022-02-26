@@ -45,6 +45,13 @@
     "form.symptoms.sensitivity":"Sensibilidad",
     "form.otherSymptoms":"Introduce otros síntomas",
 
+    "form.summary.verify": "Por favor, verifique sus datos:",
+    "form.summary.medical": "Patologías y alergias",
+    "form.summary.medical.pathology": "Patologías:",
+    "form.summary.medical.allergy": "Alergias:",
+    "form.summary.symptoms": "Síntomas y signos",
+    "form.summary.causes": "Causas",
+
     "form.location": "Selecciona los dientes en los que sientes dolor",
 
     "form.cause": "¿A qué asocia este problema?",
