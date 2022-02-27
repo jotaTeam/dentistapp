@@ -46,6 +46,13 @@
     "form.symptoms.sensitivity":"Sensitivity",
     "form.otherSymptoms":"Insert other symptoms",
 
+    "form.summary.verify": "Please, verify your information:",
+    "form.summary.medical": "Pathologies and allergies",
+    "form.summary.medical.pathology": "Pathologies:",
+    "form.summary.medical.allergy": "Allergies:",
+    "form.summary.symptoms": "Symptoms and signs",
+    "form.summary.causes": "Causes",
+
     "form.location": "Select the teeth where you feel pain",
 
     "form.cause": "What do you associate this problem with?",

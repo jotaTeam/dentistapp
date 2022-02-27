@@ -16,6 +16,8 @@ export const Form = () => {
 
     });
 
+    const [position, setPosition] = useState(0);
+
     const emergencyData = useRef({});
     const actTeeth = useRef([]);
     let teeth = '';
@@ -47,11 +49,14 @@ export const Form = () => {
             handleInputChange={handleInputChange}
         />,
         <FormSummary
+        formData={formData}
         emergencyData = {emergencyData.current}
+        handleInputChange={handleInputChange}
+        setPosition = {setPosition}
     />
     ];
 
-    const [position, setPosition] = useState(0);
+ 
 
 
     const onHandleNext = (e) => {
