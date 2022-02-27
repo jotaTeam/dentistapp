@@ -20,22 +20,25 @@ export const MedicalData = ({handleInputChange, formData}) => {
                     value="true"
                     name="pathology"
                     id="true-pathology"
+                    checked={formData.pathology === 'true'}
                 />
                 <label for="true-pathology">
                     <FormattedMessage
                         id="form.yes"
                         defaultMessage="Sí"
-                        
+                       
                     />
                 </label>
                 
+
 
                 <input type="radio"
                     onChange={handleInputChange}
                     value="false"
                     name="pathology"
                     id="false-pathology"
-                    defaultChecked />
+                    checked={formData.pathology === 'false'}
+                     />
 
                 <label for="false-pathology">
                     <FormattedMessage
@@ -77,6 +80,7 @@ export const MedicalData = ({handleInputChange, formData}) => {
                     value="true"
                     name="allergy"
                     id="true-allergy"
+                    checked={formData.allergy === 'true'}
                 />
                 <label for="true-allergy">
                     <FormattedMessage
@@ -91,7 +95,8 @@ export const MedicalData = ({handleInputChange, formData}) => {
                     value="false"
                     name="allergy"
                     id="false-allergy"
-                    defaultChecked />
+                    checked={formData.allergy === 'false'}
+                     /> 
                 <label for="false-allergy">
                     <FormattedMessage
                         id="form.no"

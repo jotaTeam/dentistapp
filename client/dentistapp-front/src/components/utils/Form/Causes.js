@@ -16,7 +16,9 @@ export const Causes = ({handleInputChange, formData}) => {
                     onChange={handleInputChange}
                     name="cavity"
                     value="true" 
-                    id="cavity"/>
+                    id="cavity"
+                    checked={formData.cavity === 'true'}
+                    />
 
                 <label for="cavity">
                     <FormattedMessage
@@ -30,7 +32,9 @@ export const Causes = ({handleInputChange, formData}) => {
                     onChange={handleInputChange}
                     name="fracture"
                     value="true"
-                    id="fracture" />
+                    id="fracture" 
+                    checked={formData.fracture === 'true'}
+                    />
 
                  <label for="fracture">
                     <FormattedMessage
@@ -44,7 +48,9 @@ export const Causes = ({handleInputChange, formData}) => {
                     onChange={handleInputChange}
                     name="gums_problems"
                     value="true"
-                    id="gums_problems" />
+                    id="gums_problems"
+                    checked={formData.gums_problems === 'true'}
+                    />
 
                 <label for="gums_problems">
                     <FormattedMessage
@@ -58,7 +64,9 @@ export const Causes = ({handleInputChange, formData}) => {
                     onChange={handleInputChange}
                     name="oral_hygiene"
                     value="true"
-                    id="oral_hygiene" />
+                    id="oral_hygiene"
+                    checked={formData.oral_hygiene === 'true'}
+                    />
                 
                 <label for="oral_hygiene">
                     <FormattedMessage
@@ -72,7 +80,9 @@ export const Causes = ({handleInputChange, formData}) => {
                     onChange={handleInputChange}
                     name="oral_disease"
                     value="true"
-                    id="oral_disease" />
+                    id="oral_disease"
+                    checked={formData.oral_disease === 'true'}
+                    />
 
                 <label for="oral_disease" className="oral-disease-label" title={intl.formatMessage({id: 'form.cause.diseasesEx'})}>
                     <FormattedMessage
@@ -91,7 +101,9 @@ export const Causes = ({handleInputChange, formData}) => {
                     onChange={handleInputChange}
                     name="oral_trauma"
                     value="true"
-                    id="oral_trauma" />
+                    id="oral_trauma"
+                    checked={formData.oral_trauma === 'true'}
+                    />
 
                  <label for="oral_trauma">
                     <FormattedMessage

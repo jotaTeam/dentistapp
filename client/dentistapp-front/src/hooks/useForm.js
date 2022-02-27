@@ -17,7 +17,7 @@ export const useForm = (initialState = {}) => {
 
         });
 
-        console.log(target)
+        // console.log(target)
 
     }
    

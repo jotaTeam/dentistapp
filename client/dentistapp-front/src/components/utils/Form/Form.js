@@ -57,6 +57,9 @@ export const Form = () => {
     const onHandleNext = (e) => {
         setPosition(position + 1);
     }
+    const onHandlePrev = (e) => {
+        setPosition(position - 1);
+    }
 
 
     const onSubmitHandle = (e) => {
@@ -71,6 +74,7 @@ export const Form = () => {
         emergencyData.current = {...formData};
         emergencyData.current.teeth = teeth;
        // console.log(emergencyData);
+       console.log("probando: patologia =  " + formData.pathology + " alergia = " + formData.allergy)
         
     };
 
@@ -119,12 +123,20 @@ export const Form = () => {
                             />
                         </button>
                         :
+                        <div>
                         <button className="btn-next" onClick={onHandleNext}>
                             <FormattedMessage
                                 id="form.btnNext"
                                 defaultMessage="Next"
                             />
                         </button>
+                          <button onClick={onHandlePrev}>
+                          <FormattedMessage
+                              id="form.btnNext"
+                              defaultMessage="Next"
+                          />
+                      </button>
+                      </div>
                     }
 
 
