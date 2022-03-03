@@ -12,13 +12,13 @@ const LanguageSelector = () => {
     return (
 
 
-        <section class="menu-cont">
+        <section className="menu-cont">
 
             {(!localStorage.getItem('lang'))
                 && lang.provideLanguage('es')
             }
-            <div class="logo-cont">
-                <Link to="/" ><img class="menu-logo" src={logo} alt="dentist" width='40px'></img></Link>
+            <div className="logo-cont">
+                <Link to="/" ><img className="menu-logo" src={logo} alt="dentist" width='40px'></img></Link>
 
             </div>
 
@@ -27,10 +27,10 @@ const LanguageSelector = () => {
                 {/* <button onClick={() => lang.provideLanguage('en')}><img src={en} alt="" width='40px' /></button> */}
 
                 <input type="radio" id="lang-es" className='lang-change-btn' name="lang-selection" onChange={() => lang.provideLanguage('es')} checked={localStorage.getItem('lang') === 'es'} />
-                <label className='lb-lang' for="lang-es">ES</label>
+                <label className='lb-lang' htmlFor="lang-es">ES</label>
 
                 <input type="radio" id="lang-en" className='lang-change-btn' name="lang-selection" onChange={() => lang.provideLanguage('en')} checked={localStorage.getItem('lang') === 'en'} />
-                <label className='lb-lang' for="lang-en">EN</label>
+                <label className='lb-lang' htmlFor="lang-en">EN</label>
 
 
             </div>

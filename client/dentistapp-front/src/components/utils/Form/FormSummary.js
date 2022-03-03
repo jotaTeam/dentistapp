@@ -32,13 +32,13 @@ export const FormSummary = ({ formData, setPosition }) => {
           <span> {formData.name} </span>
         </p>}
 
-        {formData.surname &&
+        {formData.surnames &&
           <p className="summaryData">
             <FormattedMessage
               id="form.surname"
               defaultMessage="Apellidos:"
             />
-            <span> {formData.surname} </span>
+            <span> {formData.surnames} </span>
           </p>}
 
         {formData.dni &&
@@ -50,13 +50,13 @@ export const FormSummary = ({ formData, setPosition }) => {
             <span> {formData.dni} </span>
           </p>}
 
-        {formData.telephone &&
+        {formData.phone &&
           <p className="summaryData">
             <FormattedMessage
               id="form.telephone"
               defaultMessage="Teléfono:"
             />
-            <span> {formData.telephone} </span>
+            <span> {formData.phone} </span>
           </p>}
 
         <button className="summaryBtn" onClick={() => handleClick(0)}>
@@ -78,7 +78,7 @@ export const FormSummary = ({ formData, setPosition }) => {
             id="form.summary.medical.pathology"
             defaultMessage="Patologías:"
           />
-          {formData.pathology ?
+          {formData.pathology === true ?
             <span> <FormattedMessage
               id="form.yes"
               defaultMessage="Sí"
@@ -98,7 +98,7 @@ export const FormSummary = ({ formData, setPosition }) => {
             id="form.summary.medical.allergy"
             defaultMessage="Alergias:"
           />
-          {formData.allergy ?
+          {formData.allergy === true ?
             <span> <FormattedMessage
               id="form.yes"
               defaultMessage="Sí"

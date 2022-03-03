@@ -10,7 +10,7 @@ export const Causes = ({handleInputChange, formData}) => {
                         defaultMessage="¿A qué lo asocia?"
                     />
                 </h3>
-                <div class="symptom-options">
+                <div className="symptom-options">
                
                 <input type="checkbox"
                     onChange={handleInputChange}
@@ -20,7 +20,7 @@ export const Causes = ({handleInputChange, formData}) => {
                     checked={formData.cavity === 'true'}
                     />
 
-                <label for="cavity">
+                <label htmlFor="cavity">
                     <FormattedMessage
                         id="form.cause.cavity"
                         defaultMessage="Caries"
@@ -36,7 +36,7 @@ export const Causes = ({handleInputChange, formData}) => {
                     checked={formData.fracture === 'true'}
                     />
 
-                 <label for="fracture">
+                 <label htmlFor="fracture">
                     <FormattedMessage
                         id="form.cause.fracture"
                         defaultMessage="Fractura"
@@ -52,7 +52,7 @@ export const Causes = ({handleInputChange, formData}) => {
                     checked={formData.gums_problems === 'true'}
                     />
 
-                <label for="gums_problems">
+                <label htmlFor="gums_problems">
                     <FormattedMessage
                         id="form.cause.gums"
                         defaultMessage="Problemas de encías"
@@ -68,7 +68,7 @@ export const Causes = ({handleInputChange, formData}) => {
                     checked={formData.oral_hygiene === 'true'}
                     />
                 
-                <label for="oral_hygiene">
+                <label htmlFor="oral_hygiene">
                     <FormattedMessage
                         id="form.cause.hygiene"
                         defaultMessage="Productos de higiene oral"
@@ -84,7 +84,7 @@ export const Causes = ({handleInputChange, formData}) => {
                     checked={formData.oral_disease === 'true'}
                     />
 
-                <label for="oral_disease" className="oral-disease-label" title={intl.formatMessage({id: 'form.cause.diseasesEx'})}>
+                <label htmlFor="oral_disease" className="oral-disease-label" title={intl.formatMessage({id: 'form.cause.diseasesEx'})}>
                     <FormattedMessage
                         id="form.cause.diseases"
                         defaultMessage="Enfermedades orales (cáncer oral, herpes labial…)"
@@ -105,7 +105,7 @@ export const Causes = ({handleInputChange, formData}) => {
                     checked={formData.oral_trauma === 'true'}
                     />
 
-                 <label for="oral_trauma">
+                 <label htmlFor="oral_trauma">
                     <FormattedMessage
                         id="form.cause.trauma"
                         defaultMessage="Traumatismo oral"

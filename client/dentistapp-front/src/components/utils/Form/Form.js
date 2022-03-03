@@ -9,12 +9,17 @@ import '../../../assets/styles/form.css';
 //import { UrgenciasValidator } from "../validators/UrgenciasValidator";
 import { PainLocation } from "./PainLocation";
 import { FormSummary } from "./FormSummary";
+import {SubmitModal} from "../../urgencias/SubmitModal";
+import {createData} from "../../../crud/createData";
+import { apiUrl } from '../../../datahelpers/apiURL';
 
 export const Form = () => {
 
     const [formData, handleInputChange] = useForm({
 
     });
+
+  const [modalOpen, setModalOpen] = useState(false);
 
     const [position, setPosition] = useState(0);
 
@@ -83,9 +88,22 @@ export const Form = () => {
         
     };
 
+  const handleSubmit = async() => {
+
+
+  const resp = await createData(formData, apiUrl.emergency);
+
+    console.log(resp);
+
+    setModalOpen(true);
+
+  }
+
     return (
 
         <>
+
+      <SubmitModal modalOpen={modalOpen} />
             <div className='under-background-form'></div>
 
             <div className="formCont">
@@ -121,7 +139,7 @@ export const Form = () => {
                 } */}
 
                     {(position === 5) ?
-                        <button className="btn-next" type="submit">
+                        <button className="btn-next" type="submit" onClick={handleSubmit}>
                             <FormattedMessage
                                 id="form.send"
                                 defaultMessage="Enviar"
@@ -148,6 +166,7 @@ export const Form = () => {
                 </form>
 
             </div>
+
         </>
     );
 
