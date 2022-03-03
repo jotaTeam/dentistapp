@@ -42,7 +42,7 @@ export const PersonalData = ({handleInputChange, formData}) => {
                     type="text"
                     onChange={handleInputChange}
                     value={formData.surname}
-                    name="surname"
+                    name="surnames"
                     required
                 />
             </section>   
@@ -78,7 +78,7 @@ export const PersonalData = ({handleInputChange, formData}) => {
                     type="text"
                     onChange={handleInputChange}
                     value={formData.telephone}
-                    name="telephone"
+                    name="phone"
                     required
                 />
             </section>  

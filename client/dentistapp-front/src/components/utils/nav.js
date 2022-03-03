@@ -75,12 +75,10 @@ export const Nav = () => {
       <nav>
       {
         routes.map(route=>(
-          <>
             <NavLink
             to={route.path}
             key={route.key}
             >{route.title}</NavLink>
-          </>
         ))
       }
       </nav>

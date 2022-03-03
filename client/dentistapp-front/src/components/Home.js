@@ -24,7 +24,7 @@ export const Home = () => {
 
        
 
-        <header class="home-header">
+        <header className="home-header">
         <div className='home-title-cont'>    
         <h1 className='home-title-left'>Dentist App</h1>
         <p className='home-description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ul</p>

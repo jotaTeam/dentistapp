@@ -17,12 +17,12 @@ export const MedicalData = ({handleInputChange, formData}) => {
                 <input
                     type="radio"
                     onChange={handleInputChange}
-                    value="true"
+                    value={true}
                     name="pathology"
                     id="true-pathology"
                     checked={formData.pathology === 'true'}
                 />
-                <label for="true-pathology">
+                <label htmlFor="true-pathology">
                     <FormattedMessage
                         id="form.yes"
                         defaultMessage="Sí"
@@ -34,13 +34,13 @@ export const MedicalData = ({handleInputChange, formData}) => {
 
                 <input type="radio"
                     onChange={handleInputChange}
-                    value="false"
+                    value={false}
                     name="pathology"
                     id="false-pathology"
                     checked={formData.pathology === 'false'}
                      />
 
-                <label for="false-pathology">
+                <label htmlFor="false-pathology">
                     <FormattedMessage
                         id="form.no"
                         defaultMessage="No"
@@ -77,12 +77,12 @@ export const MedicalData = ({handleInputChange, formData}) => {
                 <section>
                 <input type="radio"
                     onChange={handleInputChange}
-                    value="true"
+                    value={true}
                     name="allergy"
                     id="true-allergy"
                     checked={formData.allergy === 'true'}
                 />
-                <label for="true-allergy">
+                <label htmlFor="true-allergy">
                     <FormattedMessage
                         id="form.yes"
                         defaultMessage="Sí"
@@ -92,12 +92,12 @@ export const MedicalData = ({handleInputChange, formData}) => {
 
                 <input type="radio"
                     onChange={handleInputChange}
-                    value="false"
+                    value={false}
                     name="allergy"
                     id="false-allergy"
                     checked={formData.allergy === 'false'}
                      /> 
-                <label for="false-allergy">
+                <label htmlFor="false-allergy">
                     <FormattedMessage
                         id="form.no"
                         defaultMessage="No"

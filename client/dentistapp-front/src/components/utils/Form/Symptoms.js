@@ -12,7 +12,7 @@ export const Symptoms = ({handleInputChange, formData}) => {
                     />
                 </h3>
             
-            <div class="symptom-options">
+            <div className="symptom-options">
                 <input type="checkbox"
                     onChange={handleInputChange}
                     name="bleeding"
@@ -20,7 +20,7 @@ export const Symptoms = ({handleInputChange, formData}) => {
                     id="bleeding"
                     checked={formData.bleeding === 'true'}
                     />
-                <label for="bleeding">
+                <label htmlFor="bleeding">
                     <FormattedMessage
                         id="form.symptoms.bleeding"
                         defaultMessage="Sangrado"
@@ -35,7 +35,7 @@ export const Symptoms = ({handleInputChange, formData}) => {
                     checked={formData.pain === 'true'}
                     />
 
-                 <label for="pain">
+                 <label htmlFor="pain">
                     <FormattedMessage
                         id="form.symptoms.pain"
                         defaultMessage="Dolor"
@@ -50,7 +50,7 @@ export const Symptoms = ({handleInputChange, formData}) => {
                     checked={formData.dental_movility === 'true'}
                     />
 
-                <label for="dental_movility">
+                <label htmlFor="dental_movility">
                     <FormattedMessage
                         id="form.symptoms.dentalmov"
                         defaultMessage="Movilidad dentaria"
@@ -65,7 +65,7 @@ export const Symptoms = ({handleInputChange, formData}) => {
                     checked={formData.ulcer === 'true'}
                     />
 
-                <label for="ulcer">
+                <label htmlFor="ulcer">
                     <FormattedMessage
                         id="form.symptoms.ulcers"
                         defaultMessage="Úlceras"
@@ -81,7 +81,7 @@ export const Symptoms = ({handleInputChange, formData}) => {
                     checked={formData.dental_stains === 'true'}
                     />
 
-                <label for="dental_stains">
+                <label htmlFor="dental_stains">
                     <FormattedMessage
                         id="form.symptoms.dentalstains"
                         defaultMessage="Manchas dentales"
@@ -96,7 +96,7 @@ export const Symptoms = ({handleInputChange, formData}) => {
                     checked={formData.gums_inflammations === 'true'}
                     />
 
-                <label for="gums_inflammations">
+                <label htmlFor="gums_inflammations">
                     <FormattedMessage
                         id="form.symptoms.gums"
                         defaultMessage="Inflamación de encías"
@@ -112,7 +112,7 @@ export const Symptoms = ({handleInputChange, formData}) => {
                     checked={formData.bad_breath === 'true'}
                      />
 
-                <label for="bad_breath">
+                <label htmlFor="bad_breath">
                     <FormattedMessage
                         id="form.symptoms.badbreath"
                         defaultMessage="Mal aliento"
@@ -129,7 +129,7 @@ export const Symptoms = ({handleInputChange, formData}) => {
                     checked={formData.sensibility === 'true'}
                     />
 
-                 <label for="sensibility">
+                 <label htmlFor="sensibility">
                     <FormattedMessage
                         id="form.symptoms.sensitivity"
                         defaultMessage="Sensibilidad"
