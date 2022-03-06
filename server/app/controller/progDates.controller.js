@@ -7,18 +7,33 @@ const ProgDatesController= {};
 
 ProgDatesController.get = async(req, res) =>{
   prog_dates.findAll()
-  .then(pd=>res.json(pd))
-  .catch(err=> res.json(err))
+  .then(pd=>res.status(200).json({
+    ok:true,
+    pd}))
+  .catch(err=> res.json({
+    ok:false,
+    err
+  }))
 }
 ProgDatesController.getBiId = async(req, res) =>{
   prog_dates.findByPk(req.params.id)
-  .then(pd=>res.json(pd))
-  .catch(err=> res.json(err))
+  .then(pd=>res.status(200).json({
+    ok:true,
+    pd}))
+  .catch(err=> res.json({
+    ok:false,
+    err
+  }))
 }
 ProgDatesController.create = async(req, res) =>{
   prog_dates.create(req.body)
-  .then(pd=>res.json(pd))
-  .catch(err=> res.json(err))
+  .then(pd=>res.status(200).json({
+    ok:true,
+    pd}))
+  .catch(err=> res.json({
+    ok:false,
+    err
+  }))
 }
 ProgDatesController.update = async(req, res) =>{
   const id = req.params.id
@@ -27,8 +42,13 @@ ProgDatesController.update = async(req, res) =>{
       id
     }
   })
-  .then(pd=>res.json(pd))
-  .catch(err=> res.json(err))
+  .then(pd=>res.status(200).json({
+    ok:true,
+    pd}))
+  .catch(err=> res.json({
+    ok:false,
+    err
+  }))
 }
 ProgDatesController.delete = async(req, res) =>{
   const id = req.params.id
@@ -37,8 +57,13 @@ ProgDatesController.delete = async(req, res) =>{
       id
     },
   })
-  .then(pd=>res.json(pd))
-  .catch(err=> res.json(err))
+  .then(pd=>res.status(200).json({
+    ok:true,
+    pd}))
+  .catch(err=> res.json({
+    ok:false,
+    err
+  }))
 }
 
 

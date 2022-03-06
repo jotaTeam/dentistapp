@@ -9,15 +9,27 @@ const EmergencyController={}
         include: [causes,simptoms]
       }  
     })
-    .then(emergency=> res.json(emergency))
-    .catch(err=>res.json(err))
+    .then(emergency=> res.status(200).json({
+      ok:true,
+      emergency
+    }))
+    .catch(err=>res.status(500).json({
+      ok:false,
+      err
+    }))
 
   }
 
   EmergencyController.getBiId= async (req,res)=>{
     dental_emergency.findByPk(req.params.id)
-    .then(emergency=> res.json(emergency))
-    .catch(err=>res.json(err))
+    .then(emergency=> res.status(200).json({
+      ok:true,
+      emergency
+    }))
+    .catch(err=>res.status(500).json({
+      ok:false,
+      err
+    }))
 
   }
 
@@ -35,8 +47,14 @@ const EmergencyController={}
         id
       }
     })
-    .then(emergency=> res.json(emergency))
-    .catch(err=>res.json(err))
+    .then(emergency=> res.status(200).json({
+      ok:true,
+      emergency
+    }))
+    .catch(err=>res.status(500).json({
+      ok:false,
+      err
+    }))
 
   }
 
@@ -45,8 +63,14 @@ const EmergencyController={}
     dental_emergency.destroy({where:{
       id
     }})
-    .then(emergency=> res.json(emergency))
-    .catch(err=>res.json(err))
+    .then(emergency=> res.status(200).json({
+      ok:true,
+      emergency
+    }))
+    .catch(err=>res.status(500).json({
+      ok:false,
+      err
+    }))
 
   }
 
@@ -66,8 +90,14 @@ const EmergencyController={}
         include: [causes,simptoms]
       }  
     })
-    .then(emergency=> res.json(emergency))
-    .catch(err=>res.json(err))
+    .then(emergency=> res.status(200).json({
+      ok:true,
+      emergency
+    }))
+    .catch(err=>res.json({
+      ok:false,
+      err
+    }))
 }
 
   const newEmergency = async( values ) =>{
