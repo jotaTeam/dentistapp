@@ -5,20 +5,38 @@ const PatientsController={};
 
 PatientsController.get = async(req, res) =>{
   patient.findAll()
-  .then(patients=> res.json(patients))
-  .catch(err=>res.json(err))
+  .then(patients=> res.status(200).json({
+    ok:true,
+    patients
+  }))
+  .catch(err=>res.status(500).json({
+    ok:false,
+    err
+  }))
 }
 
 PatientsController.getById = async(req, res) =>{
   patient.findByPk(req.params.dni)
-  .then(patient=> res.json(patient))
-  .catch(err=>res.json(err))
+  .then(patient=> res.status(200).json({
+    ok:true,
+    patient
+  }))
+  .catch(err=>res.status(500).json({
+    ok:false,
+    err
+  }))
 }
 
 PatientsController.create = async(req, res) =>{
   patient.create(req.body)  
-  .then(patient=> res.json(patient))
-  .catch(err=>res.json(err))
+  .then(patient=> res.status(200).json({
+    ok:true,
+    patient
+  }))
+  .catch(err=>res.status(500).json({
+    ok:false,
+    err
+  }))
 }
 
 PatientsController.update = async(req, res) =>{
@@ -28,8 +46,14 @@ PatientsController.update = async(req, res) =>{
       dni
     }
   })
-  .then(patient=> res.json(patient))
-  .catch(err=>res.json(err))
+  .then(patient=> res.status(200).json({
+    ok:true,
+    patient
+  }))
+  .catch(err=>res.status(500).json({
+    ok:false,
+    err
+  }))
 }
 
 PatientsController.delete = async(req, res) =>{
@@ -39,8 +63,14 @@ PatientsController.delete = async(req, res) =>{
       dni
     }
   })
-  .then(patient=> res.json(patient))
-  .catch(err=>res.json(err))
+  .then(patient=> res.status(200).json({
+    ok:true,
+    patient
+  }))
+  .catch(err=>res.status(500).json({
+    ok:false,
+    err
+  }))
 }
 
 module.exports= PatientsController;

@@ -6,18 +6,31 @@ const CausesController ={};
 CausesController.create = async(req, res)=>{
   Causes.create(req.body)
   .then(causes=>res.json(causes))
+  .catch(err=>res.status(500).json({
+    ok:false,
+    err}))
 }
 
 CausesController.get= async(req,res)=>{
   causes.findAll()
-  .then(causes=>res.json(causes))
-  .catch(err=>res.json(err))
+  .then(causes=>res.status(200).json({
+    ok:true,
+    causes
+  }))
+  .catch(err=>res.status(500).json({
+    ok:false,
+    err}))
 }
 
 CausesController.getById= async(req,res)=>{
   causes.findByPk(req.params.id)
-  .then(causes=>res.json(causes))
-  .catch(err=>res.json(err))
+  .then(causes=>res.status(200).json({
+    ok:true,
+    causes
+  }))
+  .catch(err=>res.status(500).json({
+    ok:false,
+    err}))
 }
 
 CausesController.update = async(req, res)=>{
@@ -27,8 +40,13 @@ CausesController.update = async(req, res)=>{
       id
     }
   })
-  .then(causes=>res.json(causes))
-  .catch(err=>res.json(err))
+  .then(causes=>res.status(200).json({
+    ok:true,
+    causes
+  }))
+  .catch(err=>res.status(500).json({
+    ok:false,
+    err}))
 }
 
 //TODO probar esto
@@ -37,8 +55,13 @@ CausesController.delete= async(req, res)=>{
   causes.destroy({where:{
     id
   }})
-  .then(causes=>res.json(causes))
-  .catch(err=>res.json(err))
+  .then(causes=>res.json({
+    ok:true,
+    causes
+  }))
+  .catch(err=>res.status(500).json({
+    ok:false,
+    err}))
 }
 
 

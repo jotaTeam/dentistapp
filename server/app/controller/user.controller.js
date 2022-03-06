@@ -14,22 +14,40 @@ userController.create = async( req, res )=>{
     email,
     google_token,
   })
-  .then(user=> res.json(user))
-  .catch(err=>res.json(err))
+  .then(user=> res.status(200).json({
+    ok:true,
+    user
+  }))
+  .catch(err=>res.status(500).json({
+    ok:false,
+    err
+  }))
 }
 
 //Read
 userController.getAll = async(req, res)=>{
   User.findAll()
-  .then(user=>res.json(user))
-  .catch(err=>res.json(err))
+  .then(user=>res.jstatus(200).son({
+    ok:true,
+    user
+  }))
+  .catch(err=>res.status(500).json({
+    ok:false,
+    err
+  }))
 }
 
 userController.getById = async(req, res)=>{
   const id = req.params.id
   User.findByPk(id)
-  .then(user=>res.json(user))
-  .catch(err=>res.json(err))
+  .then(user=>res.jstatus(200).son({
+    ok:true,
+    user
+  }))
+  .catch(err=>res.status(500).json({
+    ok:false,
+    err
+  }))
 }
 
 //update
@@ -42,8 +60,14 @@ userController.update = async (req, res) =>{
       id,
     }
   })
-  .then(user=>res.json(user))
-  .catch(err=>res.json(err))
+  .then(user=>res.jstatus(200).son({
+    ok:true,
+    user
+  }))
+  .catch(err=>res.status(500).json({
+    ok:false,
+    err
+  }))
 
 }
 
@@ -54,8 +78,14 @@ userController.delete = async (req, res)=> {
   User.destroy({where:{
     id
   }})
-  .then(user=>res.json(user))
-  .catch(err=>res.json(err));
+  .then(user=>res.jstatus(200).son({
+    ok:true,
+    user
+  }))
+  .catch(err=>res.status(500).json({
+    ok:false,
+    err}
+    ));
 }
 
 module.exports = userController;
