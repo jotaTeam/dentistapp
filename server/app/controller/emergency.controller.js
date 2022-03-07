@@ -34,10 +34,25 @@ const EmergencyController={}
   }
 
   EmergencyController.create= async (req,res)=>{
-    newEmergency(req.body)
-    .then(res.json({msg:'Emergencia guadada'}))
-    .catch(err=>console.log(err))
 
+    const eValues = (emergencyValues(req.body))
+    console.log(eValues);
+    dental_emergency.create(emergencyValues(eValues))
+    .then(emergency => {
+      const emergencyId =emergency.dataValues.id
+      medicalInfo.create(medicalInfoValues(req.body,emergencyId))
+      .then(medicalinfo=> {
+        const medicalInfoId = medicalinfo.dataValues.id;
+        causes.create(causesValues(req.body,medicalInfoId));
+        simptoms.create(simptomsValues(req.body,medicalInfoId));
+        Teeth.create(teethValues(req.body,medicalInfoId))
+        res.status(200).json({ok:true, emergency})
+      })
+    })
+    .catch(err=>{
+     res.status(500).json({ok:false, err})
+      
+    })
   }
 
   EmergencyController.update= async (req,res)=>{
@@ -103,7 +118,7 @@ const EmergencyController={}
   const newEmergency = async( values ) =>{
     console.log(values);
     dental_emergency.create(emergencyValues(values))
-    .then(emergency=> {
+    .then(emergency => {
       const emergencyId =emergency.dataValues.id
       medicalInfo.create(medicalInfoValues(values,emergencyId))
       .then(medicalinfo=> {
@@ -114,7 +129,10 @@ const EmergencyController={}
         
       })
     })
-    .catch(err=>console.log(err))
+    .catch(err=>{
+     
+     return err
+    })
   }
 
   const emergencyValues = ({name,phone,surnames})=>{
