@@ -10,8 +10,6 @@ import '../../../assets/styles/form.css';
 import { PainLocation } from "./PainLocation";
 import { FormSummary } from "./FormSummary";
 import {SubmitModal} from "../../urgencias/SubmitModal";
-import {createData} from "../../../crud/createData";
-import { apiUrl } from '../../../datahelpers/apiURL';
 
 export const Form = () => {
 
@@ -82,28 +80,20 @@ export const Form = () => {
                     }
                 });
         emergencyData.current = {...formData};
-        emergencyData.current.teeth = teeth;
+        emergencyData.current.pieces = teeth;
        // console.log(emergencyData);
        console.log("probando: patologia =  " + formData.pathology + " alergia = " + formData.allergy)
         
     };
 
-  const handleSubmit = async() => {
-
-
-  const resp = await createData(formData, apiUrl.emergency);
-
-    console.log(resp);
-
+  const handleModal = () => {
     setModalOpen(true);
-
   }
 
     return (
 
         <>
 
-      <SubmitModal modalOpen={modalOpen} />
             <div className='under-background-form'></div>
 
             <div className="formCont">
@@ -139,7 +129,7 @@ export const Form = () => {
                 } */}
 
                     {(position === 5) ?
-                        <button className="btn-next" type="submit" onClick={handleSubmit}>
+                        <button className="btn-next" type="submit" onClick={handleModal}>
                             <FormattedMessage
                                 id="form.send"
                                 defaultMessage="Enviar"
@@ -167,6 +157,7 @@ export const Form = () => {
 
             </div>
 
+	  <SubmitModal modalOpen={modalOpen} setModalOpen={setModalOpen} emergencyData={emergencyData} />
         </>
     );
 
