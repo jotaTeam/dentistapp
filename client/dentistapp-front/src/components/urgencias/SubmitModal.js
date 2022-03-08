@@ -1,42 +1,42 @@
+import { useState } from "react";
 import Modal from "react-modal";
-import {Link} from "react-router-dom";
-import '../../assets/styles/modal.css';
+import { Link } from "react-router-dom";
+import "../../assets/styles/modal.css";
+import { createData } from "../../crud/createData";
+import { apiUrl } from "../../datahelpers/apiURL";
 
 const customStyles = {
   content: {
-    width: "50vw",	
+    width: "50vw",
     height: "50vh",
     position: "absolute",
     left: "25%",
     top: "25%",
-
-/*     background: "white", */
-/*     margin: "auto" */
-
-/*         top: '50%',
-        left: '50%',
-        right: 'auto',
-        bottom: 'auto',
-        marginRight: '-50%',
-        transform: 'translate(-50%, -50%)', */
   },
 };
-if(process.env.NODE_ENV !== 'test') {
-    Modal.setAppElement('#root');
+if (process.env.NODE_ENV !== "test") {
+  Modal.setAppElement("#root");
 }
-export const SubmitModal = ({modalOpen}) => {
+export const SubmitModal = ({ modalOpen, setModalOpen, emergencyData }) => {
+  const [data, setData] = useState({ loading: true, error: null, data: {} });
   const closeModal = () => {
     console.log("Fuiiiira");
   };
 
-  const handleClose = () => {
+  const dispatchCreat = async () => {
+    const resp = await createData(emergencyData.current, apiUrl.emergency);
 
-  }
+    setData(resp);
+  };
 
+  const handleCloseModal = () => {
+    setModalOpen(false);
+  };
 
   return (
     <Modal
       isOpen={modalOpen}
+      onAfterOpen={dispatchCreat}
       onRequestClose={closeModal}
       style={customStyles}
       closeTimeoutMS={200}
@@ -44,13 +44,27 @@ export const SubmitModal = ({modalOpen}) => {
       overlayClassName="modal-fondo"
       ariaHideApp={false}
     >
+      {data.error && <h1>Ha ocurrido un error conectando con el servidor</h1>}
 
-      <h1>Su urgencia ha sido procesada</h1>
-
-
-
-	<button className="btn-next"><Link to="/">Cerrar</Link></button>
+      {data.loading ? (
+        <h1> Aquí va el cargando...</h1>
+      ) : data.data.ok ? (
+        <div>
+          {" "}
+          <h1>Su urgencia ha sido procesada</h1>
+          <button className="btn-next">
+            <Link to="/">Cerrar</Link>
+          </button>
+        </div>
+      ) : (
+        <div>
+          {" "}
+          <h1>Ha ocurrido un error</h1>
+          <button className="btn-next" onClick={handleCloseModal}>
+            Volver
+          </button>
+        </div>
+      )}
     </Modal>
-
   );
 };
