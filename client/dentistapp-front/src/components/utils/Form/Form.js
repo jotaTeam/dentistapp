@@ -22,13 +22,24 @@ export const Form = () => {
     const [position, setPosition] = useState(0);
 
     const emergencyData = useRef({});
+
+    //TEETH
     const actTeeth = useRef([]);
+
     let teeth = '';
+
+    let prevState = [false, false, false, false, false, false, false, false, false, false,
+        false, false, false, false, false, false, false, false, false, false,
+        false, false, false, false, false, false, false, false, false, false,
+        false, false, false];
+
+    const [active, setActive] = useState(prevState);
 
     const setTeeth = (activeTeeth) => {
         actTeeth.current = activeTeeth;
     }
 
+    //FORM COMPONENTS
     const formComponents = [
         <PersonalData
             formData={formData}
@@ -46,6 +57,9 @@ export const Form = () => {
             formData={formData}
             handleInputChange={handleInputChange}
             setTeeth={setTeeth}
+            active = {active}
+            setActive = {setActive}
+            prevState = {prevState}
         />,
         <Causes
             formData={formData}
