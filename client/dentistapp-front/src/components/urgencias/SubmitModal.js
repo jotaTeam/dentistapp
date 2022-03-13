@@ -7,11 +7,9 @@ import { apiUrl } from "../../datahelpers/apiURL";
 
 const customStyles = {
   content: {
-    width: "50vw",
-    height: "50vh",
-    position: "absolute",
-    left: "25%",
-    top: "25%",
+    width: "auto",
+    height: "auto",
+   
   },
 };
 if (process.env.NODE_ENV !== "test") {
@@ -49,18 +47,20 @@ export const SubmitModal = ({ modalOpen, setModalOpen, emergencyData }) => {
       {data.loading ? (
         <h1> Aquí va el cargando...</h1>
       ) : data.data.ok ? (
-        <div>
+        <div className="modal-content">
           {" "}
           <h1>Su urgencia ha sido procesada</h1>
-          <button className="btn-next">
+          <div className="processed-modal-img-cont"></div>
+          <button className="btn-next modal-btn">
             <Link to="/">Cerrar</Link>
           </button>
         </div>
       ) : (
-        <div>
+        <div className="modal-content">
           {" "}
           <h1>Ha ocurrido un error</h1>
-          <button className="btn-next" onClick={handleCloseModal}>
+          <div className="error-modal-img-cont"></div>
+          <button className="btn-next modal-btn error" onClick={handleCloseModal}>
             Volver
           </button>
         </div>

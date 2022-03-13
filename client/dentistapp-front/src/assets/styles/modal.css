@@ -1,18 +1,82 @@
 .modal-fondo {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(6, 44, 43, 0.62);
     bottom: 0;
     left: 0;
     right: 0;
     top: 0;
     position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .modal {
     background: white;
-    border-radius: 5px;
-    color: rgb(51, 51, 51);
-    display: inline;
-    max-height: 620px;
-    max-width: 500px;
-    outline: none;
-    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5em 2em;
+    max-width: 400px;
+}
+
+.modal-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content h1{
+    font-weight: 500;
+    font-size: 25px;
+    text-align: center;
+}
+
+.modal-btn{
+    width: 100%;
+    border-radius: 25px;
+    margin-top: 1em;
+}
+
+.modal-btn a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.modal-btn.error{
+    background-color: #f05c6c;
+}
+.modal-btn.error:hover{
+    background-color: #ce3746;
+}
+
+.error-modal-img-cont, .processed-modal-img-cont{
+    background-image: url(../img/error.png);
+    width: 150px;
+    height: 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    animation: moveTopDown infinite 1s alternate;
+}
+
+.processed-modal-img-cont{
+    background-image: url(../img/processed.png);
+}
+
+/*****************responsive***************/
+@media screen and (max-width:680px){
+    .modal {
+        max-width: 290px;
+       
+    }
+
+    .modal-content h1{
+         font-size: 20px;
+    }
+
+    .modal-btn{
+        padding: 0;
+    }
 }

@@ -1,6 +1,11 @@
 {
     "home.welcome": "Welcome to DentisApp",
-
+    "home.subtitle":"Appointment and emergency service at your trusted dental clinic",
+    "home.date" : "Schedule Date",
+    "home.dateDescription" : "Request appointment",
+    "home.emergency" : "Emergency",
+    "home.emergencyDescription" : "Emergency form",
+    
     "nav.home": "Home",
     "nav.login": "Login",
     "nav.emergencies": "Emergencies",
@@ -8,7 +13,6 @@
     "nav.appointments": "Appointments",
     "nav.adminhome": "Admin home",
     "nav.admincontrol": "Admin control",
-
 
     "form.title": "Emergency form",
 
@@ -18,6 +22,7 @@
     "form.placeDNI": "Insert your DNI",
     "form.placePhone": "Insert your phone number",
     "form.btnNext": "Next",
+    "form.btnPrev": "Previous",
     "form.name": "Name:",
     "form.surname": "Surname:",
     "form.dni": "ID number:",
