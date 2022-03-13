@@ -9,7 +9,7 @@ export const FormSummary = ({ formData, setPosition }) => {
   }
 
   return (
-    <div>
+    <div className='summary-cont'>
       <h2 className="summary"><FormattedMessage
         id="form.summary.verify"
         defaultMessage="Por favor, verifique sus datos:"
@@ -17,13 +17,19 @@ export const FormSummary = ({ formData, setPosition }) => {
       </h2>
 
       {/* PERSONAL DATA */}
-      <div className="summaryBox">
-        <h3>
+      <div className='header-summary-cont'>
+      <h3 className='summary-title'>
           <FormattedMessage
             id="form.data"
             defaultMessage="Datos personales"
           />
         </h3>
+        <button className="summaryBtn" onClick={() => handleClick(0)}>
+          Modificar
+        </button>
+        </div>
+      <div className="summaryBox">
+      
         {formData.name && <p className="summaryData">
           <FormattedMessage
             id="form.name"
@@ -59,20 +65,24 @@ export const FormSummary = ({ formData, setPosition }) => {
             <span> {formData.phone} </span>
           </p>}
 
-        <button className="summaryBtn" onClick={() => handleClick(0)}>
-          Modificar
-        </button>
+       
 
       </div>
 
       {/* MEDICAL DATA */}
-      <div className="summaryBox">
-        <h3>
+      <div className='header-summary-cont'>
+      <h3 className='summary-title'>
           <FormattedMessage
             id="form.summary.medical"
             defaultMessage="Patologías y alergias"
           />
         </h3>
+        <button className="summaryBtn" onClick={() => handleClick(1)}>
+          Modificar
+        </button>
+        </div>
+      <div className="summaryBox">
+      
         <p className="summaryData">
           <FormattedMessage
             id="form.summary.medical.pathology"
@@ -112,20 +122,24 @@ export const FormSummary = ({ formData, setPosition }) => {
 
           }
         </p>
-        <button className="summaryBtn" onClick={() => handleClick(1)}>
-          Modificar
-        </button>
+        
       </div>
 
       {/* SÍNTOMAS Y SIGNOS*/}
-      <div className="summaryBox">
-        <h3>
+      <div className='header-summary-cont'>
+      <h3 className='summary-title'>
           <FormattedMessage
             id="form.summary.symptoms"
             defaultMessage="Síntomas y signos"
           />
         </h3>
-        <p>
+        <button className="summaryBtn" onClick={() =>handleClick(2)}>
+          Modificar
+        </button>
+        </div>
+      <div className="summaryBox">
+       
+        <p className='summaryData'>
           {formData.bleeding && <span>
             <FormattedMessage
               id="form.symptoms.bleeding"
@@ -172,20 +186,24 @@ export const FormSummary = ({ formData, setPosition }) => {
               defaultMessage="Otros:"
             /> {formData.otherSimptoms}  </span>}
         </p>
-        <button className="summaryBtn" onClick={() =>handleClick(2)}>
-          Modificar
-        </button>
+        
       </div>
 
       {/* CAUSES */}
-      <div className="summaryBox">
-        <h3>
+      <div className='header-summary-cont'>
+      <h3 className='summary-title'>
           <FormattedMessage
             id="form.summary.causes"
             defaultMessage="Causas"
           />
         </h3>
-        <p>
+        <button className="summaryBtn" onClick={() =>handleClick(4)}>
+          Modificar
+        </button>
+        </div>
+      <div className="summaryBox">
+      
+        <p className='summaryData'>
           {formData.cavity && <span>
             <FormattedMessage
               id="form.cause.cavity"
@@ -223,9 +241,7 @@ export const FormSummary = ({ formData, setPosition }) => {
             /> {formData.otherCauses}  </span>}
 
         </p>
-        <button className="summaryBtn" onClick={() =>handleClick(4)}>
-          Modificar
-        </button>
+        
       </div>
       {/* <p>
         {JSON.stringify(emergencyData, null, 2)}

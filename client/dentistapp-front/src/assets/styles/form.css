@@ -30,31 +30,56 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    height: 600px;
+    height: 680px;
     position: relative;
     width: 50%;
-    margin-top: 10em;
-    
-}
+    margin-top: 3em;
 
-.btn-next:hover{
+    --webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+    border-radius: 12px;
+    width: 560px;
+    padding: 3em 0;
+}
+.btn-cont{
+    display: flex;
+    width: 90%;
+    position: absolute;
+    bottom: 2em;
+    justify-content: center;
+    align-items: center;
+}
+.btn-next:hover, .btn-prev:hover{
     background-color:#118f8d;
 }
-.btn-next{
-    position: absolute;
-    bottom: 0;
+.btn-next, .btn-prev{
     border: none;
-    width: 450px;
     cursor: pointer;
     height: 45px;
     line-height: 45px;
-    border-radius: 25px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
     background-color: #1aacaa;
     font-size: 18px;
     font-weight: 600;
     color: #fff;
+    width: 45%;
+    margin: 0 0.5em;
 }
 
+.btn-next{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.btn-cont.one-btn .btn-next{
+    width: 94%;
+    border-radius: 25px;
+}
 
 
 .under-background-form{
@@ -69,13 +94,16 @@
     border-radius: 25px;
     background-color: rgba(255, 255, 255, 0.34);
     /* background:linear-gradient(to bottom, rgba(255, 255, 255, 0.34) 90%, #1aacaa 5%) no-repeat; */
-    --webkit-box-shadow: 0px 0px 25px -7px rgba(58,57,68,0.6);
-    -moz-box-shadow: 0px 0px 25px -7px rgba(58,57,68,0.6);
-    box-shadow: 0px 0px 25px -7px rgba(58,57,68,0.6);
+    --webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
 }
 
 .form-urg-title{
     margin-bottom: 1em;
+    text-align: center;
+    color: #119f95;
+    font-size: 38px;
 }
 
 .personal-form, .medical-form, .symptom-form{
@@ -95,12 +123,13 @@
 .personal-form section input,.personal-form section label{
     margin: 0.5em 0;
     width: 100%;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .personal-form h3, .symptom-form h3{
     margin-bottom: 1em;
     font-weight: 400;
+    font-size: 17px;
 }
 
 .formCont form input[type="text"], .formCont form input[type="email"]{
@@ -142,7 +171,7 @@
 }
 
 .radio-options-form-cont section label:hover{
-    background-color: #cff2f2;
+    background-color: #e4f4f2;
     border: 2px solid transparent;
 }
 
@@ -164,8 +193,9 @@
 
 .radio-options-form-cont h3{
     
-    font-weight: 500;
+    font-weight: 400;
     margin-top: 1em;
+    font-size: 17px;
 } 
 
 .radio-options-form-cont:first-child h3{
@@ -184,7 +214,7 @@
     justify-content: space-between;
 }
 .symptom-options label{
-    width: 180px;
+    width: 207px;
     padding:0 0.2em;
     line-height: 20px;
     height: 45px;
@@ -209,6 +239,7 @@
 
 .oral-disease-label span{
     font-size: 10px;
+    color: #9f9f9f;
 }
 
 .symptom-options input[type="checkbox"]{
@@ -222,7 +253,7 @@
 }
 
 .symptom-options label:hover{
-    background-color: #cff2f2;
+    background-color: #e4f4f2;
     border: 2px solid transparent;
 }
 
@@ -246,11 +277,11 @@
 }
 
 /********************************************************/
-.cls-2{fill:#cef1f1;stroke:#1aacaa;stroke-miterlimit:10;stroke-width:3px;opacity:0.55;}
+.cls-2{fill:#eeffff;stroke:#1aacaa;stroke-miterlimit:10;stroke-width:3px;opacity:0.55;}
 .cls-1{fill:#cef1f1;opacity:1;}
 .cls-3{fill:#cef1f1;opacity:0.55;}
 svg:hover .cls-2{
-    fill: #50e9e6!important;
+    fill: #c3f8f1!important;
 }
 
 .selected svg .cls-2{
@@ -421,7 +452,7 @@ svg{
 }
 
 .mouth-separate{
-    width: 520px;
+    width: 450px;
     margin: auto;
     margin-top: 160px;
     height: 3px;
@@ -477,13 +508,13 @@ svg{
     color: #fff;
 }
 .sign-option:hover{
-    background-color: #cfcff1;
+    background-color: #e4f4f2;
 }
 
 .pain-location{
     
     flex-direction: column;
-    margin-top: 3em;
+    margin-top: 1.5em;
     
 }
 
@@ -494,6 +525,8 @@ svg{
 }
 .pain-title{
     text-align: center;
+    font-weight: 400;
+    font-size: 17px;
 }
 
 
@@ -542,10 +575,9 @@ svg{
         width: 50%;
         margin: auto;
       }
-}
-@media screen and (max-width:520px){
 
-    .btn-next,.personal-form, .symptom-options label,.medical-form, .symptom-form, .formCont form input[type="text"], .formCont form input[type="email"]{
+
+    .personal-form, .symptom-options label,.medical-form, .symptom-form, .formCont form input[type="text"], .formCont form input[type="email"]{
         width: 320px;
     }
 
@@ -554,22 +586,31 @@ svg{
     }
     .form-urg-title{
 
-        width: 150%;
         display: flex;
         justify-content: center;
     }
 
-    .btn-next{
-        position: fixed;
-        bottom: 0;
+
+    .formCont{
         width: 100%;
-        height: 80px;
-        border-radius: 0;
+    }
+    .formCont form{
+        margin-top: 4em;
+        width: auto;
+        height: auto;
+        margin-bottom: 6em;
+        padding:  2em;
     }
 
-    .formCont form{
-        margin-top: 11em;
-      
+    .mouth-cont{
+        width: auto;
+        height: auto;
+        margin-bottom: 6em;
+        padding:  2em;
+    }
+
+    .mouth-separate{
+        width: 308px;
     }
 
     .under-background-form{
@@ -587,15 +628,62 @@ svg{
         
     }
 
-    .symptom-form{
-        padding-bottom: 9em;
-    }
-
+   
     .personal-form h3, .symptom-form h3 {
         text-align: center;
         align-self: center;
     }
   
+    .btn-cont{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    .btn-prev, .btn-next{
+      
+        margin: 0;
+        border-radius: 0;
+        padding: 2em 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+    }
+
+    .btn-cont.one-btn .btn-next {
+        width: 100%;
+        border-radius: 0;
+      }
+
+    .btn-prev{
+        background-color: #118f8d;
+
+    }
+
+    .summaryBox{
+        width: 380px;
+    }
+}
+
+@media screen and (max-width:600px){
+
+    body{
+        background-color: #fff!important;
+    }
+
+    
+    .formCont form{
+        box-shadow: none;
+        padding:  0;
+      
+    }
+
+}
+@media screen and (max-width:420px){
+    .personal-form, .symptom-options label, .medical-form, .symptom-form, .formCont form input[type="text"], .formCont form input[type="email"] {
+        width: 280px;
+      }
 }
 
 

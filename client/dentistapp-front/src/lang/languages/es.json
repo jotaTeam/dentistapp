@@ -1,5 +1,10 @@
 {
     "home.welcome": "Bienvenido a DentisApp",
+    "home.subtitle":"Servicio de cita previa y urgencias en tu clínica dental de confianza",
+    "home.date" : "Cita Previa",
+    "home.dateDescription" : "Solicita cita previa",
+    "home.emergency" : "Urgencias",
+    "home.emergencyDescription" : "Formulario de urgencias",
 
     "nav.home": "Inicio",
     "nav.login": "Acceso",
@@ -9,7 +14,6 @@
     "nav.adminhome": "Admin home",
     "nav.admincontrol": "Admin control",
 
-
     "form.title": "Formulario de urgencias",
 
     "form.data": "Datos personales",
@@ -18,6 +22,7 @@
     "form.placeDNI": "Introduce tu DNI",
     "form.placePhone": "Introduce tu número de teléfono",
     "form.btnNext": "Siguiente",
+    "form.btnPrev": "Anterior",
     "form.name": "Nombre:",
     "form.surname": "Apellidos:",
     "form.dni": "DNI:",
