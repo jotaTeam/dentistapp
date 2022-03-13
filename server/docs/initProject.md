@@ -46,15 +46,15 @@ npx sequelize-cli init
 
 este comando nos genera una serie de carpetas para trabajar con sequelize:
 
-- config -- conexion con la base de datos
-- models -- todos los modelos y ademas el archivo index para dominarlos a todos
-- seeders -- archivos para sembrar la base de datos que veremos mas adelante
-- migrations -- las migraciones son los archivos que se ejecutan con la informacion de los modelos para generar nuestra base de datos
+- [config](./DB-conf.md) -- conexion con la base de datos
+- [models](./CreateModels.md) -- todos los modelos y ademas el archivo index para dominarlos a todos
+- [seeders](./sembrar.md) -- archivos para sembrar la base de datos que veremos mas adelante
+- [migrations](https://sequelize.org/v6/manual/migrations.html) -- las migraciones son los archivos que se ejecutan con la informacion de los modelos para generar nuestra base de datos
 
 en nuestro caso la estructura que nos generaba el CLI no concordaba con la idea que teniamos para organizar las carpetas y recolocamos donde nos venia mejor.
 Para ello tuvimos que usar un archivo de configuracion que le indicara la ruta de los diferentes archivos necesarios para el ORM, es decir model,seeder,migrations y config. 
 
-El archivo es [.sequelizerc](https://sequelize.org/v6/manual/migrations.html#the--code--sequelizerc--code--file)
+El archivo es [.sequelizerc](https://sequelize.org/v6/manual/migrations.html#the--code--sequelizerc--code--file) [:anchor:](#sequelizerc)
 
 ```javascript
 var path = require('path')
@@ -108,4 +108,9 @@ const PORT = process.env.PORT || 7074 ;
 })
   ```
 
-## configuracion del archivo index para sequelize
+## Sequelize
+
+A la hora de trabajar con sequelize tenemos que tener en cuenta:
+- [conexion a la base de datos y configuracion de instancia de sequelize](./DB-conf.md)
+- [crear modelos](./CreateModels.md)
+- [configuraciones a la hora de lanzar sequelize](./sequelize.md)
