@@ -60,3 +60,6 @@ Como podemos ver nos crea un esqueleto de nuestro modelo con los atributos previ
 tenemos que tener en cuenta que este las modificaciones que realizamos en este archivo tambien deberan ser hechas en su migracion
 
 Los modelos podemos crearlos de forma manual, pero es aconsejable trabajar con los CLI de las diferentes librerias que usemos.
+
+
+## [Volver a Documentacion base](./initProject.md)
