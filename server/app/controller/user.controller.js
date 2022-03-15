@@ -27,7 +27,7 @@ userController.create = async( req, res )=>{
 //Read
 userController.getAll = async(req, res)=>{
   User.findAll()
-  .then(user=>res.jstatus(200).son({
+  .then(user=>res.status(200).json({
     ok:true,
     user
   }))
@@ -40,7 +40,7 @@ userController.getAll = async(req, res)=>{
 userController.getById = async(req, res)=>{
   const id = req.params.id
   User.findByPk(id)
-  .then(user=>res.jstatus(200).son({
+  .then(user=>res.status(200).json({
     ok:true,
     user
   }))
@@ -60,7 +60,7 @@ userController.update = async (req, res) =>{
       id,
     }
   })
-  .then(user=>res.jstatus(200).son({
+  .then(user=>res.status(200).json({
     ok:true,
     user
   }))
@@ -78,7 +78,7 @@ userController.delete = async (req, res)=> {
   User.destroy({where:{
     id
   }})
-  .then(user=>res.jstatus(200).son({
+  .then(user=>res.status(200).json({
     ok:true,
     user
   }))
