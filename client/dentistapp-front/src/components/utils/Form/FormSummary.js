@@ -88,7 +88,7 @@ export const FormSummary = ({ formData, setPosition }) => {
             id="form.summary.medical.pathology"
             defaultMessage="Patologías:"
           />
-          {formData.pathology === true ?
+          {formData.pathology === 'true' ?
             <span> <FormattedMessage
               id="form.yes"
               defaultMessage="Sí"
@@ -108,7 +108,7 @@ export const FormSummary = ({ formData, setPosition }) => {
             id="form.summary.medical.allergy"
             defaultMessage="Alergias:"
           />
-          {formData.allergy === true ?
+          {formData.allergy === 'true' ?
             <span> <FormattedMessage
               id="form.yes"
               defaultMessage="Sí"
