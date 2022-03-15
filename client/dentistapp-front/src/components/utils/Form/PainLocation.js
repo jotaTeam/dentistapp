@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect} from "react";
 import { FormattedMessage } from "react-intl";
 
 export const PainLocation = ({ setTeeth, active, setActive, prevState }) => {
