@@ -3,7 +3,7 @@ const PORT = '5000';
 export const apiUrl = {
 
     
-
+// const restApi = 'https://destistapp.herokuapp.com'
     patient: `http://localhost:${PORT}/patients/`,
     user: `http://localhost:${PORT}/user/`,
     simptoms: `http://localhost:${PORT}/simptoms/`,
