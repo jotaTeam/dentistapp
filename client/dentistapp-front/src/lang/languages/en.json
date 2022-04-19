@@ -68,6 +68,23 @@
     "form.cause.diseases": "Oral diseases",
     "form.cause.diseasesEx": "oral cancer, lip cold sore… ",
     "form.cause.trauma": "Oral trauma",
-    "form.otherCauses": "Insert other causes"
+    "form.otherCauses": "Insert other causes",
+
+    "date.treatment.title": "Select a treatment",
+    "date.treatment.cleaning" : "Dental Cleaning",
+    "date.treatment.scraped" : "Dental Scraped",
+    "date.treatment.whitening" : "Dental Whitening",
+    "date.treatment.checkup" : "Check-up",
+    "date.treatment.fluoride" : "Fluoride Treatment",
+    "date.treatment.orthodontic.checkup" : "Orthodontic Check-up",
+    "date.treatment.sealing" : "Pit and Fissure Sealant",
+    "date.treatment.obturation" : "Dental Obturation",
+    "date.treatment.endodontics" : "Endodontics",
+    "date.treatment.extraction.simple" : "Simple Extraction",
+    "date.treatment.implant" : "Dental Implant",
+    "date.treatment.implant.checkup" : "Implant Check-up",
+    "date.treatment.prosthesis" : "Dental Prosthesis",
+    "date.treatment.prosthesis.checkup" : "Prosthesis Check-up",
+    "date.treatment.botox" : "Botox"
 
 }
