@@ -39,7 +39,7 @@ export const Home = () => {
         <section className='home-options-cont'>
 
         
-        <Link to="/urgencias" className="link-cont">
+        <Link to="/citaprevia" className="link-cont">
             <div className='top-link'></div>
             <div className='img-cont'></div>
             <div className='img-date'><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500"><defs></defs><title>date_1</title><g id="Capa_2" data-name="Capa 2"><g id="circle_white" data-name="circle white"><circle class="cls-11" cx="250" cy="250" r="250"/></g><g id="Capa_3" data-name="Capa 3"><circle class="cls-22" cx="249" cy="251" r="212.5"/></g><g id="Capa_4" data-name="Capa 4"><rect class="cls-33" x="285" y="205" width="31" height="133" transform="translate(29 572) rotate(-90)"/><rect class="cls-33" x="233.5" y="124.5" width="31" height="133"/></g></g></svg></div>
