@@ -38,8 +38,14 @@ server.use('/emergency', emergencyRoutes);
 const medicalInfoRouter = require('./routes/medicalInfo.routes');
 server.use('/medical', medicalInfoRouter);
 
+const appointmentRouter = require('./routes/appointment.routes');
+server.use('/appointment', appointmentRouter);
+
+
 const authRouter = require('./routes/auth.routes');
 server.use('/login', authRouter)
+
+
 
 const PORT = process.env.PORT || 7074 ;
 
