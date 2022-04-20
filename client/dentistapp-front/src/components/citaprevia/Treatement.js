@@ -1,10 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { FormattedMessage, useIntl } from "react-intl";
 
 
 export const Treatement = () => {
 
     const intl = useIntl();
+
+    const [disabled, setdisabled] = useState(false);
+    
+    const handleChangeDisabled = (e) =>{
+        //setdisabled(true);
+        if(e.target.htmlFor === "cleaning"){
+            console.log("cleaning")
+        }
+    }
 
   return (
     <div className="symptom-form">
@@ -24,7 +33,11 @@ export const Treatement = () => {
         id="cleaning"
         // checked={formData.bleeding === 'true'}
         />
-    <label htmlFor="cleaning">
+    <label 
+        className={`${disabled ? 'disabled' : '' }`}
+        htmlFor="cleaning"
+        onClick={handleChangeDisabled}
+        >
         <FormattedMessage
             id="date.treatment.cleaning"
             defaultMessage="Limpieza"
@@ -39,7 +52,11 @@ export const Treatement = () => {
         // checked={formData.pain === 'true'}
         />
 
-     <label htmlFor="scraped">
+     <label 
+        className={`${disabled ? 'disabled' : '' }`}
+        htmlFor="scraped"
+        onClick={handleChangeDisabled}
+        >
         <FormattedMessage
             id="date.treatment.scraped"
             defaultMessage="Scraped"
@@ -54,7 +71,11 @@ export const Treatement = () => {
         // checked={formData.dental_movility === 'true'}
         />
 
-    <label htmlFor="whitening">
+    <label
+        className={`${disabled ? 'disabled' : '' }`}
+        htmlFor="whitening"
+        onClick={handleChangeDisabled}
+        >
         <FormattedMessage
             id="date.treatment.whitening"
             defaultMessage="Blanqueamiento"
@@ -69,7 +90,11 @@ export const Treatement = () => {
         // checked={formData.ulcer === 'true'}
         />
 
-    <label htmlFor="checkup">
+    <label 
+        className={`${disabled ? 'disabled' : '' }`}
+        htmlFor="checkup"
+        onClick={handleChangeDisabled}
+        >
         <FormattedMessage
             id="date.treatment.checkup"
             defaultMessage="Revisión"
@@ -85,7 +110,11 @@ export const Treatement = () => {
         // checked={formData.dental_stains === 'true'}
         />
 
-    <label htmlFor="fluoride">
+    <label 
+        className={`${disabled ? 'disabled' : '' }`}
+        htmlFor="fluoride"
+        onClick={handleChangeDisabled}
+        >
         <FormattedMessage
             id="date.treatment.fluoride"
             defaultMessage="Fluorización"
@@ -100,7 +129,11 @@ export const Treatement = () => {
         // checked={formData.gums_inflammations === 'true'}
         />
 
-    <label htmlFor="orthodontic_checkup">
+    <label 
+        className={`${disabled ? 'disabled' : '' }`}
+        htmlFor="orthodontic_checkup"
+        onClick={handleChangeDisabled}
+        >
         <FormattedMessage
             id="date.treatment.orthodontic.checkup"
             defaultMessage="Revisión de Ortodoncias"
@@ -116,7 +149,11 @@ export const Treatement = () => {
         // checked={formData.bad_breath === 'true'}
          />
 
-    <label htmlFor="sealing">
+    <label 
+        className={`${disabled ? 'disabled' : '' }`}
+        htmlFor="sealing"
+        onClick={handleChangeDisabled}
+        >
         <FormattedMessage
             id="date.treatment.sealing"
             defaultMessage="Sellado de Fosas y Fisuras"
@@ -133,7 +170,11 @@ export const Treatement = () => {
         // checked={formData.sensibility === 'true'}
         />
 
-     <label htmlFor="obturation">
+     <label 
+        className={`${disabled ? 'disabled' : '' }`}
+        htmlFor="obturation"
+        onClick={handleChangeDisabled}
+        >
         <FormattedMessage
             id="date.treatment.obturation"
             defaultMessage="Obturación"
@@ -148,7 +189,11 @@ export const Treatement = () => {
         id="endodontics"
         // checked={formData.bleeding === 'true'}
         />
-    <label htmlFor="endodontics">
+    <label 
+        className={`${disabled ? 'disabled' : '' }`}
+        htmlFor="endodontics"
+        onClick={handleChangeDisabled}
+        >
         <FormattedMessage
             id="date.treatment.endodontics"
             defaultMessage="Endodoncia"
@@ -162,7 +207,11 @@ export const Treatement = () => {
         id="extraction"
         // checked={formData.bleeding === 'true'}
         />
-    <label htmlFor="extraction">
+    <label
+     className={`${disabled ? 'disabled' : '' }`}
+     htmlFor="extraction"
+     onClick={handleChangeDisabled}
+     >
         <FormattedMessage
             id="date.treatment.extraction.simple"
             defaultMessage="Extracción Simple"
@@ -176,7 +225,11 @@ export const Treatement = () => {
         id="implant"
         // checked={formData.bleeding === 'true'}
         />
-    <label htmlFor="implant">
+    <label 
+        className={`${disabled ? 'disabled' : '' }`}
+        htmlFor="implant"
+        onClick={handleChangeDisabled}
+        >
         <FormattedMessage
             id="date.treatment.implant"
             defaultMessage="Implantes"
@@ -190,7 +243,11 @@ export const Treatement = () => {
         id="implant_checkup"
         // checked={formData.bleeding === 'true'}
         />
-    <label htmlFor="implant_checkup">
+    <label 
+        className={`${disabled ? 'disabled' : '' }`}
+        htmlFor="implant_checkup"
+        onClick={handleChangeDisabled}
+        >
         <FormattedMessage
             id="date.treatment.implant.checkup"
             defaultMessage="Revisión de Implantes"
@@ -204,7 +261,11 @@ export const Treatement = () => {
         id="prosthesis"
         // checked={formData.bleeding === 'true'}
         />
-    <label htmlFor="prosthesis">
+    <label
+        className={`${disabled ? 'disabled' : '' }`}
+        htmlFor="prosthesis"
+        onClick={handleChangeDisabled}
+        >
         <FormattedMessage
             id="date.treatment.prosthesis"
             defaultMessage="Prótesis"
@@ -218,7 +279,11 @@ export const Treatement = () => {
         id="prosthesis_checkup"
         // checked={formData.bleeding === 'true'}
         />
-    <label htmlFor="prosthesis_checkup">
+    <label
+        className={`${disabled ? 'disabled' : '' }`}
+        htmlFor={`${!disabled ? 'prosthesis_checkup' : '' }`}
+        onClick={handleChangeDisabled}
+        >
         <FormattedMessage
             id="date.treatment.prosthesis.checkup"
             defaultMessage="Revisisón de Prótesis"
@@ -232,7 +297,11 @@ export const Treatement = () => {
         id="botox"
         // checked={formData.bleeding === 'true'}
         />
-    <label htmlFor="botox">
+    <label
+        className={`${disabled ? 'disabled' : '' }`}
+        htmlFor="botox"
+        onClick={handleChangeDisabled}
+        >
         <FormattedMessage
             id="date.treatment.botox"
             defaultMessage="Botox"

@@ -260,7 +260,13 @@
 .symptom-options.treatement label{
     width: 127px;
     height: 127px;
+    margin: 0.5em;
     
+}
+
+.symptom-options.treatement label.disabled, .symptom-options.treatement label.disabled:hover{
+    background-color: #dfdfdf;
+    cursor: auto;
 }
 
 .oral-disease-label{
