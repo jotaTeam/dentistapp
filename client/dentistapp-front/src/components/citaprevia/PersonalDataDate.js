@@ -7,12 +7,33 @@ export const PersonalDataDate = () => {
     const intl = useIntl();
 
 
-    const pamirar = useContext(AppointmentContext);
+    let {AppoinmentValues, setAppoinmentValues} = useContext(AppointmentContext);
+    // console.log(AppoinmentValues);
+
+
+    let {
+        name,
+        surname,
+        phone,
+        dni,
+    } = AppoinmentValues.personalData;
 
     // console.log(pamirar);
 
     // const {name,surname,telephone,dni} = props
     // console.log(name);
+
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setAppoinmentValues({
+            ...AppoinmentValues,
+            personalData: {
+                ...AppoinmentValues.personalData,
+                [name]: value,
+            },
+        });
+    };
+
    
     return (
         <div className="personal-form">
@@ -33,8 +54,8 @@ export const PersonalDataDate = () => {
             <input
                 placeholder={intl.formatMessage({id: 'form.placeName'})}
                 type="text"
-                // onChange={handleInputChange}
-                // value={formData.name}
+                onChange={handleInputChange}
+                value={name}
                 name="name"
                 required
             />
@@ -50,8 +71,8 @@ export const PersonalDataDate = () => {
             <input
                 placeholder={intl.formatMessage({id: 'form.placeLastname'})}
                 type="text"
-                // onChange={handleInputChange}
-                // value={formData.surname}
+                onChange={handleInputChange}
+                value={surname}
                 name="surnames"
                 required
             />
@@ -69,8 +90,8 @@ export const PersonalDataDate = () => {
             <input
                 placeholder={intl.formatMessage({id: 'form.placeDNI'})}
                 type="text"
-                // onChange={handleInputChange}
-                // value={formData.dni}
+                onChange={handleInputChange}
+                value={dni}
                 name="dni"
                 required
             />
@@ -86,8 +107,8 @@ export const PersonalDataDate = () => {
             <input
                 placeholder={intl.formatMessage({id: 'form.placePhone'})}
                 type="text"
-                // onChange={handleInputChange}
-                // value={formData.telephone}
+                onChange={handleInputChange}
+                value={phone}
                 name="phone"
                 required
             />
