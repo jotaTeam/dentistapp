@@ -1,9 +1,15 @@
 import { FormattedMessage, useIntl } from "react-intl";
+import { useContext } from "react";
+import { AppointmentContext } from "./Appointment.context";
 
 export const PersonalDataDate = () => {
 
     const intl = useIntl();
 
+
+    const pamirar = useContext(AppointmentContext);
+
+    // console.log(pamirar);
 
     // const {name,surname,telephone,dni} = props
     // console.log(name);

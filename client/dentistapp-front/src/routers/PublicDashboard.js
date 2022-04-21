@@ -7,6 +7,7 @@ import LanguageSelector from "../components/LanguageSelector";
 import { NotFound } from "../components/NotFound";
 import PreSendInfo from "../components/urgencias/PreSendInfo";
 import { CitaPreviaForm } from "../components/citaprevia/CitaPreviaForm";
+import Appoinment from "../components/citaprevia/Appoinment";
 
 
 export const PublicDashboard = () => {
@@ -25,7 +26,7 @@ export const PublicDashboard = () => {
                 <Route path="/login" element={<Login />} />
                 <Route path="/urgencias" element={<Urgencias />} />
                 <Route path='/show' element={<PreSendInfo/>} />
-                <Route path= "/citaprevia" element = {<CitaPreviaForm/>}/>
+                <Route path= "/citaprevia" element = {<Appoinment/>}/>
                 <Route path= "/*" element = {<NotFound/>}/>
 
             </Routes>
