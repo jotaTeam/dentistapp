@@ -26,6 +26,8 @@ const onHandlePrev = (e) => {
 }
 const onSubmitHandle = (e) => {
     e.preventDefault();
+
+    console.log('submit');
    
     
 };
@@ -54,7 +56,13 @@ const onSubmitHandle = (e) => {
         {formComponents[position]}
 
         {(position === 2) ?
-                     <div className="btn-cont one-btn">
+                     <div className="btn-cont">
+                     <button className="btn-prev" onClick={onHandlePrev}>
+                          <FormattedMessage
+                              id="form.btnPrev"
+                              defaultMessage="Previous"
+                          />
+                        </button>
                         <button className="btn-next" type="submit" >
                             <FormattedMessage
                                 id="form.send"
