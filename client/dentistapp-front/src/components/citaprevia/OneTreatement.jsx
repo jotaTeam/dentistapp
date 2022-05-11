@@ -1,4 +1,4 @@
-import {useContext} from 'react';
+import {useContext, useEffect, useState} from 'react';
 
 import {AppointmentContext} from './Appointment.context'
 
@@ -9,9 +9,21 @@ export const OneTreatement = ({name}) => {
 
     const { AppoinmentValues,setAppoinmentValues } = useContext(AppointmentContext);
 
-    const {treatments} = AppoinmentValues;
+    const [treatments, setTreatments] = useState(AppoinmentValues.treatments);
     
-    console.log(treatments[name]);
+    useEffect(() => {
+        const howManyTreatments = Object.values(AppoinmentValues.treatments);
+
+        console.log(howManyTreatments.every(t => t !== true));
+
+        // console.log(howManyTreatments);
+        // if(Object.values(treatments).every(value => value === false)) console.log('todos los tratamientos estan en false');
+        // if (AppoinmentValues.treatments.values().every(t => t === false)) {
+        //     console.log('Todos los tratamientos estan en false');
+        // }
+
+        
+    }, [AppoinmentValues])
 
     const handleClick = (e) => {
 
@@ -19,7 +31,12 @@ export const OneTreatement = ({name}) => {
     }
 
     const handleInputChange = (e) => {
-        console.log(`soy el input change ${e.target.value} y ${e.target.name}`);
+
+        setTreatments({
+            ...treatments,
+            [name]: !treatments[name]
+        })
+
         setAppoinmentValues({
             ...AppoinmentValues,
             treatments:{

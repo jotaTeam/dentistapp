@@ -1,10 +1,9 @@
-import {useState, useContext} from 'react';
-import { FormattedMessage, useIntl } from "react-intl";
-import { AppointmentContext } from './Appointment.context';
+import { FormattedMessage } from "react-intl";
 import { OneTreatement } from './OneTreatement';
 
 
-export const Treatement = () => {
+export const Treatements = () => {
+
 
     const treatments= [
         'dental_cleaning',
@@ -23,19 +22,7 @@ export const Treatement = () => {
         'check_prosthesis',
         'botox',
     ];
-
-    let {AppoinmentValues, setAppoinmentValues} = useContext(AppointmentContext);
-
-    const intl = useIntl();
-
-    const [disabled, setdisabled] = useState(false);
     
-    const handleChangeDisabled = (e) =>{
-        //setdisabled(true);
-        if(e.target.htmlFor === "cleaning"){
-            console.log("cleaning")
-        }
-    }
 
   return (
     <div className="symptom-form">

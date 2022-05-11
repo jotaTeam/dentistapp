@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { FormattedMessage } from "react-intl";
 import { DateCalendar } from './DateCalendar';
 import { PersonalDataDate } from './PersonalDataDate';
-import { Treatement } from './Treatement';
+import { Treatements } from './Treatements';
 export const CitaPreviaForm = () => {
 
   const [position, setPosition] = useState(0);
@@ -11,7 +11,7 @@ export const CitaPreviaForm = () => {
     <PersonalDataDate
     
     />,
-    <Treatement
+    <Treatements
   
     />,
     <DateCalendar
