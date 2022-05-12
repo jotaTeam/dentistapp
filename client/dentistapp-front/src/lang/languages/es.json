@@ -69,6 +69,9 @@
     "form.cause.trauma": "Traumatismo oral",
     "form.otherCauses": "Introduce otras causas",
 
+    "date.calendar.moreinfo" : "¿Quieres dar más información?",
+    "date.calendar.hour": "Selecciona una hora",
+    "date.calendar.title": "Selecciona una fecha",
     "date.treatment.title": "Selecciona un tratamiento",
     "date.treatment.dental_cleaning" : "Limpieza Dental",
     "date.treatment.curettage" : "Curetaje",
@@ -85,7 +88,6 @@
     "date.treatment.prosthesis" : "Prótesis",
     "date.treatment.check_prosthesis" : "Revisisón de Prótesis",
     "date.treatment.botox" : "Botox"
-
 
 
 

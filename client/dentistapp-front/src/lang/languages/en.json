@@ -70,6 +70,9 @@
     "form.cause.trauma": "Oral trauma",
     "form.otherCauses": "Insert other causes",
 
+    "date.calendar.moreinfo" : "Want to add info?",
+    "date.calendar.hour": "Select a time",
+    "date.calendar.title": "Select a date",
     "date.treatment.title": "Select a treatment",
     "date.treatment.dental_cleaning" : "Dental Cleaning",
     "date.treatment.curettage" : "Dental Scraped",
@@ -86,5 +89,7 @@
     "date.treatment.prosthesis" : "Dental Prosthesis",
     "date.treatment.check_prosthesis" : "Prosthesis Check-up",
     "date.treatment.botox" : "Botox"
+   
+
 
 }

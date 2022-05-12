@@ -16,7 +16,7 @@ export const Symptoms = ({handleInputChange, formData}) => {
                 <input type="checkbox"
                     onChange={handleInputChange}
                     name="bleeding"
-                    value={formData.bleeding?.length > 0 ? '' : true}
+                    value={formData.bleeding?.length > 0 ? '' : 'true'}
                     id="bleeding"
                     checked={formData.bleeding === 'true'}
                     />
