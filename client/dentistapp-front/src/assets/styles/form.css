@@ -26,6 +26,30 @@
 
 }
 
+.symptom-form.calendar input{
+    background-color: #e6e6e7a8;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    height: 45px;
+    padding-left: 20px;
+    width: 450px;
+    cursor: pointer;
+    margin-bottom: 1em;
+}
+
+.more-info-form{
+    resize: none;
+    background-color: #e6e6e7a8;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    height: 185px;
+    padding-left: 20px;
+    width: 450px;
+    padding: 1em;
+}
+
 .formCont form{
     margin: auto;
      display: flex;
@@ -613,7 +637,9 @@ svg{
       }
 
 
-    .personal-form, .symptom-options label,.medical-form, .symptom-form, .formCont form input[type="text"], .formCont form input[type="email"]{
+
+
+    .personal-form, .symptom-options label,.medical-form, .symptom-form, .formCont form input[type="text"], .formCont form input[type="email"], .symptom-form.calendar input,   .more-info-form{
         width: 320px;
     }
 
@@ -717,7 +743,7 @@ svg{
 
 }
 @media screen and (max-width:420px){
-    .personal-form, .symptom-options label, .medical-form, .symptom-form, .formCont form input[type="text"], .formCont form input[type="email"] {
+    .personal-form, .symptom-options label, .medical-form, .symptom-form, .formCont form input[type="text"], .formCont form input[type="email"], .symptom-form.calendar input, .more-info-form{
         width: 280px;
       }
 }

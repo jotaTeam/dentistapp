@@ -5,8 +5,6 @@ import { CitaPreviaForm } from './CitaPreviaForm';
 const Appoinment = () => {
  
 
-    const saludoProvider = "hola";
-
     const [AppoinmentValues, setAppoinmentValues] = useState({
         personalData: {
             name: '',
@@ -33,6 +31,11 @@ const Appoinment = () => {
             check_prosthesis: false,
             botox: false,
         },
+        appoinment: {
+            date:'',
+            time:'',
+            otros:''
+        }
     })
     
     return (
@@ -40,8 +43,7 @@ const Appoinment = () => {
 
         <AppointmentContext.Provider value={{
             AppoinmentValues,
-            setAppoinmentValues,
-            saludoProvider
+            setAppoinmentValues
         }}>
             <CitaPreviaForm/>
         </AppointmentContext.Provider>

@@ -48,8 +48,6 @@ export const OneTreatement = ({name}) => {
         })
     }
 
-    
-
 
 
     return (
