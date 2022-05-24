@@ -243,6 +243,12 @@
     scrollbar-color: #1aacaa #dbe5eb;
     scrollbar-width: 8px;
 }
+.symptom-options.urgency{
+    
+    height: auto;
+   
+    
+}
 
 
 /****/

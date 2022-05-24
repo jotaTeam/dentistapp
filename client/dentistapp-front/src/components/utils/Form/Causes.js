@@ -10,12 +10,12 @@ export const Causes = ({handleInputChange, formData}) => {
                         defaultMessage="¿A qué lo asocia?"
                     />
                 </h3>
-                <div className="symptom-options">
+                <div className="symptom-options urgency">
                
                 <input type="checkbox"
                     onChange={handleInputChange}
                     name="cavity"
-                    value="true" 
+                    value={formData.cavity?.length > 0 ? '' : 'true'}
                     id="cavity"
                     checked={formData.cavity === 'true'}
                     />
@@ -31,7 +31,7 @@ export const Causes = ({handleInputChange, formData}) => {
                 <input type="checkbox"
                     onChange={handleInputChange}
                     name="fracture"
-                    value="true"
+                    value={formData.fracture?.length > 0 ? '' : 'true'}
                     id="fracture" 
                     checked={formData.fracture === 'true'}
                     />
@@ -47,7 +47,7 @@ export const Causes = ({handleInputChange, formData}) => {
                 <input type="checkbox"
                     onChange={handleInputChange}
                     name="gums_problems"
-                    value="true"
+                    value={formData.gums_problems?.length > 0 ? '' : 'true'}
                     id="gums_problems"
                     checked={formData.gums_problems === 'true'}
                     />
@@ -63,7 +63,7 @@ export const Causes = ({handleInputChange, formData}) => {
                 <input type="checkbox"
                     onChange={handleInputChange}
                     name="oral_hygiene"
-                    value="true"
+                    value={formData.oral_hygiene?.length > 0 ? '' : 'true'}
                     id="oral_hygiene"
                     checked={formData.oral_hygiene === 'true'}
                     />
@@ -79,7 +79,7 @@ export const Causes = ({handleInputChange, formData}) => {
                 <input type="checkbox"
                     onChange={handleInputChange}
                     name="oral_disease"
-                    value="true"
+                    value={formData.oral_disease?.length > 0 ? '' : 'true'}
                     id="oral_disease"
                     checked={formData.oral_disease === 'true'}
                     />
@@ -100,7 +100,7 @@ export const Causes = ({handleInputChange, formData}) => {
                 <input type="checkbox"
                     onChange={handleInputChange}
                     name="oral_trauma"
-                    value="true"
+                    value={formData.oral_trauma?.length > 0 ? '' : 'true'}
                     id="oral_trauma"
                     checked={formData.oral_trauma === 'true'}
                     />

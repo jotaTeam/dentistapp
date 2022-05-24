@@ -12,7 +12,7 @@ export const Symptoms = ({handleInputChange, formData}) => {
                     />
                 </h3>
             
-            <div className="symptom-options">
+            <div className="symptom-options urgency">
                 <input type="checkbox"
                     onChange={handleInputChange}
                     name="bleeding"
@@ -30,7 +30,7 @@ export const Symptoms = ({handleInputChange, formData}) => {
                 <input type="checkbox"
                     onChange={handleInputChange}
                     name="pain"
-                    value="true"
+                    value={formData.pain?.length > 0 ? '' : 'true'}
                     id="pain"
                     checked={formData.pain === 'true'}
                     />
@@ -45,7 +45,7 @@ export const Symptoms = ({handleInputChange, formData}) => {
                 <input type="checkbox"
                     onChange={handleInputChange}
                     name="dental_movility"
-                    value="true"
+                    value={formData.dental_movility?.length > 0 ? '' : 'true'}
                     id="dental_movility"
                     checked={formData.dental_movility === 'true'}
                     />
@@ -60,7 +60,7 @@ export const Symptoms = ({handleInputChange, formData}) => {
                 <input type="checkbox"
                     onChange={handleInputChange}
                     name="ulcer"
-                    value="true"
+                    value={formData.ulcer?.length > 0 ? '' : 'true'}
                     id="ulcer"
                     checked={formData.ulcer === 'true'}
                     />
@@ -76,7 +76,7 @@ export const Symptoms = ({handleInputChange, formData}) => {
                 <input type="checkbox"
                     onChange={handleInputChange}
                     name="dental_stains"
-                    value="true"
+                    value={formData.dental_stains?.length > 0 ? '' : 'true'}
                     id="dental_stains"
                     checked={formData.dental_stains === 'true'}
                     />
@@ -91,7 +91,7 @@ export const Symptoms = ({handleInputChange, formData}) => {
                 <input type="checkbox"
                     onChange={handleInputChange}
                     name="gums_inflammations"
-                    value="true"
+                    value={formData.gums_inflammations?.length > 0 ? '' : 'true'}
                     id="gums_inflammations"
                     checked={formData.gums_inflammations === 'true'}
                     />
@@ -107,7 +107,7 @@ export const Symptoms = ({handleInputChange, formData}) => {
                 <input type="checkbox"
                     onChange={handleInputChange}
                     name="bad_breath"
-                    value="true"
+                    value={formData.bad_breath?.length > 0 ? '' : 'true'}
                     id="bad_breath"
                     checked={formData.bad_breath === 'true'}
                      />
@@ -124,7 +124,7 @@ export const Symptoms = ({handleInputChange, formData}) => {
                 <input type="checkbox"
                     onChange={handleInputChange}
                     name="sensibility"
-                    value="true"
+                    value={formData.sensibility?.length > 0 ? '' : 'true'}
                     id="sensibility"
                     checked={formData.sensibility === 'true'}
                     />
