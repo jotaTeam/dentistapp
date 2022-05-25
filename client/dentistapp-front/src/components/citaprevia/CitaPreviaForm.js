@@ -1,11 +1,15 @@
 import React, {useState} from 'react';
 import { FormattedMessage } from "react-intl";
+import { SubmitModal } from '../urgencias/SubmitModal';
 import { DateCalendar } from './DateCalendar';
 import { PersonalDataDate } from './PersonalDataDate';
 import { Treatements } from './Treatements';
 export const CitaPreviaForm = () => {
 
   const [position, setPosition] = useState(0);
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const mockData = {};
   //FORM COMPONENTS
   const formComponents = [
     <PersonalDataDate
@@ -28,9 +32,12 @@ const onSubmitHandle = (e) => {
     e.preventDefault();
 
     console.log('submit');
-   
-    
+      
 };
+
+const handleModal = () => {
+    setModalOpen(true);
+  }
 
   return (
     <>
@@ -63,7 +70,7 @@ const onSubmitHandle = (e) => {
                               defaultMessage="Previous"
                           />
                         </button>
-                        <button className="btn-next" type="submit" >
+                        <button className="btn-next" type="submit" onClick={handleModal} >
                             <FormattedMessage
                                 id="form.send"
                                 defaultMessage="Enviar"
@@ -99,6 +106,7 @@ const onSubmitHandle = (e) => {
                          
                       </div>
                     }
+                    <SubmitModal modalOpen={modalOpen} setModalOpen={setModalOpen} emergencyData={mockData} />
         </form>
 
     </div>

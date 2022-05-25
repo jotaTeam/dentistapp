@@ -33,6 +33,7 @@
     "form.specify": "If yes, specify:",
     "form.others": "Others:",
     "form.send": "Submit",
+    "form.modify": "Edit",
 
     "form.pathology": "Have you had any previous oral pathology or do you present it nowadays?",
     "form.allergy": "Are you allergic to any food/ medication/ product?",
@@ -57,6 +58,7 @@
     "form.summary.medical.allergy": "Allergies:",
     "form.summary.symptoms": "Symptoms and signs",
     "form.summary.causes": "Causes",
+
 
     "form.location": "Select the teeth where you feel pain",
 
@@ -88,7 +90,13 @@
     "date.treatment.check_implants" : "Implant Check-up",
     "date.treatment.prosthesis" : "Dental Prosthesis",
     "date.treatment.check_prosthesis" : "Prosthesis Check-up",
-    "date.treatment.botox" : "Botox"
+    "date.treatment.botox" : "Botox",
+
+    "message.serverError": "A server error has occurred.",
+    "message.loading": "Loading...",
+    "message.processed": "Your data has been processed succesfully.",
+    "message.error": "There was an error",
+    "message.return": "Return"
    
 
 
