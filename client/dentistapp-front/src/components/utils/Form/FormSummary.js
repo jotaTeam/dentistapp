@@ -25,7 +25,10 @@ export const FormSummary = ({ formData, setPosition }) => {
           />
         </h3>
         <button className="summaryBtn" onClick={() => handleClick(0)}>
-          Modificar
+        <FormattedMessage
+            id="form.modify"
+            defaultMessage="Modificar"
+          />
         </button>
         </div>
       <div className="summaryBox">
@@ -78,7 +81,10 @@ export const FormSummary = ({ formData, setPosition }) => {
           />
         </h3>
         <button className="summaryBtn" onClick={() => handleClick(1)}>
-          Modificar
+        <FormattedMessage
+            id="form.modify"
+            defaultMessage="Modificar"
+          />
         </button>
         </div>
       <div className="summaryBox">
@@ -134,7 +140,10 @@ export const FormSummary = ({ formData, setPosition }) => {
           />
         </h3>
         <button className="summaryBtn" onClick={() =>handleClick(2)}>
-          Modificar
+        <FormattedMessage
+            id="form.modify"
+            defaultMessage="Modificar"
+          />
         </button>
         </div>
       <div className="summaryBox">
@@ -198,7 +207,10 @@ export const FormSummary = ({ formData, setPosition }) => {
           />
         </h3>
         <button className="summaryBtn" onClick={() =>handleClick(4)}>
-          Modificar
+        <FormattedMessage
+            id="form.modify"
+            defaultMessage="Modificar"
+          />
         </button>
         </div>
       <div className="summaryBox">

@@ -33,6 +33,7 @@
     "form.specify": "En caso afirmativo, especificar:",
     "form.others": "Otros:",
     "form.send": "Enviar",
+    "form.modify": "Modificar",
 
     "form.pathology": "¿Ha tenido alguna patología oral previa o la presenta en la actualidad?",
     "form.allergy": "¿Es alérgico algún alimento/ medicamento/ producto?",
@@ -87,7 +88,14 @@
     "date.treatment.check_implants" : "Revisión de Implantes",
     "date.treatment.prosthesis" : "Prótesis",
     "date.treatment.check_prosthesis" : "Revisisón de Prótesis",
-    "date.treatment.botox" : "Botox"
+    "date.treatment.botox" : "Botox",
+
+
+    "message.serverError": "Ha ocurrido un error conectando con el servidor",
+    "message.loading": "Cargando...",
+    "message.processed": "Sus datos han sido procesados con éxito.",
+    "message.error": "Ha ocurrido un error",
+    "message.return": "Volver"
 
 
 
